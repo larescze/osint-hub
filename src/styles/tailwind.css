@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base dark theme */
+:root {
+	--font-geist-sans: "Geist Sans", ui-sans-serif, system-ui, -apple-system,
+		Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+	--font-geist-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+		Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+/* Self-hosted Geist variable fonts */
+@font-face {
+	font-family: "Geist Sans";
+	src: url("/fonts/geist/Geist-Variable.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Geist Mono";
+	src: url("/fonts/geist/GeistMono-Variable.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Apply default fonts globally */
+html {
+	background: whitesmoke;
+	color: #111111;
+	font-family: var(--font-geist-sans);
+}
+
+/* Popover animation */
+.PopoverContent {
+	animation-duration: 400ms;
+	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: transform, opacity;
+}
+.PopoverContent[data-state="open"][data-side="top"] {
+	animation-name: slideDownAndFade;
+}
+.PopoverContent[data-state="open"][data-side="right"] {
+	animation-name: slideLeftAndFade;
+}
+.PopoverContent[data-state="open"][data-side="bottom"] {
+	animation-name: slideUpAndFade;
+}
+.PopoverContent[data-state="open"][data-side="left"] {
+	animation-name: slideRightAndFade;
+}
+
+&[data-state="open"][data-side="top"] {
+	animation-name: slideDownAndFade;
+}
+&[data-state="open"][data-side="right"] {
+	animation-name: slideLeftAndFade;
+}
+&[data-state="open"][data-side="bottom"] {
+	animation-name: slideUpAndFade;
+}
+&[data-state="open"][data-side="left"] {
+	animation-name: slideRightAndFade;
+}
+@keyframes slideUpAndFade {
+	from {
+		opacity: 0;
+		transform: translateY(2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideRightAndFade {
+	from {
+		opacity: 0;
+		transform: translateX(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideDownAndFade {
+	from {
+		opacity: 0;
+		transform: translateY(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideLeftAndFade {
+	from {
+		opacity: 0;
+		transform: translateX(2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Switch */
+.SwitchRoot {
+	width: 36px;
+	height: 22px;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 9999px;
+	position: relative;
+	box-shadow: 0 2px 10px var(--black-a7);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transition: background-color 100ms;
+	flex-shrink: 0;
+	&:focus-visible {
+		box-shadow: 0 0 0 2px black;
+	}
+	&[data-state="checked"] {
+		background-color: black;
+	}
+}
+
+.SwitchThumb {
+	display: block;
+	width: 18px;
+	height: 18px;
+	background-color: white;
+	border-radius: 9999px;
+	box-shadow: 0 2px 2px var(--black-a7);
+	transition: transform 100ms;
+	transform: translateX(2px);
+	will-change: transform;
+	&[data-state="checked"] {
+		transform: translateX(16px);
+	}
+}
