@@ -1,0 +1,84 @@
+{
+	"$schema": "../../types/JSON/indexed_internet.schema.json",
+	"meta": {
+		"categories": {
+			"S": {
+				"name": "Site statistics",
+				"description": "Tools to track the rank of a website in search engines, the number of keywords searched by customers/users, the domain rating, the URL rating, and the number of social media shares."
+			},
+			"SC": {
+				"name": "Source code and content analysis",
+				"description": "Tools to analyze the source code and content of a website."
+			},
+			"TA": {
+				"name": "Taffic analysis",
+				"description": "Tools to analyze the traffic of a website."
+			},
+			"CD": {
+				"name": "Crawl data",
+				"description": "Tools to crawl the data of a website."
+			},
+			"BC": {
+				"name": "Backlink analysis",
+				"description": "Tools to analyze the backlinks of a website."
+			},
+			"SL": {
+				"name": "Scholar literature",
+				"description": "Tools to analyze the scholar literature of a website."
+			},
+			"T": {
+				"name": "Technology analysis",
+				"description": "Tools to analyze the technology aspects of a website."
+			}
+		}
+	},
+	"data": [
+		{
+			"tool": "Site Explorer",
+			"categories": ["S", "SC", "TA"],
+			"link": "https://ahrefs.com/site-explorer",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "most of functionalities are paid",
+			"API": true,
+			"API_note": "only in Enterprise subscription",
+			"description": "SEO tools which can be used to perform site audits, rank tracking and overall site research."
+		},
+		{
+			"tool": "Common Crawler",
+			"categories": ["CD"],
+			"link": "https://commoncrawl.org/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"description": "Open-source repository of web crawl data."
+		},
+		{
+			"tool": "SeoReviewTools",
+			"categories": ["S", "BC"],
+			"link": "https://www.seoreviewtools.com/valuable-backlinks-checker/",
+			"open_source": false,
+			"accessibility": true,
+			"API": null,
+			"description": "A service providing backlinks and other statistics on a given domain."
+		},
+		{
+			"tool": "nerdydata.com",
+			"categories": ["SC", "T"],
+			"link": "https://nerdydata.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": null,
+			"description": "A service able to scrape target website's source code and also technologies used by a domain."
+		},
+		{
+			"tool": "Publicwww.com",
+			"categories": ["SC"],
+			"link": "https://publicwww.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": null,
+			"description": "The service allows to search for code, signatures of keywords."
+		}
+	]
+}

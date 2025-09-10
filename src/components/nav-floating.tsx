@@ -91,7 +91,7 @@ export default function NavFloating(props: { categories: NavbarCategory[] }) {
 							))}
 							<div className="h-[1px] my-3 bg-white/20 w-full" />
 							<NavLink
-								href="https://github.com/osint-hub/osint-hub"
+								href="https://github.com/larescze/osint-hub"
 								icon={GitHubIcon}
 								className="mb-4"
 							>

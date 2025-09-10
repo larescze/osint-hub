@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
-import { useOsintDataContext } from '../contexts/osing-data-context'
+import { useSectionData } from '../hooks/useSectionData'
 
 type MixedRecord = {
 	tool: string
@@ -16,10 +16,10 @@ type MixedRecord = {
 }
 
 export default function MixedPage() {
-	const { data, loading, error } = useOsintDataContext()
+	const { data, loading, error } = useSectionData<MixedRecord>('mixed')
 
-	const records: MixedRecord[] = (data?.mixed?.data as MixedRecord[]) || []
-	const categoryMeta = data?.mixed?.meta?.categories || {}
+	const records: MixedRecord[] = data?.data || []
+	const categoryMeta = data?.meta?.categories || {}
 
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
 		Set<string>

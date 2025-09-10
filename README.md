@@ -1,6 +1,6 @@
 ## OSINT Hub
 
-Lightweight React + Vite app that lists OSINT resources. Data lives in `public/data/data.json`.
+Lightweight React + Vite app that lists OSINT resources. Data now lives in per-section files under `public/data/*.json` (e.g., `indexed_internet.json`, `devices.json`, etc.).
 
 ## Run locally
 
@@ -24,17 +24,17 @@ yarn build
 yarn preview
 ```
 
-## Contributing to public/data/data.json
+## Contributing to public/data/*.json
 
 Contributions are welcome! The dataset is validated with a strict schema so the app remains stable.
 
 ### Where to edit
-- File: `public/data/data.json`
+- Files: `public/data/[section].json`
 - Schema references: `types/schema.ts` (Zod) and `types/data.schema.json` (JSON Schema)
 
 ### How to propose changes
 1. Fork and create a feature branch.
-2. Update `public/data/data.json`:
+2. Update `public/data/[section].json`:
    - Add or edit entries under the correct top-level section: `indexed_internet`, `archived_web`, `devices`, `dark_web`, `social_networks`, `search_engines`, or `mixed`.
    - Ensure each new record includes all required fields for that section (e.g., `tool`, `categories`, `API`, plus section specifics like `maintained`, `services`, or `social_network`).
    - Categories used in records must exist in that section’s `meta.categories`. Add new categories there if needed with at least a `name`.
@@ -53,7 +53,7 @@ Contributions are welcome! The dataset is validated with a strict schema so the 
 - `yarn dev`: start Vite dev server
 - `yarn build`: build for production to `dist`
 - `yarn preview`: preview the production build
-- `yarn validate`: validate `public/data/data.json`
+- `yarn validate`: validate all `public/data/*.json` files
 - `yarn lint`: run Biome linter
 - `yarn format`: run Biome formatter
 

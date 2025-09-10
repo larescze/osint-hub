@@ -4,21 +4,25 @@ import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
 
-type DarkWebRecord = {
+type DomainsIpsRecord = {
 	tool: string
 	categories: string[]
 	link: string | null
-	maintained: 'yes' | 'no' | 'partial' | 'unknown'
+	open_source: boolean
+	accessibility: boolean | null
+	accessibility_note: string | null
+	maintained: boolean | null
 	maintained_note: string | null
-	API: 'yes' | 'no' | 'partial' | 'unknown'
+	API: boolean | null
 	API_note: string | null
 	description: string | null
 }
 
-export default function DarkWebPage() {
-	const { data, loading, error } = useSectionData<DarkWebRecord>('dark_web')
+export default function DomainsIpsPage() {
+	const { data, loading, error } =
+		useSectionData<DomainsIpsRecord>('domains_ips')
 
-	const records: DarkWebRecord[] = data?.data || []
+	const records: DomainsIpsRecord[] = data?.data || []
 	const categoryMeta = data?.meta?.categories || {}
 
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
@@ -34,7 +38,7 @@ export default function DarkWebPage() {
 		)
 	}, [records, selectedCategoriesUpper])
 
-	const columns = useMemo<DataColumnSpec<DarkWebRecord>[]>(() => {
+	const columns = useMemo<DataColumnSpec<DomainsIpsRecord>[]>(() => {
 		return [
 			{
 				id: 'tool',
@@ -59,11 +63,17 @@ export default function DarkWebPage() {
 				),
 			},
 			{
-				id: 'maintained',
+				id: 'open_source',
 				type: 'status',
-				accessorKey: 'maintained',
-				headerLabel: 'Maintained',
-				noteDataKey: 'maintained_note',
+				accessorKey: 'open_source',
+				headerLabel: 'Open Source',
+			},
+			{
+				id: 'accessibility',
+				type: 'status',
+				accessorKey: 'accessibility',
+				headerLabel: 'Accessibility',
+				noteDataKey: 'accessibility_note',
 			},
 			{
 				id: 'API',
@@ -71,6 +81,13 @@ export default function DarkWebPage() {
 				accessorKey: 'API',
 				headerLabel: 'API',
 				noteDataKey: 'API_note',
+			},
+			{
+				id: 'maintained',
+				type: 'status',
+				accessorKey: 'maintained',
+				headerLabel: 'Maintained',
+				noteDataKey: 'maintained_note',
 			},
 			{
 				id: 'description',
@@ -85,13 +102,13 @@ export default function DarkWebPage() {
 	if (loading) {
 		return (
 			<PageLayout
-				title="Dark Web"
-				subtitle="Resources and tools for dark web research"
+				title="Domains & IPs"
+				subtitle="Resources and tools for domains, certificates and IP addresses"
 			>
 				<div className="flex justify-center items-center min-h-64">
 					<div className="text-center">
 						<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-2" />
-						<p style={{ color: '#111111' }}>Loading dark web sources...</p>
+						<p style={{ color: '#111111' }}>Loading domain & IP sources...</p>
 					</div>
 				</div>
 			</PageLayout>
@@ -100,7 +117,7 @@ export default function DarkWebPage() {
 
 	if (error) {
 		return (
-			<PageLayout title="Dark Web">
+			<PageLayout title="Domains & IPs">
 				<div className="flex justify-center items-center min-h-64">
 					<div className="text-center text-red-600">
 						<p className="text-lg font-semibold" style={{ color: '#111111' }}>
@@ -117,10 +134,10 @@ export default function DarkWebPage() {
 
 	return (
 		<PageLayout
-			title="Dark Web"
-			subtitle="Resources and tools for dark web research"
+			title="Domains & IPs"
+			subtitle="Resources and tools for domains, certificates and IP addresses"
 		>
-			<DataTable<DarkWebRecord>
+			<DataTable<DomainsIpsRecord>
 				data={filteredRecords}
 				columns={columns}
 				categoryMeta={categoryMeta}

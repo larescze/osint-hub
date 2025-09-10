@@ -1,0 +1,68 @@
+{
+	"$schema": "../../types/JSON/social_networks.schema.json",
+	"meta": {
+		"categories": {
+			"PI": {
+				"name": "Profile information",
+				"description": "Tools for gathering profile data including Instagram walls, Reddit submissions, trophies, Facebook IDs, usernames, nicknames, and profile/page IDs."
+			},
+			"G": {
+				"name": "Groups and communities",
+				"description": "Tools for analyzing groups, group pages, group IDs, and community information across social platforms."
+			},
+			"E": {
+				"name": "Email addresses",
+				"description": "Tools for discovering and extracting email addresses associated with social media accounts and profiles."
+			},
+			"PMC": {
+				"name": "Posts, messages, and comments",
+				"description": "Tools for collecting posts, messages, comments, reactions, subreddits, stories, feeds, and likes from social media platforms."
+			},
+			"S": {
+				"name": "Statistical and analytical data",
+				"description": "Tools for gathering statistical data and performing analytics on social media accounts and content."
+			},
+			"GE": {
+				"name": "Geolocation data",
+				"description": "Tools for extracting location data and geolocation information from social media posts and profiles."
+			},
+			"CN": {
+				"name": "Cell phone numbers",
+				"description": "Tools for discovering and extracting phone numbers associated with social media accounts."
+			},
+			"AUD": {
+				"name": "Audio-visual content",
+				"description": "Tools for downloading and analyzing audio, video, and image content from social media platforms."
+			},
+			"O": {
+				"name": "Other data types",
+				"description": "Tools for collecting miscellaneous data including events, IP addresses, hostnames, crypto wallets, word frequency analysis, time spent online, and server member information."
+			},
+			"B": {
+				"name": "Bot management",
+				"description": "Tools for creating, operating, and managing social media bots and automation systems."
+			},
+			"C": {
+				"name": "Channels",
+				"description": "Tools for analyzing and monitoring social media channels and broadcasting platforms."
+			},
+			"DT": {
+				"name": "Date and Time",
+				"description": "Tools for analyzing temporal patterns, posting schedules, and time-based data from social media."
+			},
+			"T": {
+				"name": "Trends",
+				"description": "Tools for identifying and tracking trending topics, hashtags, and viral content across social platforms."
+			},
+			"M": {
+				"name": "Metadata",
+				"description": "Tools for extracting metadata including comment counts, shares, media types, account creation dates, 2FA status, and other profile metadata."
+			},
+			"FBF": {
+				"name": "Frame-by-frame video analysis",
+				"description": "Tools for performing frame-by-frame analysis of videos posted on social media platforms."
+			}
+		}
+	},
+	"data": []
+}

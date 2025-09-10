@@ -1,0 +1,93 @@
+{
+	"$schema": "../../types/JSON/archived_web.schema.json",
+	"meta": {
+		"categories": {
+			"A": {
+				"name": "Archived content",
+				"description": "Tools for accessing images, articles, pages that might have already been deleted or modified, including JavaScript content and historical web data."
+			},
+			"B": {
+				"name": "Bibliographical content",
+				"description": "Tools for accessing books, papers, articles, magazines, records and metadata from various repositories and archives."
+			},
+			"C": {
+				"name": "Leaked and classified information",
+				"description": "Tools for accessing leaked and often classified information and documents, including government documents, surveillance and intelligence materials."
+			}
+		}
+	},
+	"data": [
+		{
+			"tool": "Internet Archive",
+			"categories": ["A"],
+			"link": "https://archive.org",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"description": "A tool that allows to view historical data for archived websites."
+		},
+		{
+			"tool": "Archive.today",
+			"categories": ["A"],
+			"link": "https://archive.is",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "A tool that allows to view historical data for archived websites, including textual content, images, frames, and JS-loaded content."
+		},
+		{
+			"tool": "CachedView.com",
+			"categories": ["A"],
+			"link": "https://cachedview.com",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "A tool that allows to view historical data for archived websites using the Google Web Cache and the Archive.org, including textual content, images, frames, and JS-loaded content."
+		},
+		{
+			"tool": "Anna's Archive",
+			"categories": ["B"],
+			"link": "https://annas-archive.org",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "A repository of books, research papers, magazines and other content."
+		},
+		{
+			"tool": "waybackpack",
+			"categories": ["A"],
+			"link": "https://github.com/jsvine/waybackpack",
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"description": "A tool that allows to view historical data for archived websites."
+		},
+		{
+			"tool": "Memento Time Travel",
+			"categories": ["A"],
+			"link": "http://timetravel.mementoweb.org",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"description": "A service which fetches historic data of a page from various web archives."
+		},
+		{
+			"tool": "Cryptome",
+			"categories": ["C"],
+			"link": "https://cryptome.org",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "Storage for all sorts of government materials ranging from interesting, secret to top-secret, including freedom of expression materials, privacy, cryptology, dual-use technologies, national security intelligence."
+		},
+		{
+			"tool": "WikiLeaks",
+			"categories": ["C"],
+			"link": "https://wikileaks.org",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "Storage for all sorts of government materials ranging from interesting, secret to top-secret, including censored or otherwise restricted official materials involving war, spying and corruption."
+		}
+	]
+}

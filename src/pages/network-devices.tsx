@@ -4,21 +4,26 @@ import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
 
-type DarkWebRecord = {
+type NetworkDevicesRecord = {
 	tool: string
 	categories: string[]
 	link: string | null
-	maintained: 'yes' | 'no' | 'partial' | 'unknown'
+	services: boolean | null
+	services_note: string | null
+	CVE: boolean | null
+	CVE_note: string | null
+	maintained: boolean | null
 	maintained_note: string | null
-	API: 'yes' | 'no' | 'partial' | 'unknown'
+	API: boolean | null
 	API_note: string | null
 	description: string | null
 }
 
-export default function DarkWebPage() {
-	const { data, loading, error } = useSectionData<DarkWebRecord>('dark_web')
+export default function NetworkDevicesPage() {
+	const { data, loading, error } =
+		useSectionData<NetworkDevicesRecord>('network_devices')
 
-	const records: DarkWebRecord[] = data?.data || []
+	const records: NetworkDevicesRecord[] = data?.data || []
 	const categoryMeta = data?.meta?.categories || {}
 
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
@@ -34,7 +39,7 @@ export default function DarkWebPage() {
 		)
 	}, [records, selectedCategoriesUpper])
 
-	const columns = useMemo<DataColumnSpec<DarkWebRecord>[]>(() => {
+	const columns = useMemo<DataColumnSpec<NetworkDevicesRecord>[]>(() => {
 		return [
 			{
 				id: 'tool',
@@ -57,6 +62,20 @@ export default function DarkWebPage() {
 						onChange={setSelectedCategoriesUpper}
 					/>
 				),
+			},
+			{
+				id: 'services',
+				type: 'status',
+				accessorKey: 'services',
+				headerLabel: 'Services',
+				noteDataKey: 'services_note',
+			},
+			{
+				id: 'CVE',
+				type: 'status',
+				accessorKey: 'CVE',
+				headerLabel: 'CVE',
+				noteDataKey: 'CVE_note',
 			},
 			{
 				id: 'maintained',
@@ -85,13 +104,13 @@ export default function DarkWebPage() {
 	if (loading) {
 		return (
 			<PageLayout
-				title="Dark Web"
-				subtitle="Resources and tools for dark web research"
+				title="Network Devices"
+				subtitle="Devices discovery, services exposure and CVE sources"
 			>
 				<div className="flex justify-center items-center min-h-64">
 					<div className="text-center">
 						<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-2" />
-						<p style={{ color: '#111111' }}>Loading dark web sources...</p>
+						<p style={{ color: '#111111' }}>Loading device sources...</p>
 					</div>
 				</div>
 			</PageLayout>
@@ -100,7 +119,7 @@ export default function DarkWebPage() {
 
 	if (error) {
 		return (
-			<PageLayout title="Dark Web">
+			<PageLayout title="Network Devices">
 				<div className="flex justify-center items-center min-h-64">
 					<div className="text-center text-red-600">
 						<p className="text-lg font-semibold" style={{ color: '#111111' }}>
@@ -117,10 +136,10 @@ export default function DarkWebPage() {
 
 	return (
 		<PageLayout
-			title="Dark Web"
-			subtitle="Resources and tools for dark web research"
+			title="Network Devices"
+			subtitle="Devices discovery, services exposure and CVE sources"
 		>
-			<DataTable<DarkWebRecord>
+			<DataTable<NetworkDevicesRecord>
 				data={filteredRecords}
 				columns={columns}
 				categoryMeta={categoryMeta}

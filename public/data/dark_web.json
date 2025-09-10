@@ -1,0 +1,40 @@
+{
+	"$schema": "../../types/JSON/dark_web.schema.json",
+	"meta": {
+		"categories": {
+			"S": {
+				"name": "Sites by keyword",
+				"description": "Tools for finding websites related to specific keywords or search terms."
+			},
+			"O": {
+				"name": "Onion sites by keyword",
+				"description": "Tools for discovering .onion sites related to specific keywords or search terms."
+			},
+			"SCDE": {
+				"name": "Scraping, Crawling and Advanced Data Extraction",
+				"description": "Tools for crawling websites, extracting emails, metadata, keywords, titles, HTML code, hostnames, IP addresses, and taking screenshots from onion or standard sites."
+			},
+			"IS": {
+				"name": "Infrastructure and Security Analysis",
+				"description": "Tools for identifying web servers, SSH, SMTP, FTP information, versions, crypto wallets, vulnerabilities, and other operational security issues on onion sites."
+			},
+			"ST": {
+				"name": "Onion site status",
+				"description": "Tools for checking the status and availability of .onion sites."
+			},
+			"CTI": {
+				"name": "Cyber Threat Intelligence",
+				"description": "Platforms created or optimized for performing OSINT specifically for threat intelligence purposes."
+			},
+			"OS": {
+				"name": "Onion services directory",
+				"description": "Tools and directories listing notable onion services and hidden services."
+			},
+			"R": {
+				"name": "Tor relay history",
+				"description": "Tools for checking whether a given IP address was used as a Tor relay during a specific time period."
+			}
+		}
+	},
+	"data": []
+}

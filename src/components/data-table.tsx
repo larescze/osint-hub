@@ -10,20 +10,14 @@ import {
 } from '@tanstack/react-table'
 import ExternalNavigationModal from './external-navigation-dialog'
 import Tag from './tag'
-import type { CategoryMeta } from '../hooks/useOsintData'
+import type { CategoryMeta } from '../hooks/useSectionData'
 import Note from './note'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import { twMerge } from 'tailwind-merge'
 
 type ColumnType = 'text' | 'link' | 'tags' | 'status'
 
-type StatusValue =
-	| boolean
-	| 'yes'
-	| 'no'
-	| 'partial'
-	| 'unknown'
-	| null
-	| undefined
+type StatusValue = boolean | null | undefined
 
 export type DataColumnSpec<T extends object> = {
 	id: string
@@ -33,7 +27,7 @@ export type DataColumnSpec<T extends object> = {
 	accessorKey?: keyof T
 	accessorFn?: (row: T) => unknown
 	sortable?: boolean
-	statusOrder?: Record<'yes' | 'partial' | 'no' | 'unknown', number>
+	statusOrder?: Record<'yes' | 'no' | 'na', number>
 	// link-specific
 	linkHrefKey?: keyof T
 	linkHrefAccessor?: (row: T) => string | null | undefined
@@ -53,23 +47,16 @@ export type DataTableProps<T extends object> = {
 	onSortingChange?: (sorting: SortingState) => void
 }
 
-const DEFAULT_STATUS_ORDER: Record<
-	'yes' | 'partial' | 'no' | 'unknown',
-	number
-> = {
+const DEFAULT_STATUS_ORDER: Record<'yes' | 'no' | 'na', number> = {
 	yes: 0,
-	partial: 1,
-	no: 2,
-	unknown: 3,
+	no: 1,
+	na: 2,
 }
 
-function normalizeStatus(
-	value: StatusValue,
-): 'yes' | 'no' | 'partial' | 'unknown' {
-	if (typeof value === 'boolean') return value ? 'yes' : 'no'
-	if (!value) return 'unknown'
-	const v = String(value).toLowerCase() as 'yes' | 'no' | 'partial' | 'unknown'
-	return ['yes', 'no', 'partial', 'unknown'].includes(v) ? v : 'unknown'
+function normalizeStatus(value: StatusValue): 'yes' | 'no' | 'na' {
+	if (value === true) return 'yes'
+	if (value === false) return 'no'
+	return 'na'
 }
 
 export default function DataTable<T extends object>(props: DataTableProps<T>) {
@@ -163,9 +150,16 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 				header: () => (
 					<button
 						type="button"
-						className={`px-6 h-[40px] text-center uppercase ${
-							spec.headerClassName ?? ''
-						}`}
+						className={twMerge(
+							`px-6 h-[40px] uppercase ${
+								spec.type === 'tags'
+									? 'text-left'
+									: spec.type === 'status'
+										? 'text-center'
+										: 'text-center'
+							}`,
+							spec.headerClassName,
+						)}
 					>
 						{headerNode}
 					</button>
@@ -209,11 +203,12 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 								return (
 									<ExternalNavigationModal
 										trigger={
-											<div className="flex items-center gap-1">
-												<span className="font-medium underline cursor-pointer">
+											<div className="whitespace-nowrap">
+												<span className="font-medium underline cursor-pointer whitespace-normal">
 													{label}
 												</span>
-												<ArrowTopRightOnSquareIcon className="size-4 cursor-pointer" />
+												{'\u00A0'}
+												<ArrowTopRightOnSquareIcon className="size-4 cursor-pointer inline ml-1" />
 												{spec.noteDataKey ? (
 													<Note
 														// biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -256,12 +251,17 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 							const variantMap = {
 								yes: 'success' as const,
 								no: 'error' as const,
-								partial: 'warning' as const,
-								unknown: 'default' as const,
+								na: 'default' as const,
 							}
 							return (
-								<div className="flex items-center gap-1">
-									<Tag variant={variantMap[normalized]}>{normalized}</Tag>
+								<div className="flex items-center gap-1 justify-center">
+									<Tag variant={variantMap[normalized]}>
+										{normalized === 'yes'
+											? 'Yes'
+											: normalized === 'no'
+												? 'No'
+												: 'N/A'}
+									</Tag>
 									{spec.noteDataKey ? (
 										// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 										<Note note={(row as any)[spec.noteDataKey as string]} />
@@ -303,16 +303,16 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 			{stickyHeader && (
 				<div
 					className={`
-            overflow-hidden
-            w-full
-            sticky
-            top-0
-            z-20
-            bg-gray-50
-            border
-            border-gray-200
-            mb-[-42px]
-          `}
+						overflow-hidden
+						w-full
+						sticky
+						top-0
+						z-20
+						bg-gray-50
+						border
+						border-gray-200
+						mb-[-42px]
+					`}
 				>
 					<div className="flex overflow-hidden" ref={stickyHeaderRef}>
 						{(table.getHeaderGroups()[0]?.headers ?? []).map((header) => (
@@ -322,7 +322,18 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 								style={{ color: '#111111' }}
 								onClick={header.column.getToggleSortingHandler()}
 							>
-								<div className="flex items-center space-x-1">
+								<div
+									className={`flex items-center space-x-1 ${(() => {
+										const spec = (
+											specById as Record<string, DataColumnSpec<T> | undefined>
+										)[header.column.id as string]
+										return spec?.type === 'status'
+											? 'justify-center'
+											: spec?.type === 'tags'
+												? 'justify-start'
+												: ''
+									})()}`}
+								>
 									{header.isPlaceholder
 										? null
 										: flexRender(
@@ -355,7 +366,21 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 										style={{ color: '#111111' }}
 										onClick={header.column.getToggleSortingHandler()}
 									>
-										<div className="flex items-center space-x-1">
+										<div
+											className={`flex items-center space-x-1 ${(() => {
+												const spec = (
+													specById as Record<
+														string,
+														DataColumnSpec<T> | undefined
+													>
+												)[header.column.id as string]
+												return spec?.type === 'status'
+													? 'justify-center'
+													: spec?.type === 'tags'
+														? 'justify-start'
+														: ''
+											})()}`}
+										>
 											{header.isPlaceholder
 												? null
 												: flexRender(
@@ -391,10 +416,12 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 											extraStyle = { minWidth: '380px' }
 										}
 									}
+									const alignClass =
+										spec?.type === 'status' ? 'text-center' : ''
 									return (
 										<td
 											key={cell.id}
-											className="px-6 h-[40px] py-2 text-sm"
+											className={`px-6 h-[40px] py-2 text-sm ${alignClass}`}
 											style={{ color: '#111111', ...(extraStyle || {}) }}
 										>
 											{flexRender(

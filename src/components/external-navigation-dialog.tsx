@@ -45,8 +45,9 @@ export default function ExternalNavigationModal(props: {
 
 	const handleOpenChange = (next: boolean) => {
 		if (next) {
-			if (skipWarning) {
-				// Instantly navigate and do not open the dialog
+			// Evaluate cookie at click-time to ensure immediate effect across instances
+			const cookieSaysSkip = readCookie(COOKIE_NAME) === '1'
+			if (skipWarning || cookieSaysSkip) {
 				if (typeof window !== 'undefined') {
 					window.open(props.href, '_blank', 'noopener,noreferrer')
 				}

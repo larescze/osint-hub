@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
-import { useOsintDataContext } from '../contexts/osing-data-context'
+import { useSectionData } from '../hooks/useSectionData'
 
 type SearchEngineRecord = {
 	tool: string
@@ -14,11 +14,11 @@ type SearchEngineRecord = {
 }
 
 export default function SearchEnginesPage() {
-	const { data, loading, error } = useOsintDataContext()
+	const { data, loading, error } =
+		useSectionData<SearchEngineRecord>('search_engines')
 
-	const records: SearchEngineRecord[] =
-		(data?.search_engines?.data as SearchEngineRecord[]) || []
-	const categoryMeta = data?.search_engines?.meta?.categories || {}
+	const records: SearchEngineRecord[] = data?.data || []
+	const categoryMeta = data?.meta?.categories || {}
 
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
 		Set<string>

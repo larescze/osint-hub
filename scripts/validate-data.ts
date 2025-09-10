@@ -3,122 +3,119 @@
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import { DataJSONSchema } from '../types/schema'
+import {
+	ArchivedWebFileSchema,
+	DarkWebFileSchema,
+	DevicesFileSchema,
+	IndexedInternetFileSchema,
+	MixedFileSchema,
+	SearchEnginesFileSchema,
+	SocialNetworksFileSchema,
+	DomainsIpsFileSchema,
+} from '../types/schema'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
-const dataPath = join(__dirname, '..', 'public', 'data', 'data.json')
+const dataDir = join(__dirname, '..', 'public', 'data')
 
 function validateData(): void {
 	try {
-		console.log('🔍 Validating data.json...\n')
+		console.log('🔍 Validating public/data/*.json...\n')
 
-		// Read the data file
-		const dataContent = readFileSync(dataPath, 'utf-8')
-		const data = JSON.parse(dataContent)
+		const files = {
+			indexed_internet: {
+				path: join(dataDir, 'indexed_internet.json'),
+				schema: IndexedInternetFileSchema,
+			},
+			archived_web: {
+				path: join(dataDir, 'archived_web.json'),
+				schema: ArchivedWebFileSchema,
+			},
+			network_devices: {
+				path: join(dataDir, 'network_devices.json'),
+				schema: DevicesFileSchema,
+			},
+			dark_web: {
+				path: join(dataDir, 'dark_web.json'),
+				schema: DarkWebFileSchema,
+			},
+			social_networks: {
+				path: join(dataDir, 'social_networks.json'),
+				schema: SocialNetworksFileSchema,
+			},
+			search_engines: {
+				path: join(dataDir, 'search_engines.json'),
+				schema: SearchEnginesFileSchema,
+			},
+			domains_ips: {
+				path: join(dataDir, 'domains_ips.json'),
+				schema: DomainsIpsFileSchema,
+			},
+			mixed: { path: join(dataDir, 'mixed.json'), schema: MixedFileSchema },
+		} as const
 
-		// First, validate basic structure
-		const basicResult = DataJSONSchema.safeParse(data)
-		if (!basicResult.success) {
-			console.error('❌ Basic structure validation failed!\n')
-			console.error('Issues found:')
-			basicResult.error.issues.forEach((error, index) => {
-				const path = error.path.join('.')
-				console.error(`${index + 1}. ${path}: ${error.message}`)
-			})
-			console.error(`\nTotal issues: ${basicResult.error.issues.length}`)
-			process.exit(1)
-		}
+		type SectionKey = keyof typeof files
 
-		// Validation successful
-		console.log('✅ Schema validation successful!')
-
-		// Count records across all sections
-		const sections = [
-			'indexed_internet',
-			'archived_web',
-			'devices',
-			'dark_web',
-			'social_networks',
-			'search_engines',
-			'mixed',
-		]
 		let totalRecords = 0
-
-		for (const section of sections) {
-			const sectionData = data[section]
-			if (sectionData?.data) {
-				const recordCount = sectionData.data.length
-				totalRecords += recordCount
-				console.log(`📊 ${section}: ${recordCount} records`)
-			}
-		}
-
-		console.log(`📊 Total records across all sections: ${totalRecords}`)
-
-		// Validate categories for each section
-		for (const section of sections) {
-			const sectionData = data[section]
-			if (sectionData?.data) {
-				const availableCategories = Object.keys(sectionData.meta.categories)
-
-				if (availableCategories.length > 0) {
-					console.log(
-						`📋 ${section} available categories: ${availableCategories.join(', ')}`,
-					)
-				}
-
-				// Check for undefined categories in records
-				const usedCategories = new Set<string>()
-				for (const record of sectionData.data) {
-					if (record.categories) {
-						for (const category of record.categories) {
-							usedCategories.add(category)
-						}
-					}
-				}
-
-				const undefinedCategories = Array.from(usedCategories).filter(
-					(category) => !availableCategories.includes(category),
-				)
-
-				if (undefinedCategories.length > 0) {
-					console.error(
-						`\n❌ Error: Found categories used in ${section} records that are not defined in meta:`,
-					)
-					for (const category of undefinedCategories) {
-						console.error(`   - ${category}`)
-					}
-					process.exit(1)
-				}
-
-				// Check for unused categories
-				const unusedCategories = availableCategories.filter(
-					(category) => !usedCategories.has(category),
-				)
-
-				if (unusedCategories.length > 0 && sectionData.data.length > 0) {
-					console.warn(
-						`\n⚠️  Warning: Found categories defined in ${section} meta but not used in any records:`,
-					)
-					for (const category of unusedCategories) {
-						console.warn(`   - ${category}`)
-					}
-				}
-			}
-		}
-
-		// Additional validation: check for duplicates by tool name across all sections
 		const allTools: string[] = []
-		for (const section of sections) {
-			const sectionData = data[section]
-			if (sectionData?.data) {
-				const sectionTools = sectionData.data
-					.map((record: { tool: string }) => record.tool?.toLowerCase().trim())
-					.filter(Boolean)
-				allTools.push(...sectionTools)
+
+		for (const section of Object.keys(files) as SectionKey[]) {
+			const { path, schema } = files[section]
+			const content = readFileSync(path, 'utf-8')
+			const json = JSON.parse(content)
+
+			const result = schema.safeParse(json)
+			if (!result.success) {
+				console.error(`❌ ${section}.json validation failed!\n`)
+				console.error('Issues found:')
+				result.error.issues.forEach((error, index) => {
+					const path = error.path.join('.')
+					console.error(`${index + 1}. ${path}: ${error.message}`)
+				})
+				console.error(`\nTotal issues: ${result.error.issues.length}`)
+				process.exit(1)
+			}
+
+			console.log(`✅ ${section}.json: schema validation successful!`)
+
+			const recordCount = result.data.data.length
+			totalRecords += recordCount
+			console.log(`📊 ${section}: ${recordCount} records`)
+
+			const availableCategories = Object.keys(result.data.meta.categories)
+			if (availableCategories.length > 0) {
+				console.log(
+					`📋 ${section} available categories: ${availableCategories.join(', ')}`,
+				)
+			}
+
+			const usedCategories = new Set<string>()
+			for (const record of result.data.data) {
+				if (record.categories) {
+					for (const category of record.categories) {
+						usedCategories.add(category)
+					}
+				}
+				if (record.tool) {
+					allTools.push(String(record.tool).toLowerCase().trim())
+				}
+			}
+
+			const undefinedCategories = Array.from(usedCategories).filter(
+				(category) => !availableCategories.includes(category),
+			)
+			if (undefinedCategories.length > 0) {
+				console.error(
+					`\n❌ Error: Found categories used in ${section} records that are not defined in meta:`,
+				)
+				for (const category of undefinedCategories) {
+					console.error(`   - ${category}`)
+				}
+				process.exit(1)
 			}
 		}
+
+		console.log(`\n📊 Total records across all sections: ${totalRecords}`)
 
 		const duplicates = allTools.filter(
 			(tool: string, index: number) => allTools.indexOf(tool) !== index,
@@ -136,8 +133,8 @@ function validateData(): void {
 		process.exit(0)
 	} catch (error: unknown) {
 		if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
-			console.error('❌ Error: data.json file not found!')
-			console.error(`Expected at: ${dataPath}`)
+			console.error('❌ Error: one of the section files not found!')
+			console.error(`Expected directory: ${dataDir}`)
 		} else if (error instanceof SyntaxError) {
 			console.error('❌ Error: Invalid JSON syntax in data.json')
 			console.error(error.message)

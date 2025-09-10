@@ -1,15 +1,24 @@
 import { useMemo, useState } from 'react'
-import type { NormalizedRecord, CategoryMeta } from '../hooks/useOsintData'
-import { useOsintDataContext } from '../contexts/osing-data-context'
+import {
+	useSectionData,
+	normalizeIndexedInternetRecord,
+	type NormalizedRecord,
+	type CategoryMeta,
+} from '../hooks/useSectionData'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 
 export default function IndexedInternet() {
-	const { data, loading, error } = useOsintDataContext()
+	const { data, loading, error } = useSectionData('indexed_internet', {
+		map: (records) =>
+			(records as unknown as NormalizedRecord[]).map(
+				normalizeIndexedInternetRecord,
+			),
+	})
 
-	const records = data?.indexed_internet?.records || []
-	const categoryMeta = data?.indexed_internet?.meta?.categories || {}
+	const records = data?.data || []
+	const categoryMeta = data?.meta?.categories || {}
 
 	// Categories filtering state (store uppercase codes for the popover)
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
@@ -54,14 +63,7 @@ export default function IndexedInternet() {
 				type: 'status',
 				accessorKey: 'open_source',
 				headerLabel: 'Open Source',
-				// Match previous ascending behavior: No before Yes
-				statusOrder: { no: 0, yes: 1, partial: 2, unknown: 3 },
-			},
-			{
-				id: 'open_source_license',
-				type: 'text',
-				accessorKey: 'open_source_license',
-				headerLabel: 'License',
+				statusOrder: { yes: 0, no: 1, na: 2 },
 			},
 			{
 				id: 'accessibility',

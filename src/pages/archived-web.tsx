@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
-import { useOsintDataContext } from '../contexts/osing-data-context'
+import { useSectionData } from '../hooks/useSectionData'
 
 type ArchivedWebRecord = {
 	tool: string
@@ -17,11 +17,11 @@ type ArchivedWebRecord = {
 }
 
 export default function ArchivedWebPage() {
-	const { data, loading, error } = useOsintDataContext()
+	const { data, loading, error } =
+		useSectionData<ArchivedWebRecord>('archived_web')
 
-	const records: ArchivedWebRecord[] =
-		(data?.archived_web?.data as ArchivedWebRecord[]) || []
-	const categoryMeta = data?.archived_web?.meta?.categories || {}
+	const records: ArchivedWebRecord[] = data?.data || []
+	const categoryMeta = data?.meta?.categories || {}
 
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
 		Set<string>

@@ -1,0 +1,36 @@
+{
+	"$schema": "../../types/JSON/domains_ips.schema.json",
+	"meta": {
+		"categories": {
+			"D": {
+				"name": "Domains",
+				"description": "Domain WHOIS, DNS, history and analytics"
+			},
+			"IP": {
+				"name": "IP addresses",
+				"description": "IP WHOIS, geolocation, abuse and hosting"
+			},
+			"CERT": {
+				"name": "Certificates",
+				"description": "TLS/SSL certificate transparency and search"
+			},
+			"RDNS": {
+				"name": "Reverse DNS",
+				"description": "Reverse DNS, PTR and rDNS lookups"
+			},
+			"SUB": {
+				"name": "Subdomains",
+				"description": "Subdomain enumeration and discovery"
+			},
+			"ASN": {
+				"name": "ASN",
+				"description": "Autonomous system info, routes and peers"
+			},
+			"DNS": {
+				"name": "DNS records",
+				"description": "DNS records enumeration and history"
+			}
+		}
+	},
+	"data": []
+}

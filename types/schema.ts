@@ -51,7 +51,7 @@ export const RecordBaseSchema = z.object({
 	tool: z.string(),
 	categories: z.array(z.string()),
 	link: z.string().optional(),
-	API: z.enum(['yes', 'no', 'partial', 'unknown']),
+	API: z.boolean().nullable(),
 	API_note: z.string().optional(),
 	description: z.string().optional(),
 })
@@ -60,100 +60,130 @@ export const RecordBaseSchema = z.object({
 export const IdxInternetRecordSchema = RecordBaseSchema.extend({
 	open_source: z.boolean(),
 	open_source_license: z.string().optional(),
-	accessibility: z.enum(['yes', 'no', 'partial', 'unknown']),
+	accessibility: z.boolean().nullable(),
 	accessibility_note: z.string().optional(),
 })
 
 export const ArchivedWebRecordSchema = RecordBaseSchema.extend({
 	open_source: z.boolean(),
-	accessibility: z.enum(['yes', 'no', 'partial', 'unknown']),
+	accessibility: z.boolean().nullable(),
 	accessibility_note: z.string().optional(),
 })
 
 export const DevicesRecordSchema = RecordBaseSchema.extend({
-	services: z.enum(['yes', 'no', 'partial', 'unknown']),
+	services: z.boolean().nullable(),
 	services_note: z.string().optional(),
-	CVE: z.enum(['yes', 'no', 'partial', 'unknown']),
+	CVE: z.boolean().nullable(),
 	CVE_note: z.string().optional(),
-	maintained: z.enum(['yes', 'no', 'partial', 'unknown']),
+	maintained: z.boolean().nullable(),
 	maintained_note: z.string().optional(),
 })
 
 export const DarkWebRecordSchema = RecordBaseSchema.extend({
-	maintained: z.enum(['yes', 'no', 'partial', 'unknown']),
+	maintained: z.boolean().nullable(),
 	maintained_note: z.string().optional(),
 })
 
 export const SocialNetworksRecordSchema = RecordBaseSchema.extend({
 	social_network: z.string(),
-	maintained: z.enum(['yes', 'no', 'partial', 'unknown']),
+	maintained: z.boolean().nullable(),
 	maintained_note: z.string().optional(),
 })
 
 export const MixedRecordSchema = RecordBaseSchema.extend({
-	maintained: z.enum(['yes', 'no', 'partial', 'unknown']),
+	maintained: z.boolean().nullable(),
 	maintained_note: z.string().optional(),
 })
 
 export const SearchEngineRecordSchema = RecordBaseSchema
 
-// Basic schema for initial parsing (before dynamic validation)
-export const DataJSONSchema = z.object({
-	$schema: z.string().optional(),
-	indexed_internet: z
-		.object({
-			meta: z.object({
-				categories: CategoryMetadataSchema,
-			}),
-			data: z.array(IdxInternetRecordSchema),
-		})
-		.superRefine(categoriesRefine),
-	archived_web: z
-		.object({
-			meta: z.object({
-				categories: CategoryMetadataSchema,
-			}),
-			data: z.array(ArchivedWebRecordSchema),
-		})
-		.superRefine(categoriesRefine),
-	devices: z
-		.object({
-			meta: z.object({
-				categories: CategoryMetadataSchema,
-			}),
-			data: z.array(DevicesRecordSchema),
-		})
-		.superRefine(categoriesRefine),
-	dark_web: z
-		.object({
-			meta: z.object({
-				categories: CategoryMetadataSchema,
-			}),
-			data: z.array(DarkWebRecordSchema),
-		})
-		.superRefine(categoriesRefine),
-	social_networks: z
-		.object({
-			meta: z.object({
-				categories: CategoryMetadataSchema,
-			}),
-			data: z.array(SocialNetworksRecordSchema),
-		})
-		.superRefine(categoriesRefine),
-	mixed: z
-		.object({
-			meta: z.object({
-				categories: CategoryMetadataSchema,
-			}),
-			data: z.array(MixedRecordSchema),
-		})
-		.superRefine(categoriesRefine),
-	search_engines: z
-		.object({
-			meta: z.object({
-				categories: CategoryMetadataSchema,
-			}),
-			data: z.array(SearchEngineRecordSchema),
-		})
-		.superRefine(categoriesRefine),
+// Domains & IPs schema: resources for domains, certificates and IP addresses
+export const DomainsIpsRecordSchema = RecordBaseSchema.extend({
+	open_source: z.boolean(),
+	accessibility: z.boolean().nullable(),
+	accessibility_note: z.string().optional(),
+	maintained: z.boolean().nullable(),
+	maintained_note: z.string().optional(),
 })
+
+// Basic schema for initial parsing (before dynamic validation)
+// Per-section schemas for individual JSON files under public/data/*.json
+export const IndexedInternetFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(IdxInternetRecordSchema),
+	})
+	.superRefine(categoriesRefine)
+
+export const ArchivedWebFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(ArchivedWebRecordSchema),
+	})
+	.superRefine(categoriesRefine)
+
+export const DevicesFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(DevicesRecordSchema),
+	})
+	.superRefine(categoriesRefine)
+
+export const DarkWebFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(DarkWebRecordSchema),
+	})
+	.superRefine(categoriesRefine)
+
+export const SocialNetworksFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(SocialNetworksRecordSchema),
+	})
+	.superRefine(categoriesRefine)
+
+export const MixedFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(MixedRecordSchema),
+	})
+	.superRefine(categoriesRefine)
+
+export const SearchEnginesFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(SearchEngineRecordSchema),
+	})
+	.superRefine(categoriesRefine)
+
+export const DomainsIpsFileSchema = z
+	.object({
+		$schema: z.string().optional(),
+		meta: z.object({
+			categories: CategoryMetadataSchema,
+		}),
+		data: z.array(DomainsIpsRecordSchema),
+	})
+	.superRefine(categoriesRefine)

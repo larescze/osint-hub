@@ -1,0 +1,40 @@
+{
+	"$schema": "../../types/JSON/mixed.schema.json",
+	"meta": {
+		"categories": {
+			"PI": {
+				"name": "Profile information",
+				"description": "Tools for gathering profile data including Instagram walls, Reddit submissions, trophies, Facebook IDs, usernames, nicknames, and profile/page IDs."
+			},
+			"E": {
+				"name": "Email addresses",
+				"description": "Tools for discovering and extracting email addresses associated with social media accounts and profiles."
+			},
+			"O": {
+				"name": "Other data types",
+				"description": "Tools for collecting miscellaneous data including events, IP addresses, hostnames, crypto wallets, word frequency analysis, time spent online, and server member information."
+			},
+			"CN": {
+				"name": "Cell phone numbers",
+				"description": "Tools for discovering and extracting phone numbers associated with social media accounts."
+			},
+			"IP": {
+				"name": "IP address",
+				"description": "Tools for discovering and analyzing IP addresses associated with devices and networks."
+			},
+			"PMC": {
+				"name": "Posts, messages, and comments",
+				"description": "Tools for collecting posts, messages, comments, reactions, subreddits, stories, feeds, and likes from social media platforms."
+			},
+			"S": {
+				"name": "Statistical and analytical data",
+				"description": "Tools for gathering statistical data and performing analytics on social media accounts and content."
+			},
+			"GE": {
+				"name": "Geolocation data",
+				"description": "Tools for extracting location data and geolocation information from social media posts and profiles."
+			}
+		}
+	},
+	"data": []
+}

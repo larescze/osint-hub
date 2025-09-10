@@ -1,0 +1,64 @@
+{
+	"$schema": "../../types/JSON/search_engines.schema.json",
+	"meta": {
+		"categories": {
+			"Q": { "name": "Query", "description": "Base query term(s)" },
+			"SW": {
+				"name": "Specific words",
+				"description": "Sites containing a specific set of words"
+			},
+			"EW": {
+				"name": "Explicit words",
+				"description": "Sites containing explicit words"
+			},
+			"AW": {
+				"name": "Any/All words",
+				"description": "Sites containing any/all of given words"
+			},
+			"NW": { "name": "Exclude words", "description": "Exclude given words" },
+			"IU": { "name": "In URL", "description": "Keywords in URL" },
+			"IT": { "name": "In Title", "description": "Keywords in title" },
+			"ITX": { "name": "In Text", "description": "Keywords in text" },
+			"IB": { "name": "In Body", "description": "Keywords in body" },
+			"IA": { "name": "In Anchor", "description": "Keyword in anchor" },
+			"IPG": {
+				"name": "Title or Body",
+				"description": "Keyword in title or body"
+			},
+			"RLT": {
+				"name": "Related pages",
+				"description": "Pages related to a given page"
+			},
+			"L": { "name": "Language", "description": "Restrict by language" },
+			"R": { "name": "Region", "description": "Restrict by region" },
+			"U": { "name": "Last update", "description": "Filter by last update" },
+			"D": { "name": "Domain", "description": "Restrict to domain" },
+			"F": { "name": "File type", "description": "Restrict by file type" },
+			"E": { "name": "Extension", "description": "Restrict by extension" },
+			"RU": { "name": "Rights of use", "description": "Rights filter" },
+			"T": { "name": "Time period", "description": "Specific time period" },
+			"P": { "name": "Pagination", "description": "Pagination controls" },
+			"SRT": { "name": "Sort by", "description": "Sorting results" },
+			"ORDB": { "name": "Order", "description": "Sorting order ASC/DESC" },
+			"GRPB": { "name": "Grouping", "description": "Group results" },
+			"IS": { "name": "Image size", "description": "Filter by image size" },
+			"IP": { "name": "IP host", "description": "Sites hosted on IP" },
+			"PREF": { "name": "Preferences", "description": "Search preferences" },
+			"RF": { "name": "RSS feed", "description": "RSS feed on a site" },
+			"HASFEED": {
+				"name": "Has feed",
+				"description": "Pages containing RSS feed"
+			},
+			"URL": {
+				"name": "Indexed check",
+				"description": "Check if URL is indexed"
+			},
+			"SS": { "name": "SafeSearch", "description": "SafeSearch filter" },
+			"N": {
+				"name": "Results per page",
+				"description": "Number of results per page"
+			}
+		}
+	},
+	"data": []
+}

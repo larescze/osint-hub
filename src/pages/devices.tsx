@@ -2,29 +2,29 @@ import { useMemo, useState } from 'react'
 import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
-import { useOsintDataContext } from '../contexts/osing-data-context'
+import { useSectionData } from '../hooks/useSectionData'
 
 type DevicesRecord = {
 	tool: string
 	categories: string[]
 	link: string | null
-	services: 'yes' | 'no' | 'partial' | 'unknown'
+	services: boolean | null
 	services_note: string | null
-	CVE: 'yes' | 'no' | 'partial' | 'unknown'
+	CVE: boolean | null
 	CVE_note: string | null
-	maintained: 'yes' | 'no' | 'partial' | 'unknown'
+	maintained: boolean | null
 	maintained_note: string | null
-	API: 'yes' | 'no' | 'partial' | 'unknown'
+	API: boolean | null
 	API_note: string | null
 	description: string | null
 }
 
 export default function DevicesPage() {
-	const { data, loading, error } = useOsintDataContext()
+	const { data, loading, error } =
+		useSectionData<DevicesRecord>('network_devices')
 
-	const records: DevicesRecord[] =
-		(data?.devices?.data as DevicesRecord[]) || []
-	const categoryMeta = data?.devices?.meta?.categories || {}
+	const records: DevicesRecord[] = data?.data || []
+	const categoryMeta = data?.meta?.categories || {}
 
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
 		Set<string>
@@ -104,7 +104,7 @@ export default function DevicesPage() {
 	if (loading) {
 		return (
 			<PageLayout
-				title="Devices"
+				title="Network Devices"
 				subtitle="Devices discovery, services exposure and CVE sources"
 			>
 				<div className="flex justify-center items-center min-h-64">
@@ -119,7 +119,7 @@ export default function DevicesPage() {
 
 	if (error) {
 		return (
-			<PageLayout title="Devices">
+			<PageLayout title="Network Devices">
 				<div className="flex justify-center items-center min-h-64">
 					<div className="text-center text-red-600">
 						<p className="text-lg font-semibold" style={{ color: '#111111' }}>
@@ -136,7 +136,7 @@ export default function DevicesPage() {
 
 	return (
 		<PageLayout
-			title="Devices"
+			title="Network Devices"
 			subtitle="Devices discovery, services exposure and CVE sources"
 		>
 			<DataTable<DevicesRecord>

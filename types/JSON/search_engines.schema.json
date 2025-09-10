@@ -1,0 +1,52 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "types/search_engines.schema.json",
+	"title": "Search Engines section file",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"$schema": { "type": "string" },
+		"meta": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"categories": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"name": { "type": "string" },
+							"description": { "type": "string" }
+						},
+						"required": ["name"]
+					}
+				}
+			},
+			"required": ["categories"]
+		},
+		"data": {
+			"type": "array",
+			"items": { "$ref": "#/definitions/SearchEngineRecord" }
+		}
+	},
+	"required": ["meta", "data"],
+	"definitions": {
+		"SearchEngineRecord": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"tool": { "type": "string" },
+				"categories": {
+					"type": "array",
+					"items": { "type": "string" }
+				},
+				"link": { "type": "string" },
+				"API": { "type": ["boolean", "null"] },
+				"API_note": { "type": "string" },
+				"description": { "type": "string" }
+			},
+			"required": ["tool", "categories", "API"]
+		}
+	}
+}

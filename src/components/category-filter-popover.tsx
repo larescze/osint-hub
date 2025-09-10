@@ -1,6 +1,6 @@
 import * as Popover from '@radix-ui/react-popover'
 import Tag from './tag'
-import type { CategoryMeta } from '../hooks/useOsintData'
+import type { CategoryMeta } from '../hooks/useSectionData'
 
 type CategoryFilterPopoverProps = {
 	label?: string
