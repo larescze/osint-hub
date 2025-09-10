@@ -174,18 +174,17 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 									className="text-sm text-gray-600"
 									style={{ color: '#111111' }}
 								>
-									{value ?? (
-										<span
-											className="text-gray-400"
-											style={{ color: '#666666' }}
-										>
-											N/A
-										</span>
-									)}
-									{spec.noteDataKey ? (
-										// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-										<Note note={(row as any)[spec.noteDataKey as string]} />
-									) : null}
+									{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
+									<Note note={(row as any)[spec.noteDataKey as string]}>
+										{value ?? (
+											<span
+												className="text-gray-400"
+												style={{ color: '#666666' }}
+											>
+												N/A
+											</span>
+										)}
+									</Note>
 								</div>
 							)
 						}
@@ -203,19 +202,22 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 								return (
 									<ExternalNavigationModal
 										trigger={
-											<div className="whitespace-nowrap">
+											<Note
+												note={
+													spec.noteDataKey
+														? // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+															(row as any)[spec.noteDataKey as string]
+														: null
+												}
+												as="div"
+												className="whitespace-nowrap"
+											>
 												<span className="font-medium underline cursor-pointer whitespace-normal">
 													{label}
 												</span>
 												{'\u00A0'}
 												<ArrowTopRightOnSquareIcon className="size-4 cursor-pointer inline ml-1" />
-												{spec.noteDataKey ? (
-													<Note
-														// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-														note={(row as any)[spec.noteDataKey as string]}
-													/>
-												) : null}
-											</div>
+											</Note>
 										}
 										href={href as string}
 									/>
@@ -254,7 +256,15 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 								na: 'default' as const,
 							}
 							return (
-								<div className="flex items-center gap-1 justify-center">
+								<Note
+									note={
+										spec.noteDataKey
+											? // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+												(row as any)[spec.noteDataKey as string]
+											: null
+									}
+									className="flex items-center gap-1 justify-center"
+								>
 									<Tag variant={variantMap[normalized]}>
 										{normalized === 'yes'
 											? 'Yes'
@@ -262,11 +272,7 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 												? 'No'
 												: 'N/A'}
 									</Tag>
-									{spec.noteDataKey ? (
-										// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-										<Note note={(row as any)[spec.noteDataKey as string]} />
-									) : null}
-								</div>
+								</Note>
 							)
 						}
 					}

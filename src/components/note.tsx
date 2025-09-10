@@ -1,21 +1,36 @@
 import * as HoverCard from '@radix-ui/react-hover-card'
 import { useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-export default function Note({ note }: { note: string }) {
+export default function Note({
+	as = 'div',
+	className,
+	note,
+	children,
+}: {
+	as?: 'div' | 'span'
+	className?: string
+	note: string | null
+	children: React.ReactNode
+}) {
 	const [isOpen, setIsOpen] = useState(false)
 
-	if (!note) return null
+	const Component = as
+
+	if (!note) return <Component className={className}>{children}</Component>
 
 	return (
 		<HoverCard.Root open={isOpen} onOpenChange={setIsOpen}>
 			<HoverCard.Trigger asChild>
-				<span
-					className="text-sm text-gray-600 cursor-help underline decoration-dotted mx-1 italic"
-					style={{ color: '#111111' }}
+				<Component
+					className={twMerge(
+						'cursor-help underline decoration-dotted',
+						className,
+					)}
 					onClick={() => setIsOpen(!isOpen)}
 				>
-					note
-				</span>
+					{children}
+				</Component>
 			</HoverCard.Trigger>
 			<HoverCard.Portal>
 				<HoverCard.Content
