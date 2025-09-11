@@ -60,6 +60,19 @@ export default function ExternalNavigationModal(props: {
 		}
 	}
 
+	const handleTriggerClick = (): void => {
+		// Evaluate cookie at click-time to ensure immediate effect across instances
+		const cookieSaysSkip = readCookie(COOKIE_NAME) === '1'
+		if (skipWarning || cookieSaysSkip) {
+			if (typeof window !== 'undefined') {
+				window.open(props.href, '_blank', 'noopener,noreferrer')
+			}
+			setIsOpen(false)
+			return
+		}
+		setIsOpen(true)
+	}
+
 	const handleSkipToggle = (checked: boolean) => {
 		setSkipWarning(checked)
 		if (checked) {
@@ -72,7 +85,19 @@ export default function ExternalNavigationModal(props: {
 
 	return (
 		<Dialog.Root open={isOpen} onOpenChange={handleOpenChange}>
-			<Dialog.Trigger asChild>{props.trigger}</Dialog.Trigger>
+			<div
+				role="button"
+				tabIndex={0}
+				onClick={handleTriggerClick}
+				onKeyDown={(e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault()
+						handleTriggerClick()
+					}
+				}}
+			>
+				{props.trigger}
+			</div>
 			<Dialog.Portal>
 				<Dialog.Overlay className="fixed inset-0 bg-black/40 z-20" />
 				<Dialog.Content className="absolute w-[460px] overflow-hidden max-w-[95vw] bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg z-30">
