@@ -1,68 +1,1053 @@
 {
-	"$schema": "../../types/JSON/social_networks.schema.json",
-	"meta": {
-		"categories": {
-			"PI": {
-				"name": "Profile information",
-				"description": "Tools for gathering profile data including Instagram walls, Reddit submissions, trophies, Facebook IDs, usernames, nicknames, and profile/page IDs."
-			},
-			"G": {
-				"name": "Groups and communities",
-				"description": "Tools for analyzing groups, group pages, group IDs, and community information across social platforms."
-			},
-			"E": {
-				"name": "Email addresses",
-				"description": "Tools for discovering and extracting email addresses associated with social media accounts and profiles."
-			},
-			"PMC": {
-				"name": "Posts, messages, and comments",
-				"description": "Tools for collecting posts, messages, comments, reactions, subreddits, stories, feeds, and likes from social media platforms."
-			},
-			"S": {
-				"name": "Statistical and analytical data",
-				"description": "Tools for gathering statistical data and performing analytics on social media accounts and content."
-			},
-			"GE": {
-				"name": "Geolocation data",
-				"description": "Tools for extracting location data and geolocation information from social media posts and profiles."
-			},
-			"CN": {
-				"name": "Cell phone numbers",
-				"description": "Tools for discovering and extracting phone numbers associated with social media accounts."
-			},
-			"AUD": {
-				"name": "Audio-visual content",
-				"description": "Tools for downloading and analyzing audio, video, and image content from social media platforms."
-			},
-			"O": {
-				"name": "Other data types",
-				"description": "Tools for collecting miscellaneous data including events, IP addresses, hostnames, crypto wallets, word frequency analysis, time spent online, and server member information."
-			},
-			"B": {
-				"name": "Bot management",
-				"description": "Tools for creating, operating, and managing social media bots and automation systems."
-			},
-			"C": {
-				"name": "Channels",
-				"description": "Tools for analyzing and monitoring social media channels and broadcasting platforms."
-			},
-			"DT": {
-				"name": "Date and Time",
-				"description": "Tools for analyzing temporal patterns, posting schedules, and time-based data from social media."
-			},
-			"T": {
-				"name": "Trends",
-				"description": "Tools for identifying and tracking trending topics, hashtags, and viral content across social platforms."
-			},
-			"M": {
-				"name": "Metadata",
-				"description": "Tools for extracting metadata including comment counts, shares, media types, account creation dates, 2FA status, and other profile metadata."
-			},
-			"FBF": {
-				"name": "Frame-by-frame video analysis",
-				"description": "Tools for performing frame-by-frame analysis of videos posted on social media platforms."
-			}
-		}
-	},
-	"data": []
+  "$schema": "../../types/JSON/social_networks.schema.json",
+  "meta": {
+    "categories": {
+      "PI": {
+        "name": "Profile information",
+        "description": "Tools for gathering profile data including Instagram walls, Reddit submissions, trophies, Facebook IDs, usernames, nicknames, and profile/page IDs."
+      },
+      "G": {
+        "name": "Groups and communities",
+        "description": "Tools for analyzing groups, group pages, group IDs, and community information across social platforms."
+      },
+      "E": {
+        "name": "Email addresses",
+        "description": "Tools for discovering and extracting email addresses associated with social media accounts and profiles."
+      },
+      "PMC": {
+        "name": "Posts, messages, and comments",
+        "description": "Tools for collecting posts, messages, comments, reactions, subreddits, stories, feeds, and likes from social media platforms."
+      },
+      "S": {
+        "name": "Statistical and analytical data",
+        "description": "Tools for gathering statistical data and performing analytics on social media accounts and content."
+      },
+      "GEO": {
+        "name": "Geolocation data",
+        "description": "Tools for extracting location data and geolocation information from social media posts and profiles."
+      },
+      "CN": {
+        "name": "Cell phone numbers",
+        "description": "Tools for discovering and extracting phone numbers associated with social media accounts."
+      },
+      "AUD": {
+        "name": "Audio-visual content",
+        "description": "Tools for downloading and analyzing audio, video, and image content from social media platforms."
+      },
+      "O": {
+        "name": "Other data types",
+        "description": "Tools for collecting miscellaneous data including events, IP addresses, hostnames, crypto wallets, word frequency analysis, time spent online, and server member information."
+      },
+      "B": {
+        "name": "Bot management",
+        "description": "Tools for creating, operating, and managing social media bots and automation systems."
+      },
+      "C": {
+        "name": "Channels",
+        "description": "Tools for analyzing and monitoring social media channels and broadcasting platforms."
+      },
+      "DT": {
+        "name": "Date and Time",
+        "description": "Tools for analyzing temporal patterns, posting schedules, and time-based data from social media."
+      },
+      "T": {
+        "name": "Trends",
+        "description": "Tools for identifying and tracking trending topics, hashtags, and viral content across social platforms."
+      },
+      "M": {
+        "name": "Metadata",
+        "description": "Tools for extracting metadata including comment counts, shares, media types, account creation dates, 2FA status, and other profile metadata."
+      },
+      "FBF": {
+        "name": "Frame-by-frame video analysis",
+        "description": "Tools for performing frame-by-frame analysis of videos posted on social media platforms."
+      },
+      "+": {
+        "name": "and more",
+        "description": "Tools that offer additional functionalities not covered by the other categories."
+      }
+    }
+  },
+  "data": [
+    {
+      "tool": "Facebook Graph API",
+      "categories": [
+        "PI",
+        "PMC"
+      ],
+      "link": "https://developers.facebook.com/docs/graph-api",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Official Meta API"
+    },
+    {
+      "tool": "Facebook Recover Lookup",
+      "categories": [
+        "PI"
+      ],
+      "link": "https://www.facebook.com/login/identify?ctx=recover",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Checks email-to-account match"
+    },
+    {
+      "tool": "Who Posted What",
+      "categories": [
+        "PI",
+        "PMC"
+      ],
+      "link": "https://whopostedwhat.com/",
+      "social_networks": [
+        "Facebook",
+        "Instagram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Searches Facebook posts by date"
+    },
+    {
+      "tool": "Facebook Graph Searcher",
+      "categories": [
+        "PMC",
+        "AUD",
+        "O"
+      ],
+      "link": "https://intelx.io/tools?tab=facebook",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Searches posts by time period"
+    },
+    {
+      "tool": "Graph.tips",
+      "categories": [
+        "PI",
+        "PMC",
+        "GEO",
+        "AUD",
+        "O"
+      ],
+      "link": "https://graph.tips/beta/",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Facebook search"
+    },
+    {
+      "tool": "LookupID",
+      "categories": [
+        "PI",
+        "G"
+      ],
+      "link": "https://lookup-id.com/",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Extracts ID from a given URL"
+    },
+    {
+      "tool": "RandomTools",
+      "categories": [
+        "PI"
+      ],
+      "link": "https://randomtools.io/",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Extracts ID from a given URL"
+    },
+    {
+      "tool": "Facebook Data Breach Checker",
+      "categories": [
+        "CN"
+      ],
+      "link": "https://haveibeenzuckered.com/",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Checks if number was in 2019 FB breach"
+    },
+    {
+      "tool": "FDOWN",
+      "categories": [
+        "AUD"
+      ],
+      "link": "https://www.fdown.net/",
+      "social_networks": [
+        "Facebook"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Facebook video downloader"
+    },
+    {
+      "tool": "Tweepy",
+      "categories": [
+        "PI",
+        "PMC"
+      ],
+      "link": "https://www.tweepy.org/",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Twitter/X data collection via API"
+    },
+    {
+      "tool": "twarc2",
+      "categories": [
+        "PI",
+        "PMC"
+      ],
+      "link": "https://github.com/DocNow/twarc",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": false,
+      "description": "Twitter/X data collection via API"
+    },
+    {
+      "tool": "Twint",
+      "categories": [
+        "PI",
+        "PMC"
+      ],
+      "link": "https://github.com/twintproject/twint",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Twitter scraper without API"
+    },
+    {
+      "tool": "Twitter Advanced Search",
+      "categories": [
+        "O"
+      ],
+      "link": "https://github.com/igorbrigadir/twitter-advanced-search",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": null,
+      "accessibility": null,
+      "API": null,
+      "maintained": null,
+      "description": "Advanced Twitter/X search"
+    },
+    {
+      "tool": "Followerwonk.com",
+      "categories": [
+        "PI",
+        "S"
+      ],
+      "link": "https://followerwonk.com/",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Analyze/compare Twitter profiles"
+    },
+    {
+      "tool": "socialbearing.com",
+      "categories": null,
+      "link": "https://tomelliott.com/social-media/twitter-search-analytics-tool",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": null,
+      "accessibility": null,
+      "API": null,
+      "maintained": null,
+      "description": "The tools is no longer operation"
+    },
+    {
+      "tool": "twitonomy.com",
+      "categories": [
+        "PI",
+        "S"
+      ],
+      "link": "https://twitonomy.com/",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Twitter analytics."
+    },
+    {
+      "tool": "TWDown",
+      "categories": [
+        "AUD"
+      ],
+      "link": "https://twdown.net/",
+      "social_networks": [
+        "X (Twitter)"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Twitter/X video downloader"
+    },
+    {
+      "tool": "YouTube Data API",
+      "categories": [
+        "G",
+        "O"
+      ],
+      "link": "https://developers.google.com/youtube/v3",
+      "social_networks": [
+        "YouTube"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Official YouTube API"
+    },
+    {
+      "tool": "yt-dlp",
+      "categories": [
+        "AUD",
+        "M"
+      ],
+      "link": "https://github.com/yt-dlp/yt-dlp",
+      "social_networks": [
+        "YouTube"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Video downloader"
+    },
+    {
+      "tool": "MW Metadata",
+      "categories": [
+        "S",
+        "GEO",
+        "M"
+      ],
+      "link": "https://mattw.io/youtube-metadata/",
+      "social_networks": [
+        "YouTube"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Returns video metadata"
+    },
+    {
+      "tool": "TubePilot",
+      "categories": [
+        "M"
+      ],
+      "link": "https://tubepilot.ai/tools/youtube-data-viewer/",
+      "social_networks": [
+        "YouTube"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Returns video metadata"
+    },
+    {
+      "tool": "YouTube GeoFinder",
+      "categories": [
+        "GEO"
+      ],
+      "link": "https://mattw.io/youtube-geofind/",
+      "social_networks": [
+        "YouTube"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": null,
+      "maintained": true,
+      "description": "Finds geo-location of video"
+    },
+    {
+      "tool": "Watch Frame by Frame",
+      "categories": [
+        "FBF"
+      ],
+      "link": "",
+      "social_networks": [
+        "YouTube",
+        "Vimeo"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": null,
+      "description": "Frame-by-frame video viewer"
+    },
+    {
+      "tool": "Anilyzer",
+      "categories": [
+        "FBF"
+      ],
+      "link": "https://anilyzer.com/",
+      "social_networks": [
+        "YouTube",
+        "Vimeo"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Frame-by-frame video viewer"
+    },
+    {
+      "tool": "Discord API",
+      "categories": [
+        "PI",
+        "PMC",
+        "O"
+      ],
+      "link": "https://discord.com/developers/docs/reference",
+      "social_networks": [
+        "Discord"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Official Discord API"
+    },
+    {
+      "tool": "Discord.py",
+      "categories": [
+        "PI",
+        "PMC",
+        "+"
+      ],
+      "link": "https://discordpy.readthedocs.io/en/stable/",
+      "social_networks": [
+        "Discord"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "API wrapper"
+    },
+    {
+      "tool": "Discord History Tracker",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://github.com/chylex/Discord-History-Tracker",
+      "social_networks": [
+        "Discord"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Saves chat history"
+    },
+    {
+      "tool": "LinkedIn API",
+      "categories": [
+        "PI",
+        "G"
+      ],
+      "link": "https://github.com/linkedin-developers",
+      "social_networks": [
+        "LinkedIn"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Official LinkedIn API"
+    },
+    {
+      "tool": "LinkedIn-scraper",
+      "categories": [
+        "PI",
+        "G"
+      ],
+      "link": "https://github.com/joeyism/linkedin_scraper",
+      "social_networks": [
+        "LinkedIn"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "LinkedIn scraper"
+    },
+    {
+      "tool": "TikTok-API",
+      "categories": [
+        "PI",
+        "M"
+      ],
+      "link": "https://developers.tiktok.com/doc/overview",
+      "social_networks": [
+        "TikTok"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Official TikTok API"
+    },
+    {
+      "tool": "TikTok-scraper",
+      "categories": [
+        "PI",
+        "PMC",
+        "AUD",
+        "M"
+      ],
+      "link": "https://github.com/drawrowfly/tiktok-scraper",
+      "social_networks": [
+        "TikTok"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Scrapes profile, video, comments"
+    },
+    {
+      "tool": "TikTok video downloader",
+      "categories": [
+        "AUD"
+      ],
+      "link": "https://ttdown.org/",
+      "social_networks": [
+        "TikTok"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Downloads TikTok videos"
+    },
+    {
+      "tool": "TikTok date extractor",
+      "categories": [
+        "DT"
+      ],
+      "link": "https://bellingcat.github.io/tiktok-timestamp/",
+      "social_networks": [
+        "TikTok"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": null,
+      "description": "Extracts video upload time"
+    },
+    {
+      "tool": "Exolyt",
+      "categories": [
+        "PI",
+        "S",
+        "AUD",
+        "T"
+      ],
+      "link": "https://exolyt.com/",
+      "social_networks": [
+        "TikTok"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "TikTok trends and analytics"
+    },
+    {
+      "tool": "Trend Discovery",
+      "categories": [
+        "T"
+      ],
+      "link": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/en?from=001114",
+      "social_networks": [
+        "TikTok"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Finds trending TikTok content"
+    },
+    {
+      "tool": "Instagram Scraper",
+      "categories": [
+        "PI",
+        "PMC",
+        "GEO",
+        "M"
+      ],
+      "link": "https://github.com/drawrowfly/instagram-scraper",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Scraper for Instagram"
+    },
+    {
+      "tool": "Instaloader",
+      "categories": [
+        "PI",
+        "PMC",
+        "AUD"
+      ],
+      "link": "https://github.com/instaloader/instaloader",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Instagram scraper"
+    },
+    {
+      "tool": "Famety",
+      "categories": [
+        "AUD"
+      ],
+      "link": "https://www.famety.net/download-instagram-stories",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Instagram media downloader"
+    },
+    {
+      "tool": "dumpor",
+      "categories": [
+        "PI",
+        "PMC",
+        "AUD"
+      ],
+      "link": "https://dumpor.io/",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "IG viewer and data collector"
+    },
+    {
+      "tool": "Toolzu",
+      "categories": [
+        "PMC",
+        "AUD"
+      ],
+      "link": "https://toolzu.com/downloader/instagram/",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "IG video/audio downloader"
+    },
+    {
+      "tool": "StorySaver",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://www.storysaver.net/",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "IG story downloader"
+    },
+    {
+      "tool": "InstaHunt",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://instahunt.huntintel.io/",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Finds IG posts by location"
+    },
+    {
+      "tool": "InstaStoriesViewer",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://insta-stories-viewer.com/",
+      "social_networks": [
+        "Instagram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Anonymous viewing of Instagram stories"
+    },
+    {
+      "tool": "Reddit API",
+      "categories": [
+        "PI",
+        "PMC"
+      ],
+      "link": "https://www.reddit.com/dev/api/",
+      "social_networks": [
+        "Reddit"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Official Reddit API"
+    },
+    {
+      "tool": "PRAW",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://github.com/praw-dev/praw",
+      "social_networks": [
+        "Reddit"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Reddit API wrapper"
+    },
+    {
+      "tool": "YARS",
+      "categories": [
+        "PI",
+        "PMC",
+        "AUD"
+      ],
+      "link": "https://github.com/datavorous/yars",
+      "social_networks": [
+        "Reddit"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Reddit scraper"
+    },
+    {
+      "tool": "Pushshift API",
+      "categories": [
+        "PI",
+        "PMC",
+        "O"
+      ],
+      "link": "https://github.com/pushshift/api",
+      "social_networks": [
+        "Reddit"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": false,
+      "description": "Reddit comment/post API"
+    },
+    {
+      "tool": "Redective",
+      "categories": [
+        "PI",
+        "PMC",
+        "O"
+      ],
+      "link": "https://www.redective.com/",
+      "social_networks": [
+        "Reddit"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": null,
+      "description": "Reddit profile info and statistics"
+    },
+    {
+      "tool": "Reddit Comment Search",
+      "categories": [
+        "PMC"
+      ],
+      "link": "",
+      "social_networks": [
+        "Reddit"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Searches comments by user/keyword"
+    },
+    {
+      "tool": "Pinterest API",
+      "categories": [
+        "PI",
+        "S"
+      ],
+      "link": "https://developers.pinterest.com/",
+      "social_networks": [
+        "Pinterest"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Official Pinterest API"
+    },
+    {
+      "tool": "VK API",
+      "categories": [
+        "PI",
+        "G",
+        "PMC",
+        "AUD"
+      ],
+      "link": "https://dev.vk.com/en/reference",
+      "social_networks": [
+        "VKontakte"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": true,
+      "maintained": true,
+      "description": "Official VK API"
+    },
+    {
+      "tool": "OSINTVk",
+      "categories": [
+        "PI",
+        "G",
+        "GEO",
+        "AUD"
+      ],
+      "link": "https://github.com/AdrianGuretto/OSINTvk",
+      "social_networks": [
+        "VKontakte"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Intelligence gathering on VK"
+    },
+    {
+      "tool": "Python-telegram-bot",
+      "categories": [
+        "B"
+      ],
+      "link": "https://github.com/python-telegram-bot/python-telegram-bot",
+      "social_networks": [
+        "Telegram"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Telegram bot API wrapper"
+    },
+    {
+      "tool": "Pryogram",
+      "categories": [
+        "G",
+        "PMC",
+        "AUD",
+        "B",
+        "+"
+      ],
+      "link": "https://github.com/pyrogram/pyrogram",
+      "social_networks": [
+        "Telegram"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Telegram API wrapper"
+    },
+    {
+      "tool": "Lyzem",
+      "categories": [
+        "G",
+        "PMC",
+        "B",
+        "C"
+      ],
+      "link": "https://lyzem.com/",
+      "social_networks": [
+        "Telegram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Searches channels/groups by keyword"
+    },
+    {
+      "tool": "TGStat",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://tgstat.ru/en/search",
+      "social_networks": [
+        "Telegram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Searches posts/messages by keyword"
+    },
+    {
+      "tool": "PSE - Search TG Comments",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://cse.google.com/cse?cx=006368593537057042503:ig4r3rz35qi#gsc.tab=0",
+      "social_networks": [
+        "Telegram"
+      ],
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Searches Telegram comments"
+    },
+    {
+      "tool": "Telegram Nearby Map",
+      "categories": [
+        "GEO"
+      ],
+      "link": "https://github.com/tejado/telegram-nearby-map",
+      "social_networks": [
+        "Telegram"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": false,
+      "description": "Finds nearby Telegram users"
+    },
+    {
+      "tool": "Telegram Phone Number Checker",
+      "categories": [
+        "CN"
+      ],
+      "link": "https://github.com/bellingcat/telegram-phone-number-checker",
+      "social_networks": [
+        "Telegram"
+      ],
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": false,
+      "description": "Checks if number is on Telegram"
+    }
+  ]
 }

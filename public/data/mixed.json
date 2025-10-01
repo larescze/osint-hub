@@ -1,40 +1,261 @@
 {
-	"$schema": "../../types/JSON/mixed.schema.json",
-	"meta": {
-		"categories": {
-			"PI": {
-				"name": "Profile information",
-				"description": "Tools for gathering profile data including Instagram walls, Reddit submissions, trophies, Facebook IDs, usernames, nicknames, and profile/page IDs."
-			},
-			"E": {
-				"name": "Email addresses",
-				"description": "Tools for discovering and extracting email addresses associated with social media accounts and profiles."
-			},
-			"O": {
-				"name": "Other data types",
-				"description": "Tools for collecting miscellaneous data including events, IP addresses, hostnames, crypto wallets, word frequency analysis, time spent online, and server member information."
-			},
-			"CN": {
-				"name": "Cell phone numbers",
-				"description": "Tools for discovering and extracting phone numbers associated with social media accounts."
-			},
-			"IP": {
-				"name": "IP address",
-				"description": "Tools for discovering and analyzing IP addresses associated with devices and networks."
-			},
-			"PMC": {
-				"name": "Posts, messages, and comments",
-				"description": "Tools for collecting posts, messages, comments, reactions, subreddits, stories, feeds, and likes from social media platforms."
-			},
-			"S": {
-				"name": "Statistical and analytical data",
-				"description": "Tools for gathering statistical data and performing analytics on social media accounts and content."
-			},
-			"GE": {
-				"name": "Geolocation data",
-				"description": "Tools for extracting location data and geolocation information from social media posts and profiles."
-			}
-		}
-	},
-	"data": []
+  "$schema": "../../types/JSON/mixed.schema.json",
+  "meta": {
+    "categories": {
+      "PI": {
+        "name": "Profile information",
+        "description": "Tools for gathering profile data including Instagram walls, Reddit submissions, trophies, Facebook IDs, usernames, nicknames, and profile/page IDs."
+      },
+      "E": {
+        "name": "Email addresses",
+        "description": "Tools for discovering and extracting email addresses associated with social media accounts and profiles."
+      },
+      "O": {
+        "name": "Other data types",
+        "description": "Tools for collecting miscellaneous data including events, IP addresses, hostnames, crypto wallets, word frequency analysis, time spent online, and server member information."
+      },
+      "CN": {
+        "name": "Cell phone numbers",
+        "description": "Tools for discovering and extracting phone numbers associated with social media accounts."
+      },
+      "PMC": {
+        "name": "Posts, messages, and comments",
+        "description": "Tools for collecting posts, messages, comments, reactions, subreddits, stories, feeds, and likes from social media platforms."
+      },
+      "M": {
+        "name": "Maltego",
+        "description": "Tools and modules for OSINT investigations using Maltego."
+      },
+      "S": {
+        "name": "Statistical and analytical data",
+        "description": "Tools for gathering statistical data and performing analytics on social media accounts and content."
+      },
+      "GEO": {
+        "name": "Geolocation data",
+        "description": "Tools for extracting location data and geolocation information from social media posts and profiles."
+      },
+      "DD": {
+        "name": "Deep Fake detection",
+        "description": "Tools for detecting deep fake images and videos."
+      },
+      "+": {
+        "name": "and more",
+        "description": "Tools that provide additional functionalities related to mixed data types."
+      }
+    }
+  },
+  "data": [
+    {
+      "tool": "Sherlock",
+      "categories": [
+        "PI"
+      ],
+      "link": "https://github.com/sherlock-project/sherlock",
+      "open_source": true,
+      "accessibility": true,
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Finds accounts by username"
+    },
+    {
+      "tool": "Hunter.io",
+      "categories": [
+        "E"
+      ],
+      "link": "https://hunter.io/",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Email lookup tool"
+    },
+    {
+      "tool": "Facepager",
+      "categories": [
+        "PI",
+        "O",
+        "PMC"
+      ],
+      "link": "https://github.com/strohne/Facepager",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Collects public data from platforms"
+    },
+    {
+      "tool": "Social Searcher",
+      "categories": [
+        "PMC"
+      ],
+      "link": "https://www.social-searcher.com/",
+      "open_source": false,
+      "accessibility": true,
+      "API": null,
+      "maintained": true,
+      "description": "Social media search engine"
+    },
+    {
+      "tool": "Maltego",
+      "categories": [
+        "M"
+      ],
+      "link": "https://www.maltego.com/",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "OSINT investigation with modules"
+    },
+    {
+      "tool": "Social Blade",
+      "categories": [
+        "S",
+        "GEO"
+      ],
+      "link": "https://socialblade.com/",
+      "open_source": false,
+      "accessibility": true,
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Platform stats and geolocation"
+    },
+    {
+      "tool": "PhantomBuster",
+      "categories": [
+        "PI"
+      ],
+      "link": "https://phantombuster.com/",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Data extractor for many platforms"
+    },
+    {
+      "tool": "osint.rocks",
+      "categories": [
+        "PI",
+        "E",
+        "O",
+        "CN"
+      ],
+      "link": "https://osint.rocks/",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": true,
+      "description": "Curated directory of OSINT tools"
+    },
+    {
+      "tool": "IntelTechniques",
+      "categories": [
+        "PI",
+        "E",
+        "O",
+        "GEO"
+      ],
+      "link": "https://inteltechniques.com/",
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Browser-based OSINT search aggregator"
+    },
+    {
+      "tool": "Deepware",
+      "categories": [
+        "DD"
+      ],
+      "link": "https://deepware.ai/",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Deepfake detection"
+    },
+    {
+      "tool": "EmailRep",
+      "categories": [
+        "E"
+      ],
+      "link": "https://emailrep.io/",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Email reputation"
+    },
+    {
+      "tool": "WhatsMyName",
+      "categories": [
+        "PI"
+      ],
+      "link": "https://www.whatsmyname.app/",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Finds accounts by username"
+    },
+    {
+      "tool": "DeHashed",
+      "categories": [
+        "E",
+        "O",
+        "+"
+      ],
+      "link": "https://dehashed.com/",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Breach search and monitoring"
+    },
+    {
+      "tool": "VirusTotal",
+      "categories": [
+        "O"
+      ],
+      "link": "https://www.virustotal.com/gui/home/search",
+      "open_source": false,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Threat intelligence platform"
+    },
+    {
+      "tool": "Synapsint",
+      "categories": [
+        "E",
+        "O",
+        "CN",
+        "GEO"
+      ],
+      "link": "https://www.synapsint.com/",
+      "open_source": false,
+      "accessibility": null,
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Comprehensive OSINT platform"
+    }
+  ]
 }

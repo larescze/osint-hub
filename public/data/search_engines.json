@@ -1,64 +1,317 @@
 {
-	"$schema": "../../types/JSON/search_engines.schema.json",
-	"meta": {
-		"categories": {
-			"Q": { "name": "Query", "description": "Base query term(s)" },
-			"SW": {
-				"name": "Specific words",
-				"description": "Sites containing a specific set of words"
-			},
-			"EW": {
-				"name": "Explicit words",
-				"description": "Sites containing explicit words"
-			},
-			"AW": {
-				"name": "Any/All words",
-				"description": "Sites containing any/all of given words"
-			},
-			"NW": { "name": "Exclude words", "description": "Exclude given words" },
-			"IU": { "name": "In URL", "description": "Keywords in URL" },
-			"IT": { "name": "In Title", "description": "Keywords in title" },
-			"ITX": { "name": "In Text", "description": "Keywords in text" },
-			"IB": { "name": "In Body", "description": "Keywords in body" },
-			"IA": { "name": "In Anchor", "description": "Keyword in anchor" },
-			"IPG": {
-				"name": "Title or Body",
-				"description": "Keyword in title or body"
-			},
-			"RLT": {
-				"name": "Related pages",
-				"description": "Pages related to a given page"
-			},
-			"L": { "name": "Language", "description": "Restrict by language" },
-			"R": { "name": "Region", "description": "Restrict by region" },
-			"U": { "name": "Last update", "description": "Filter by last update" },
-			"D": { "name": "Domain", "description": "Restrict to domain" },
-			"F": { "name": "File type", "description": "Restrict by file type" },
-			"E": { "name": "Extension", "description": "Restrict by extension" },
-			"RU": { "name": "Rights of use", "description": "Rights filter" },
-			"T": { "name": "Time period", "description": "Specific time period" },
-			"P": { "name": "Pagination", "description": "Pagination controls" },
-			"SRT": { "name": "Sort by", "description": "Sorting results" },
-			"ORDB": { "name": "Order", "description": "Sorting order ASC/DESC" },
-			"GRPB": { "name": "Grouping", "description": "Group results" },
-			"IS": { "name": "Image size", "description": "Filter by image size" },
-			"IP": { "name": "IP host", "description": "Sites hosted on IP" },
-			"PREF": { "name": "Preferences", "description": "Search preferences" },
-			"RF": { "name": "RSS feed", "description": "RSS feed on a site" },
-			"HASFEED": {
-				"name": "Has feed",
-				"description": "Pages containing RSS feed"
-			},
-			"URL": {
-				"name": "Indexed check",
-				"description": "Check if URL is indexed"
-			},
-			"SS": { "name": "SafeSearch", "description": "SafeSearch filter" },
-			"N": {
-				"name": "Results per page",
-				"description": "Number of results per page"
-			}
-		}
-	},
-	"data": []
+  "$schema": "../../types/JSON/search_engines.schema.json",
+  "meta": {
+    "categories": {
+      "Q": {
+        "name": "Query",
+        "description": "Base query term(s)"
+      },
+      "SW": {
+        "name": "Specific words",
+        "description": "Sites containing a specific set of words"
+      },
+      "EW": {
+        "name": "Explicit words",
+        "description": "Sites containing explicit words"
+      },
+      "AW": {
+        "name": "Any/All words",
+        "description": "Sites containing any/all of given words"
+      },
+      "NW": {
+        "name": "Exclude words",
+        "description": "Exclude given words"
+      },
+      "IU": {
+        "name": "In URL",
+        "description": "Keywords in URL"
+      },
+      "IT": {
+        "name": "In Title",
+        "description": "Keywords in title"
+      },
+      "ITX": {
+        "name": "In Text",
+        "description": "Keywords in text"
+      },
+      "IB": {
+        "name": "In Body",
+        "description": "Keywords in body"
+      },
+      "IA": {
+        "name": "In Anchor",
+        "description": "Keyword in anchor"
+      },
+      "IPG": {
+        "name": "Title or Body",
+        "description": "Keyword in title or body"
+      },
+      "RLT": {
+        "name": "Related pages",
+        "description": "Pages related to a given page"
+      },
+      "L": {
+        "name": "Language",
+        "description": "Restrict by language"
+      },
+      "R": {
+        "name": "Region",
+        "description": "Restrict by region"
+      },
+      "U": {
+        "name": "Last update",
+        "description": "Filter by last update"
+      },
+      "D": {
+        "name": "Domain",
+        "description": "Restrict to domain"
+      },
+      "F": {
+        "name": "File type",
+        "description": "Restrict by file type"
+      },
+      "E": {
+        "name": "Extension",
+        "description": "Restrict by extension"
+      },
+      "RU": {
+        "name": "Rights of use",
+        "description": "Rights filter"
+      },
+      "T": {
+        "name": "Time period",
+        "description": "Specific time period"
+      },
+      "PG": {
+        "name": "Pagination",
+        "description": "Pagination controls"
+      },
+      "SR": {
+        "name": "Sort by",
+        "description": "Sorting results"
+      },
+      "GR": {
+        "name": "Grouping",
+        "description": "Group results"
+      },
+      "IS": {
+        "name": "Image size",
+        "description": "Filter by image size"
+      },
+      "IP": {
+        "name": "IP host",
+        "description": "Sites hosted on IP"
+      },
+      "P": {
+        "name": "Preferences",
+        "description": "Search preferences"
+      },
+      "RF": {
+        "name": "RSS feed",
+        "description": "RSS feed on a site"
+      },
+      "PRF": {
+        "name": "Has feed",
+        "description": "Pages containing RSS feed"
+      },
+      "SS": {
+        "name": "SafeSearch",
+        "description": "SafeSearch filter"
+      },
+      "N": {
+        "name": "Results per page",
+        "description": "Number of results per page"
+      }
+    }
+  },
+  "data": [
+    {
+      "tool": "Google",
+      "categories": [
+        "SW",
+        "EW",
+        "AW",
+        "NW",
+        "IU",
+        "IT",
+        "ITX",
+        "L",
+        "R",
+        "D",
+        "F",
+        "T",
+        "IP"
+      ],
+      "link": "https://www.google.com/advanced_search",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "description": "Advanced query syntax for precise data retrieval"
+    },
+    {
+      "tool": "Yandex",
+      "categories": [
+        "SW",
+        "EW",
+        "AW",
+        "NW",
+        "PG",
+        "L",
+        "R",
+        "U",
+        "D",
+        "T",
+        "SR",
+        "GR",
+        "IS",
+        "P"
+      ],
+      "link": "https://yandex.com/",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "description": "Comprehensive search with paid API access"
+    },
+    {
+      "tool": "Bing",
+      "categories": [
+        "SW",
+        "EW",
+        "AW",
+        "NW",
+        "IT",
+        "IB",
+        "IA",
+        "L",
+        "R",
+        "D",
+        "F",
+        "E",
+        "PG",
+        "IP",
+        "P",
+        "RF",
+        "PRF"
+      ],
+      "link": "https://www.bing.com/",
+      "API": false,
+      "description": "Rich search features; legacy API deprecation pending"
+    },
+    {
+      "tool": "Brave",
+      "categories": [
+        "SW",
+        "EW",
+        "AW",
+        "NW",
+        "IT",
+        "IB",
+        "IPG",
+        "L",
+        "R",
+        "D",
+        "F",
+        "E"
+      ],
+      "link": "https://search.brave.com/",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "description": "Privacy-centric search with limited free API"
+    },
+    {
+      "tool": "DuckDuckGo",
+      "categories": [
+        "SW",
+        "EW",
+        "AW",
+        "NW",
+        "IU",
+        "IT",
+        "D",
+        "F"
+      ],
+      "link": "https://duckduckgo.com/",
+      "API": true,
+      "description": "Privacy-first search with open API support"
+    },
+    {
+      "tool": "Yahoo",
+      "categories": [
+        "SW",
+        "EW",
+        "AW",
+        "NW",
+        "L",
+        "R",
+        "D",
+        "F",
+        "SS",
+        "N"
+      ],
+      "link": "https://search.yahoo.com/",
+      "API": null,
+      "description": "Legacy engine with basic advanced query tools"
+    },
+    {
+      "tool": "SearXNG",
+      "categories": null,
+      "link": "https://searx.bndkt.io/",
+      "API": true,
+      "description": "Meta-search engine with customizable API"
+    },
+    {
+      "tool": "Baidu",
+      "categories": null,
+      "link": "https://www.baidu.com/",
+      "API": null,
+      "description": "Chinese-language search engine"
+    },
+    {
+      "tool": "SearchEngineCollossus",
+      "categories": null,
+      "link": "https://www.searchenginecolossus.com/",
+      "API": null,
+      "description": "Directory of global search engine endpoints"
+    },
+    {
+      "tool": "I Search From",
+      "categories": [
+        "SW",
+        "EW",
+        "AW",
+        "NW",
+        "IU",
+        "IT",
+        "ITX",
+        "L",
+        "R",
+        "D",
+        "F",
+        "T",
+        "IP"
+      ],
+      "link": "https://isearchfrom.com/",
+      "API": false,
+      "description": "Geolocation manipulation for Google Search"
+    },
+    {
+      "tool": "Milion Short",
+      "categories": null,
+      "link": "https://millionshort.com/",
+      "API": null,
+      "description": "Search engine that skips popular sites"
+    },
+    {
+      "tool": "BoardReader",
+      "categories": [
+        "Q",
+        "SW",
+        "EW",
+        "NW",
+        "L",
+        "R"
+      ],
+      "link": "https://boardreader.com/",
+      "API": true,
+      "description": "Forums and message boards search engine"
+    }
+  ]
 }

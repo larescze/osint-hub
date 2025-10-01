@@ -1,11 +1,13 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "types/dark_web.schema.json",
+	"$id": "types/darknet.schema.json",
 	"title": "Dark Web section file",
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
-		"$schema": { "type": "string" },
+		"$schema": {
+			"type": "string"
+		},
 		"meta": {
 			"type": "object",
 			"additionalProperties": false,
@@ -16,39 +18,79 @@
 						"type": "object",
 						"additionalProperties": false,
 						"properties": {
-							"name": { "type": "string" },
-							"description": { "type": "string" }
+							"name": {
+								"type": "string"
+							},
+							"description": {
+								"type": "string"
+							}
 						},
-						"required": ["name"]
+						"required": [
+							"name"
+						]
 					}
 				}
 			},
-			"required": ["categories"]
+			"required": [
+				"categories"
+			]
 		},
 		"data": {
 			"type": "array",
-			"items": { "$ref": "#/definitions/DarkWebRecord" }
+			"items": {
+				"$ref": "#/definitions/DarkWebRecord"
+			}
 		}
 	},
-	"required": ["meta", "data"],
+	"required": [
+		"meta",
+		"data"
+	],
 	"definitions": {
 		"DarkWebRecord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
-				"API": { "type": ["boolean", "null"] },
-				"API_note": { "type": "string" },
-				"description": { "type": "string" },
-				"maintained": { "type": ["boolean", "null"] },
-				"maintained_note": { "type": "string" }
+				"link": {
+					"type": "string"
+				},
+				"API": {
+					"type": [
+						"boolean",
+						"null"
+					]
+				},
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"maintained": {
+					"type": [
+						"boolean",
+						"null"
+					]
+				},
+				"maintained_note": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API", "maintained"]
+			"required": [
+				"tool",
+				"categories",
+				"API",
+				"maintained"
+			]
 		}
 	}
 }

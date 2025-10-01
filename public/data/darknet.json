@@ -1,0 +1,356 @@
+{
+  "$schema": "../../types/JSON/darknet.schema.json",
+  "meta": {
+    "categories": {
+      "S": {
+        "name": "Sites related to a keyword(s)",
+        "description": "Tools for finding websites related to specific keywords or search terms."
+      },
+      "O": {
+        "name": "Onions sites related to keyword(s)",
+        "description": "Tools for discovering .onion sites related to specific keywords or search terms."
+      },
+      "ST": {
+        "name": "Onion site status",
+        "description": "Tools for checking the status and availability of .onion sites."
+      },
+      "CTI": {
+        "name": "Cyber Threat Intelligence",
+        "description": "Platforms created or optimized for performing OSINT specifically for threat intelligence purposes."
+      },
+      "OS": {
+        "name": "Onion services directory",
+        "description": "Tools and directories listing notable onion services and hidden services."
+      },
+      "R": {
+        "name": "Tor relay history",
+        "description": "Tools for checking whether a given IP address was used as a Tor relay during a specific time period."
+      },
+      "SCDE": {
+        "name": "Scraping, Crawling and Advanced Data Extraction",
+        "description": "Tools for crawling websites, extracting emails, metadata, keywords, titles, HTML code, hostnames, IP addresses, and taking screenshots from onion or standard sites."
+      },
+      "IS": {
+        "name": "Infrastructure and Security Analysis",
+        "description": "Tools for identifying web servers, SSH, SMTP, FTP information, versions, crypto wallets, vulnerabilities, and other operational security issues on onion sites."
+      }
+    }
+  },
+  "data": [
+    {
+      "tool": "Katana",
+      "categories": [
+        "S",
+        "O"
+      ],
+      "link": "https://github.com/0xStrontium/Katana",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Google dorking scanner; supports Tor"
+    },
+    {
+      "tool": "OnionSearch",
+      "categories": [
+        "O"
+      ],
+      "link": "https://github.com/megadose/OnionSearch",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Keyword search across onion search engines"
+    },
+    {
+      "tool": "darkdump",
+      "categories": [
+        "O",
+        "SCDE"
+      ],
+      "link": "https://github.com/josh0xA/darkdump",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Scrapes .onion sites by keyword"
+    },
+    {
+      "tool": "Ahmia",
+      "categories": [
+        "O"
+      ],
+      "link": "https://github.com/ahmia/ahmia-site",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Search engine for Tor hidden services"
+    },
+    {
+      "tool": "Darkus",
+      "categories": [
+        "O"
+      ],
+      "link": "https://github.com/Lucksi/Darkus",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Keyword search across onion search engines"
+    },
+    {
+      "tool": "Onion Search Engine",
+      "categories": [
+        "O"
+      ],
+      "link": "https://onionsearchengine.com/",
+      "open_source": false,
+      "accessibility": true,
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": false,
+      "description": "Keyword search across onion search engines"
+    },
+    {
+      "tool": "Tor2Web",
+      "categories": [
+        "O"
+      ],
+      "link": "https://github.com/tor2web/Tor2web",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Access .onion sites via regular browsers"
+    },
+    {
+      "tool": "OnionLand Search",
+      "categories": [
+        "O"
+      ],
+      "link": "https://www.onionland.io/",
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Access .onion sites via regular browsers"
+    },
+    {
+      "tool": "IACA",
+      "categories": [
+        "O"
+      ],
+      "link": "https://iaca-darkweb-tools.com/",
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Dark web and social media search platform"
+    },
+    {
+      "tool": "Hunchly",
+      "categories": [
+        "S",
+        "O",
+        "SCDE"
+      ],
+      "link": "https://hunch.ly/",
+      "open_source": true,
+      "open_source_note": "Core is open source; some features are paid",
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": true,
+      "description": "Web capture tool for clearnet and dark web"
+    },
+    {
+      "tool": "OnionScan",
+      "categories": [
+        "IS"
+      ],
+      "link": "https://github.com/s-rah/onionscan",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Scans .onion sites for leaks and issues"
+    },
+    {
+      "tool": "docker-onion-nmap",
+      "categories": [
+        "IS"
+      ],
+      "link": "https://github.com/milesrichardson/docker-onion-nmap",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Nmap scanner for .onion ports/services"
+    },
+    {
+      "tool": "ONIOFF",
+      "categories": [
+        "ST"
+      ],
+      "link": "https://github.com/k4m4/onioff",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Checks availability of onion links"
+    },
+    {
+      "tool": "OWASP TorBot",
+      "categories": [
+        "ST",
+        "SCDE"
+      ],
+      "link": "https://github.com/DedSecInside/TorBot",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Crawls onion sites, extracts links and HTML"
+    },
+    {
+      "tool": "TorCrawl.py",
+      "categories": [
+        "SCDE"
+      ],
+      "link": "https://github.com/MikeMeliz/TorCrawl.py",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Crawls onion sites, extracts links and HTML"
+    },
+    {
+      "tool": "VigilantOnion",
+      "categories": [
+        "O",
+        "CTI",
+        "SCDE"
+      ],
+      "link": "https://github.com/andreyglauzer/VigilantOnion",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Searches .onion content by keyword"
+    },
+    {
+      "tool": "OnionIngestor",
+      "categories": [
+        "CTI",
+        "SCDE"
+      ],
+      "link": "https://github.com/danieleperera/OnionIngestor",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Onion site scanner and monitor"
+    },
+    {
+      "tool": "darc",
+      "categories": [
+        "SCDE"
+      ],
+      "link": "https://github.com/JarryShaw/darc",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Onion site crawler"
+    },
+    {
+      "tool": "midnight_sea",
+      "categories": [
+        "SCDE"
+      ],
+      "link": "https://github.com/RicYaben/midnight_sea",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Dark web marketplace investigation"
+    },
+    {
+      "tool": "pryingdeep",
+      "categories": [
+        "SCDE"
+      ],
+      "link": "https://github.com/iudicium/pryingdeep",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": false,
+      "description": "Crawls .onion for certs, crypto wallets, etc."
+    },
+    {
+      "tool": "Lunar",
+      "categories": [
+        "CTI"
+      ],
+      "link": "https://webz.io/products/lunar/#lite?1",
+      "open_source": false,
+      "accessibility": null,
+      "API": true,
+      "API_note": "Paid or restricted access",
+      "maintained": null,
+      "description": "Dark web monitoring for breaches and TTPs"
+    },
+    {
+      "tool": "deepdarkCLI",
+      "categories": [
+        "CTI"
+      ],
+      "link": "https://github.com/fastfire/deepdarkCTI",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Threat collection from dark/deep web"
+    },
+    {
+      "tool": "spiderfoot",
+      "categories": [
+        "CTI",
+        "SCDE"
+      ],
+      "link": "https://github.com/smicallef/spiderfoot",
+      "open_source": true,
+      "accessibility": true,
+      "accessibility_note": "Paid or restricted access",
+      "API": false,
+      "maintained": false,
+      "description": "OSINT tool with dark web and Tor support"
+    },
+    {
+      "tool": "List of Tor Onion services (Wikiwand)",
+      "categories": [
+        "OS"
+      ],
+      "link": "https://www.wikiwand.com/en/articles/List_of_Tor_onion_services",
+      "open_source": false,
+      "accessibility": true,
+      "API": false,
+      "maintained": null,
+      "description": "Aggregated list of .onion services"
+    },
+    {
+      "tool": "ExoneraTor",
+      "categories": [
+        "R"
+      ],
+      "link": "https://metrics.torproject.org/exonerator.html",
+      "open_source": true,
+      "accessibility": true,
+      "API": false,
+      "maintained": true,
+      "description": "Shows when IP was last used as a Tor relay"
+    }
+  ]
+}

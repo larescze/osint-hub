@@ -23,21 +23,34 @@
 								"type": "object",
 								"additionalProperties": false,
 								"properties": {
-									"name": { "type": "string" },
-									"description": { "type": "string" }
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
 								},
-								"required": ["name"]
+								"required": [
+									"name"
+								]
 							}
 						}
 					},
-					"required": ["categories"]
+					"required": [
+						"categories"
+					]
 				},
 				"data": {
 					"type": "array",
-					"items": { "$ref": "#/definitions/IndexedInternetRecord" }
+					"items": {
+						"$ref": "#/definitions/IndexedInternetRecord"
+					}
 				}
 			},
-			"required": ["meta", "data"]
+			"required": [
+				"meta",
+				"data"
+			]
 		},
 		"archived_web": {
 			"type": "object",
@@ -53,21 +66,34 @@
 								"type": "object",
 								"additionalProperties": false,
 								"properties": {
-									"name": { "type": "string" },
-									"description": { "type": "string" }
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
 								},
-								"required": ["name"]
+								"required": [
+									"name"
+								]
 							}
 						}
 					},
-					"required": ["categories"]
+					"required": [
+						"categories"
+					]
 				},
 				"data": {
 					"type": "array",
-					"items": { "$ref": "#/definitions/ArchivedWebRecord" }
+					"items": {
+						"$ref": "#/definitions/ArchivedWebRecord"
+					}
 				}
 			},
-			"required": ["meta", "data"]
+			"required": [
+				"meta",
+				"data"
+			]
 		},
 		"devices": {
 			"type": "object",
@@ -83,23 +109,36 @@
 								"type": "object",
 								"additionalProperties": false,
 								"properties": {
-									"name": { "type": "string" },
-									"description": { "type": "string" }
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
 								},
-								"required": ["name"]
+								"required": [
+									"name"
+								]
 							}
 						}
 					},
-					"required": ["categories"]
+					"required": [
+						"categories"
+					]
 				},
 				"data": {
 					"type": "array",
-					"items": { "$ref": "#/definitions/DevicesRecord" }
+					"items": {
+						"$ref": "#/definitions/DevicesRecord"
+					}
 				}
 			},
-			"required": ["meta", "data"]
+			"required": [
+				"meta",
+				"data"
+			]
 		},
-		"dark_web": {
+		"darknet": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
@@ -113,21 +152,34 @@
 								"type": "object",
 								"additionalProperties": false,
 								"properties": {
-									"name": { "type": "string" },
-									"description": { "type": "string" }
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
 								},
-								"required": ["name"]
+								"required": [
+									"name"
+								]
 							}
 						}
 					},
-					"required": ["categories"]
+					"required": [
+						"categories"
+					]
 				},
 				"data": {
 					"type": "array",
-					"items": { "$ref": "#/definitions/DarkWebRecord" }
+					"items": {
+						"$ref": "#/definitions/DarkWebRecord"
+					}
 				}
 			},
-			"required": ["meta", "data"]
+			"required": [
+				"meta",
+				"data"
+			]
 		},
 		"social_networks": {
 			"type": "object",
@@ -143,21 +195,34 @@
 								"type": "object",
 								"additionalProperties": false,
 								"properties": {
-									"name": { "type": "string" },
-									"description": { "type": "string" }
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
 								},
-								"required": ["name"]
+								"required": [
+									"name"
+								]
 							}
 						}
 					},
-					"required": ["categories"]
+					"required": [
+						"categories"
+					]
 				},
 				"data": {
 					"type": "array",
-					"items": { "$ref": "#/definitions/SocialNetworksRecord" }
+					"items": {
+						"$ref": "#/definitions/SocialNetworksRecord"
+					}
 				}
 			},
-			"required": ["meta", "data"]
+			"required": [
+				"meta",
+				"data"
+			]
 		},
 		"mixed": {
 			"type": "object",
@@ -173,21 +238,34 @@
 								"type": "object",
 								"additionalProperties": false,
 								"properties": {
-									"name": { "type": "string" },
-									"description": { "type": "string" }
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
 								},
-								"required": ["name"]
+								"required": [
+									"name"
+								]
 							}
 						}
 					},
-					"required": ["categories"]
+					"required": [
+						"categories"
+					]
 				},
 				"data": {
 					"type": "array",
-					"items": { "$ref": "#/definitions/MixedRecord" }
+					"items": {
+						"$ref": "#/definitions/MixedRecord"
+					}
 				}
 			},
-			"required": ["meta", "data"]
+			"required": [
+				"meta",
+				"data"
+			]
 		},
 		"search_engines": {
 			"type": "object",
@@ -203,28 +281,41 @@
 								"type": "object",
 								"additionalProperties": false,
 								"properties": {
-									"name": { "type": "string" },
-									"description": { "type": "string" }
+									"name": {
+										"type": "string"
+									},
+									"description": {
+										"type": "string"
+									}
 								},
-								"required": ["name"]
+								"required": [
+									"name"
+								]
 							}
 						}
 					},
-					"required": ["categories"]
+					"required": [
+						"categories"
+					]
 				},
 				"data": {
 					"type": "array",
-					"items": { "$ref": "#/definitions/SearchEngineRecord" }
+					"items": {
+						"$ref": "#/definitions/SearchEngineRecord"
+					}
 				}
 			},
-			"required": ["meta", "data"]
+			"required": [
+				"meta",
+				"data"
+			]
 		}
 	},
 	"required": [
 		"indexed_internet",
 		"archived_web",
 		"devices",
-		"dark_web",
+		"darknet",
 		"social_networks",
 		"mixed",
 		"search_engines"
@@ -234,178 +325,386 @@
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
+				"link": {
+					"type": "string"
+				},
 				"API": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"API_note": { "type": "string" },
-				"description": { "type": "string" },
-				"open_source": { "type": "boolean" },
-				"open_source_license": { "type": "string" },
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"open_source": {
+					"type": "boolean"
+				},
+				"open_source_license": {
+					"type": "string"
+				},
 				"accessibility": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"accessibility_note": { "type": "string" }
+				"accessibility_note": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API", "open_source", "accessibility"]
+			"required": [
+				"tool",
+				"categories",
+				"API",
+				"open_source",
+				"accessibility"
+			]
 		},
 		"ArchivedWebRecord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
+				"link": {
+					"type": "string"
+				},
 				"API": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"API_note": { "type": "string" },
-				"description": { "type": "string" },
-				"open_source": { "type": "boolean" },
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"open_source": {
+					"type": "boolean"
+				},
 				"accessibility": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"accessibility_note": { "type": "string" }
+				"accessibility_note": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API", "open_source", "accessibility"]
+			"required": [
+				"tool",
+				"categories",
+				"API",
+				"open_source",
+				"accessibility"
+			]
 		},
 		"DevicesRecord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
+				"link": {
+					"type": "string"
+				},
 				"API": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"API_note": { "type": "string" },
-				"description": { "type": "string" },
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
 				"services": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"services_note": { "type": "string" },
+				"services_note": {
+					"type": "string"
+				},
 				"CVE": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"CVE_note": { "type": "string" },
+				"CVE_note": {
+					"type": "string"
+				},
 				"maintained": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"maintained_note": { "type": "string" }
+				"maintained_note": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API", "services", "CVE", "maintained"]
+			"required": [
+				"tool",
+				"categories",
+				"API",
+				"services",
+				"CVE",
+				"maintained"
+			]
 		},
 		"DarkWebRecord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
+				"link": {
+					"type": "string"
+				},
 				"API": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"API_note": { "type": "string" },
-				"description": { "type": "string" },
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
 				"maintained": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"maintained_note": { "type": "string" }
+				"maintained_note": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API", "maintained"]
+			"required": [
+				"tool",
+				"categories",
+				"API",
+				"maintained"
+			]
 		},
 		"SocialNetworksRecord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
+				"link": {
+					"type": "string"
+				},
 				"API": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"API_note": { "type": "string" },
-				"description": { "type": "string" },
-				"social_network": { "type": "string" },
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
+				"social_network": {
+					"type": "string"
+				},
 				"maintained": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"maintained_note": { "type": "string" }
+				"maintained_note": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API", "social_network", "maintained"]
+			"required": [
+				"tool",
+				"categories",
+				"API",
+				"social_network",
+				"maintained"
+			]
 		},
 		"MixedRecord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
+				"link": {
+					"type": "string"
+				},
 				"API": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"API_note": { "type": "string" },
-				"description": { "type": "string" },
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				},
 				"maintained": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"maintained_note": { "type": "string" }
+				"maintained_note": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API", "maintained"]
+			"required": [
+				"tool",
+				"categories",
+				"API",
+				"maintained"
+			]
 		},
 		"SearchEngineRecord": {
 			"type": "object",
 			"additionalProperties": false,
 			"properties": {
-				"tool": { "type": "string" },
+				"tool": {
+					"type": "string"
+				},
 				"categories": {
 					"type": "array",
-					"items": { "type": "string" }
+					"items": {
+						"type": "string"
+					}
 				},
-				"link": { "type": "string" },
+				"link": {
+					"type": "string"
+				},
 				"API": {
 					"type": "string",
-					"enum": ["yes", "no", "partial", "unknown"]
+					"enum": [
+						"yes",
+						"no",
+						"partial",
+						"unknown"
+					]
 				},
-				"API_note": { "type": "string" },
-				"description": { "type": "string" }
+				"API_note": {
+					"type": "string"
+				},
+				"description": {
+					"type": "string"
+				}
 			},
-			"required": ["tool", "categories", "API"]
+			"required": [
+				"tool",
+				"categories",
+				"API"
+			]
 		}
 	}
 }
