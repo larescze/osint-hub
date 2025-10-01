@@ -126,6 +126,15 @@ function Home() {
 				aspects”, which is currently under review in the journal Computers &
 				Security.
 			</p>
+			<h2 className="text-2xl font-bold mb-2">Authors</h2>
+			<p className="mb-3">
+				The original authors of the comparative analysis are Willi Lazarov,
+				Vojtech Moravec, Pavel Loutocky, Jakub Vostoupal, and Zdenek Martinasek.
+			</p>
+			<p className="mb-6">
+				Special thanks go to Pavel Prochorov, Josef Bezunk, and Roman Klampar
+				for their methodological and technical support in this work.
+			</p>
 			<h2 className="text-2xl font-bold mb-2 mt-6">Contributing</h2>
 			<div className="mb-6">
 				<p>
