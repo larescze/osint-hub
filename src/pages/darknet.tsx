@@ -16,7 +16,7 @@ type DarkWebRecord = {
 }
 
 export default function DarkWebPage() {
-	const { data, loading, error } = useSectionData<DarkWebRecord>('dark_web')
+	const { data, loading, error } = useSectionData<DarkWebRecord>('darknet')
 
 	const records: DarkWebRecord[] = data?.data || []
 	const categoryMeta = data?.meta?.categories || {}
@@ -41,7 +41,7 @@ export default function DarkWebPage() {
 				type: 'link',
 				accessorKey: 'tool',
 				linkHrefKey: 'link',
-				headerLabel: 'Tool',
+				headerLabel: 'Name',
 			},
 			{
 				id: 'categories',
@@ -59,11 +59,17 @@ export default function DarkWebPage() {
 				),
 			},
 			{
-				id: 'maintained',
+				id: 'open_source',
 				type: 'status',
-				accessorKey: 'maintained',
-				headerLabel: 'Maintained',
-				noteDataKey: 'maintained_note',
+				accessorKey: 'open_source',
+				headerLabel: 'Open Source',
+			},
+			{
+				id: 'accessibility',
+				type: 'status',
+				accessorKey: 'accessibility',
+				headerLabel: 'Accessibility',
+				noteDataKey: 'accessibility_note',
 			},
 			{
 				id: 'API',
@@ -73,12 +79,19 @@ export default function DarkWebPage() {
 				noteDataKey: 'API_note',
 			},
 			{
+				id: 'maintained',
+				type: 'status',
+				accessorKey: 'maintained',
+				headerLabel: 'Maintained',
+				noteDataKey: 'maintained_note',
+			},
+			{
 				id: 'description',
 				type: 'text',
 				accessorKey: 'description',
 				headerLabel: 'Description',
 				sortable: false,
-			},
+			}
 		]
 	}, [categoryMeta, selectedCategoriesUpper])
 

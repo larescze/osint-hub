@@ -41,7 +41,7 @@ export default function MixedPage() {
 				type: 'link',
 				accessorKey: 'tool',
 				linkHrefKey: 'link',
-				headerLabel: 'Tool',
+				headerLabel: 'Name',
 			},
 			{
 				id: 'categories',
@@ -59,11 +59,17 @@ export default function MixedPage() {
 				),
 			},
 			{
-				id: 'maintained',
+				id: 'open_source',
 				type: 'status',
-				accessorKey: 'maintained',
-				headerLabel: 'Maintained',
-				noteDataKey: 'maintained_note',
+				accessorKey: 'open_source',
+				headerLabel: 'Open Source',
+			},
+			{
+				id: 'accessibility',
+				type: 'status',
+				accessorKey: 'accessibility',
+				headerLabel: 'Accessibility',
+				noteDataKey: 'accessibility_note',
 			},
 			{
 				id: 'API',
@@ -71,6 +77,13 @@ export default function MixedPage() {
 				accessorKey: 'API',
 				headerLabel: 'API',
 				noteDataKey: 'API_note',
+			},
+			{
+				id: 'maintained',
+				type: 'status',
+				accessorKey: 'maintained',
+				headerLabel: 'Maintained',
+				noteDataKey: 'maintained_note',
 			},
 			{
 				id: 'description',

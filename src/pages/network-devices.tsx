@@ -46,7 +46,7 @@ export default function NetworkDevicesPage() {
 				type: 'link',
 				accessorKey: 'tool',
 				linkHrefKey: 'link',
-				headerLabel: 'Tool',
+				headerLabel: 'Name',
 			},
 			{
 				id: 'categories',
@@ -64,6 +64,26 @@ export default function NetworkDevicesPage() {
 				),
 			},
 			{
+				id: 'open_source',
+				type: 'status',
+				accessorKey: 'open_source',
+				headerLabel: 'Open Source',
+			},
+			{
+				id: 'accessibility',
+				type: 'status',
+				accessorKey: 'accessibility',
+				headerLabel: 'Accessibility',
+				noteDataKey: 'accessibility_note',
+			},
+			{
+				id: 'API',
+				type: 'status',
+				accessorKey: 'API',
+				headerLabel: 'API',
+				noteDataKey: 'API_note',
+			},
+			{
 				id: 'services',
 				type: 'status',
 				accessorKey: 'services',
@@ -76,20 +96,6 @@ export default function NetworkDevicesPage() {
 				accessorKey: 'CVE',
 				headerLabel: 'CVE',
 				noteDataKey: 'CVE_note',
-			},
-			{
-				id: 'maintained',
-				type: 'status',
-				accessorKey: 'maintained',
-				headerLabel: 'Maintained',
-				noteDataKey: 'maintained_note',
-			},
-			{
-				id: 'API',
-				type: 'status',
-				accessorKey: 'API',
-				headerLabel: 'API',
-				noteDataKey: 'API_note',
 			},
 			{
 				id: 'description',

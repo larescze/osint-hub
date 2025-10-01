@@ -45,7 +45,7 @@ export default function DomainsIpsPage() {
 				type: 'link',
 				accessorKey: 'tool',
 				linkHrefKey: 'link',
-				headerLabel: 'Tool',
+				headerLabel: 'Name',
 			},
 			{
 				id: 'categories',

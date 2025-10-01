@@ -43,7 +43,7 @@ export default function ArchivedWebPage() {
 				type: 'link',
 				accessorKey: 'tool',
 				linkHrefKey: 'link',
-				headerLabel: 'Tool',
+				headerLabel: 'Name',
 			},
 			{
 				id: 'categories',
