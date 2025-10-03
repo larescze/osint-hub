@@ -34,21 +34,21 @@
 	"definitions": {
 		"MixedRecord": {
 			"type": "object",
-			"additionalProperties": false,
+			"additionalProperties": true,
 			"properties": {
-				"tool": { "type": "string" },
+				"name": { "type": "string" },
 				"categories": {
-					"type": "array",
+					"type": ["array", "null"],
 					"items": { "type": "string" }
 				},
-				"link": { "type": "string" },
+				"link": { "type": ["string", "null"] },
 				"API": { "type": ["boolean", "null"] },
 				"API_note": { "type": "string" },
-				"description": { "type": "string" },
+				"description": { "type": ["string", "null"] },
 				"maintained": { "type": ["boolean", "null"] },
 				"maintained_note": { "type": "string" }
 			},
-			"required": ["tool", "categories", "API", "maintained"]
+			"required": ["name", "categories", "API", "maintained"]
 		}
 	}
 }

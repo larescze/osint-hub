@@ -18,17 +18,19 @@ function categoriesRefine(
 					name: string
 					description?: string | null
 				}
-			}
+			} | null
 		}
 		data: {
-			categories: string[]
+			categories: string[] | null
 		}[]
 	},
 	ctx: z.RefinementCtx,
 ) {
+	if (!data.meta.categories) return
 	const availableCategories = Object.keys(data.meta.categories)
 	const categorySchema = createCategorySchema(availableCategories)
 	for (const record of data.data) {
+		if (!record.categories) continue
 		for (const category of record.categories) {
 			if (!categorySchema.safeParse(category).success) {
 				ctx.addIssue({
@@ -48,62 +50,45 @@ export function createCategorySchema(categories: string[]) {
 }
 
 export const RecordBaseSchema = z.object({
-	tool: z.string(),
-	categories: z.array(z.string()),
-	link: z.string().optional(),
+	name: z.string(),
+	categories: z.array(z.string()).nullable(),
+	link: z.string().nullable().optional(),
 	API: z.boolean().nullable(),
 	API_note: z.string().optional(),
-	description: z.string().optional(),
+	description: z.string().optional().nullable(),
+	open_source: z.boolean().nullable(),
+	accessibility: z.boolean().nullable(),
+	accessibility_note: z.string().optional(),
+})
+
+const MaintainableRecordSchema = RecordBaseSchema.extend({
+	maintained: z.boolean().nullable(),
+	maintained_note: z.string().optional(),
 })
 
 // Schemas for specific sections
-export const IdxInternetRecordSchema = RecordBaseSchema.extend({
-	open_source: z.boolean(),
-	open_source_license: z.string().optional(),
-	accessibility: z.boolean().nullable(),
-	accessibility_note: z.string().optional(),
-})
-
-export const ArchivedWebRecordSchema = RecordBaseSchema.extend({
-	open_source: z.boolean(),
-	accessibility: z.boolean().nullable(),
-	accessibility_note: z.string().optional(),
-})
-
+export const IdxInternetRecordSchema = RecordBaseSchema
+export const ArchivedWebRecordSchema = RecordBaseSchema
 export const DevicesRecordSchema = RecordBaseSchema.extend({
 	services: z.boolean().nullable(),
 	services_note: z.string().optional(),
 	CVE: z.boolean().nullable(),
 	CVE_note: z.string().optional(),
-	maintained: z.boolean().nullable(),
-	maintained_note: z.string().optional(),
 })
 
-export const DarkWebRecordSchema = RecordBaseSchema.extend({
-	maintained: z.boolean().nullable(),
-	maintained_note: z.string().optional(),
+export const DarknetRecordSchema = MaintainableRecordSchema
+export const MixedRecordSchema = MaintainableRecordSchema
+export const DomainsIpsRecordSchema = MaintainableRecordSchema
+export const IndexedInternetRecordSchema = RecordBaseSchema
+
+export const SocialNetworksRecordSchema = MaintainableRecordSchema.extend({
+	social_networks: z.string().array().nullable(),
 })
 
-export const SocialNetworksRecordSchema = RecordBaseSchema.extend({
-	social_network: z.string(),
-	maintained: z.boolean().nullable(),
-	maintained_note: z.string().optional(),
-})
-
-export const MixedRecordSchema = RecordBaseSchema.extend({
-	maintained: z.boolean().nullable(),
-	maintained_note: z.string().optional(),
-})
-
-export const SearchEngineRecordSchema = RecordBaseSchema
-
-// Domains & IPs schema: resources for domains, certificates and IP addresses
-export const DomainsIpsRecordSchema = RecordBaseSchema.extend({
-	open_source: z.boolean(),
-	accessibility: z.boolean().nullable(),
-	accessibility_note: z.string().optional(),
-	maintained: z.boolean().nullable(),
-	maintained_note: z.string().optional(),
+export const SearchEngineRecordSchema = RecordBaseSchema.omit({
+	accessibility: true,
+	accessibility_note: true,
+	open_source: true,
 })
 
 // Basic schema for initial parsing (before dynamic validation)
@@ -138,13 +123,13 @@ export const DevicesFileSchema = z
 	})
 	.superRefine(categoriesRefine)
 
-export const DarkWebFileSchema = z
+export const DarknetFileSchema = z
 	.object({
 		$schema: z.string().optional(),
 		meta: z.object({
 			categories: CategoryMetadataSchema,
 		}),
-		data: z.array(DarkWebRecordSchema),
+		data: z.array(DarknetRecordSchema),
 	})
 	.superRefine(categoriesRefine)
 

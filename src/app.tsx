@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import IndexedInternet from './pages/indexed-internet'
 import ArchivedWebPage from './pages/archived-web'
 import NetworkDevicesPage from './pages/network-devices'
-import DarkWebPage from './pages/darknet'
+import DarknetPage from './pages/darknet'
 import SocialNetworksPage from './pages/social-networks'
 import MixedPage from './pages/mixed'
 import SearchEnginesPage from './pages/search-engines'
@@ -87,7 +87,7 @@ function App(): React.ReactElement {
 						<Route path="/indexed-internet" element={<IndexedInternet />} />
 						<Route path="/archived-web" element={<ArchivedWebPage />} />
 						<Route path="/network-devices" element={<NetworkDevicesPage />} />
-						<Route path="/darknet" element={<DarkWebPage />} />
+						<Route path="/darknet" element={<DarknetPage />} />
 						<Route path="/social-networks" element={<SocialNetworksPage />} />
 						<Route path="/search-engines" element={<SearchEnginesPage />} />
 						<Route path="/domains-ips" element={<DomainsIpsPage />} />

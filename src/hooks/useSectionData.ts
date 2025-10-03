@@ -18,35 +18,6 @@ export interface UseSectionDataReturn<TRecord> {
 	refetch: () => Promise<void>
 }
 
-export interface NormalizedRecord
-	extends Omit<IndexedInternetRecord, 'categories'> {
-	categories: string[]
-	normalizedTool: string
-	normalizedDescription: string
-}
-
-export function normalizeIndexedInternetRecord(
-	record: IndexedInternetRecord,
-): NormalizedRecord {
-	const normalizeUrl = (url: string | undefined): string | undefined => {
-		if (!url) return undefined
-		return url.replace(/\/+$/, '')
-	}
-
-	return {
-		...record,
-		tool: record.tool.trim(),
-		link: normalizeUrl(record.link),
-		open_source_license: record.open_source_license?.trim() || undefined,
-		accessibility_note: record.accessibility_note?.trim() || undefined,
-		API_note: record.API_note?.trim() || undefined,
-		description: record.description?.trim() || undefined,
-		categories: record.categories.map((c) => c.toLowerCase()),
-		normalizedTool: record.tool.toLowerCase().trim(),
-		normalizedDescription: (record.description || '').toLowerCase().trim(),
-	}
-}
-
 export function useSectionData<TRecord, TMapped = TRecord>(
 	section: string,
 	options?: { map?: (records: TRecord[]) => TMapped[] },

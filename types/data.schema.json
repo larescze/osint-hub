@@ -30,15 +30,11 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						}
 					},
-					"required": [
-						"categories"
-					]
+					"required": ["categories"]
 				},
 				"data": {
 					"type": "array",
@@ -47,10 +43,7 @@
 					}
 				}
 			},
-			"required": [
-				"meta",
-				"data"
-			]
+			"required": ["meta", "data"]
 		},
 		"archived_web": {
 			"type": "object",
@@ -73,15 +66,11 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						}
 					},
-					"required": [
-						"categories"
-					]
+					"required": ["categories"]
 				},
 				"data": {
 					"type": "array",
@@ -90,10 +79,7 @@
 					}
 				}
 			},
-			"required": [
-				"meta",
-				"data"
-			]
+			"required": ["meta", "data"]
 		},
 		"devices": {
 			"type": "object",
@@ -116,15 +102,11 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						}
 					},
-					"required": [
-						"categories"
-					]
+					"required": ["categories"]
 				},
 				"data": {
 					"type": "array",
@@ -133,10 +115,7 @@
 					}
 				}
 			},
-			"required": [
-				"meta",
-				"data"
-			]
+			"required": ["meta", "data"]
 		},
 		"darknet": {
 			"type": "object",
@@ -159,15 +138,11 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						}
 					},
-					"required": [
-						"categories"
-					]
+					"required": ["categories"]
 				},
 				"data": {
 					"type": "array",
@@ -176,10 +151,7 @@
 					}
 				}
 			},
-			"required": [
-				"meta",
-				"data"
-			]
+			"required": ["meta", "data"]
 		},
 		"social_networks": {
 			"type": "object",
@@ -202,15 +174,11 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						}
 					},
-					"required": [
-						"categories"
-					]
+					"required": ["categories"]
 				},
 				"data": {
 					"type": "array",
@@ -219,10 +187,7 @@
 					}
 				}
 			},
-			"required": [
-				"meta",
-				"data"
-			]
+			"required": ["meta", "data"]
 		},
 		"mixed": {
 			"type": "object",
@@ -245,15 +210,11 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						}
 					},
-					"required": [
-						"categories"
-					]
+					"required": ["categories"]
 				},
 				"data": {
 					"type": "array",
@@ -262,10 +223,7 @@
 					}
 				}
 			},
-			"required": [
-				"meta",
-				"data"
-			]
+			"required": ["meta", "data"]
 		},
 		"search_engines": {
 			"type": "object",
@@ -288,15 +246,11 @@
 										"type": "string"
 									}
 								},
-								"required": [
-									"name"
-								]
+								"required": ["name"]
 							}
 						}
 					},
-					"required": [
-						"categories"
-					]
+					"required": ["categories"]
 				},
 				"data": {
 					"type": "array",
@@ -305,10 +259,7 @@
 					}
 				}
 			},
-			"required": [
-				"meta",
-				"data"
-			]
+			"required": ["meta", "data"]
 		}
 	},
 	"required": [
@@ -339,12 +290,7 @@
 				},
 				"API": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"API_note": {
 					"type": "string"
@@ -360,24 +306,13 @@
 				},
 				"accessibility": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"accessibility_note": {
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API",
-				"open_source",
-				"accessibility"
-			]
+			"required": ["tool", "categories", "API", "open_source", "accessibility"]
 		},
 		"ArchivedWebRecord": {
 			"type": "object",
@@ -397,12 +332,7 @@
 				},
 				"API": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"API_note": {
 					"type": "string"
@@ -415,24 +345,13 @@
 				},
 				"accessibility": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"accessibility_note": {
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API",
-				"open_source",
-				"accessibility"
-			]
+			"required": ["tool", "categories", "API", "open_source", "accessibility"]
 		},
 		"DevicesRecord": {
 			"type": "object",
@@ -452,12 +371,7 @@
 				},
 				"API": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"API_note": {
 					"type": "string"
@@ -467,49 +381,27 @@
 				},
 				"services": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"services_note": {
 					"type": "string"
 				},
 				"CVE": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"CVE_note": {
 					"type": "string"
 				},
 				"maintained": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"maintained_note": {
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API",
-				"services",
-				"CVE",
-				"maintained"
-			]
+			"required": ["tool", "categories", "API", "services", "CVE", "maintained"]
 		},
 		"DarkWebRecord": {
 			"type": "object",
@@ -529,12 +421,7 @@
 				},
 				"API": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"API_note": {
 					"type": "string"
@@ -544,23 +431,13 @@
 				},
 				"maintained": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"maintained_note": {
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API",
-				"maintained"
-			]
+			"required": ["tool", "categories", "API", "maintained"]
 		},
 		"SocialNetworksRecord": {
 			"type": "object",
@@ -580,12 +457,7 @@
 				},
 				"API": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"API_note": {
 					"type": "string"
@@ -598,24 +470,13 @@
 				},
 				"maintained": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"maintained_note": {
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API",
-				"social_network",
-				"maintained"
-			]
+			"required": ["tool", "categories", "API", "social_network", "maintained"]
 		},
 		"MixedRecord": {
 			"type": "object",
@@ -635,12 +496,7 @@
 				},
 				"API": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"API_note": {
 					"type": "string"
@@ -650,23 +506,13 @@
 				},
 				"maintained": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"maintained_note": {
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API",
-				"maintained"
-			]
+			"required": ["tool", "categories", "API", "maintained"]
 		},
 		"SearchEngineRecord": {
 			"type": "object",
@@ -686,12 +532,7 @@
 				},
 				"API": {
 					"type": "string",
-					"enum": [
-						"yes",
-						"no",
-						"partial",
-						"unknown"
-					]
+					"enum": ["yes", "no", "partial", "unknown"]
 				},
 				"API_note": {
 					"type": "string"
@@ -700,11 +541,7 @@
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API"
-			]
+			"required": ["tool", "categories", "API"]
 		}
 	}
 }

@@ -3,21 +3,10 @@ import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
+import type z from 'zod'
+import type { DevicesRecordSchema } from '../../types/schema'
 
-type NetworkDevicesRecord = {
-	tool: string
-	categories: string[]
-	link: string | null
-	services: boolean | null
-	services_note: string | null
-	CVE: boolean | null
-	CVE_note: string | null
-	maintained: boolean | null
-	maintained_note: string | null
-	API: boolean | null
-	API_note: string | null
-	description: string | null
-}
+type NetworkDevicesRecord = z.infer<typeof DevicesRecordSchema>
 
 export default function NetworkDevicesPage() {
 	const { data, loading, error } =
@@ -42,9 +31,9 @@ export default function NetworkDevicesPage() {
 	const columns = useMemo<DataColumnSpec<NetworkDevicesRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},

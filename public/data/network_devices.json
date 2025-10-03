@@ -1,260 +1,201 @@
 {
-  "$schema": "../../types/JSON/network_devices.schema.json",
-  "meta": {
-    "categories": {
-      "IP": {
-        "name": "IP address",
-        "description": "Tools for discovering and analyzing IP addresses associated with devices and networks"
-      },
-      "H": {
-        "name": "Hostname",
-        "description": "Tools for identifying and resolving hostnames to IP addresses and vice versa"
-      },
-      "D": {
-        "name": "Domain",
-        "description": "Tools for analyzing domain names, DNS records, and domain ownership information"
-      },
-      "GEO": {
-        "name": "Geolocation data",
-        "description": "Tools for determining the physical location and geographic information of IP addresses and devices"
-      },
-      "T": {
-        "name": "Technologies used",
-        "description": "Tools for identifying the technology stack, frameworks, and software components running on devices"
-      },
-      "OS": {
-        "name": "Operating system",
-        "description": "Tools for detecting and fingerprinting operating systems running on target devices"
-      },
-      "P": {
-        "name": "Open ports",
-        "description": "Tools for scanning and identifying open network ports on devices and systems"
-      },
-      "SV": {
-        "name": "Services",
-        "description": "Tools for identifying and analyzing network services running on devices"
-      },
-      "V": {
-        "name": "Vulnerabilities",
-        "description": "Tools for discovering and assessing vulnerabilities in devices and their software"
-      },
-      "ISP": {
-        "name": "Internat service provider",
-        "description": "Tools for identifying the Internet Service Provider associated with an IP address or network"
-      },
-      "SSL": {
-        "name": "Certificate",
-        "description": "Tools for analyzing SSL/TLS certificates and their configurations on devices"
-      },
-      "+": {
-        "name": "and more",
-        "description": "Tools that provide additional functionalities related to network devices"
-      }
-    }
-  },
-  "data": [
-    {
-      "tool": "Shodan",
-      "categories": [
-        "IP",
-        "H",
-        "D",
-        "GEO",
-        "T",
-        "OS",
-        "P",
-        "SV",
-        "V",
-        "ISP",
-        "SSL"
-      ],
-      "link": "https://www.shodan.io/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "description": "Search engine for Internet-connected devices"
-    },
-    {
-      "tool": "Censys",
-      "categories": [
-        "IP",
-        "D",
-        "GEO",
-        "OS",
-        "P",
-        "SV",
-        "V",
-        "SSL"
-      ],
-      "link": "https://search.censys.io/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "description": "Real-time internet intelligence and threat insights"
-    },
-    {
-      "tool": "ONYPHE",
-      "categories": [
-        "IP",
-        "H",
-        "D",
-        "T",
-        "V",
-        "+"
-      ],
-      "link": "https://www.onyphe.io/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "description": "Cyber threat intelligence and attack surface data"
-    },
-    {
-      "tool": "ZoomEye",
-      "categories": [
-        "IP",
-        "GEO",
-        "P",
-        "SV",
-        "V",
-        "SSL"
-      ],
-      "link": "https://www.zoomeye.ai/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "description": "Internet-connected devices and vulnerabilities"
-    },
-    {
-      "tool": "Coalition Control",
-      "categories": [
-        "V",
-        "+"
-      ],
-      "link": "https://www.coalitioninc.com/",
-      "open_source": false,
-      "accessibility": null,
-      "API": true,
-      "services": null,
-      "CVE": true,
-      "description": "Cyber insurance with security and threat monitoring"
-    },
-    {
-      "tool": "Fofa",
-      "categories": [
-        "IP",
-        "H",
-        "D",
-        "GEO",
-        "T",
-        "OS",
-        "P",
-        "SV",
-        "V"
-      ],
-      "link": "https://en.fofa.info/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "description": "Chinese search engine for Internet-connected devices"
-    },
-    {
-      "tool": "FullHunt",
-      "categories": [
-        "IP",
-        "D",
-        "GEO",
-        "P",
-        "SV",
-        "V"
-      ],
-      "link": "https://fullhunt.io/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "description": "Monitoring external digital assets"
-    },
-    {
-      "tool": "Netlas",
-      "categories": [
-        "IP",
-        "D",
-        "GEO",
-        "P",
-        "SV",
-        "V",
-        "SSL"
-      ],
-      "link": "https://netlas.io/",
-      "open_source": true,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "description": "Internet assets and attack surface analysis"
-    },
-    {
-      "tool": "Odin",
-      "categories": [
-        "IP",
-        "G",
-        "OS",
-        "P",
-        "V",
-        "ISP"
-      ],
-      "link": "https://odin.io/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": true,
-      "CVE": true,
-      "CVE_note": "Paid or restricted access",
-      "description": "Internet-scanning search engine"
-    },
-    {
-      "tool": "NERD",
-      "categories": [
-        "IP",
-        "H",
-        "GEO",
-        "+"
-      ],
-      "link": "https://nerd.cesnet.cz/",
-      "open_source": true,
-      "accessibility": true,
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "services": false,
-      "CVE": false,
-      "description": "Open-source threat intelligence for network entities"
-    }
-  ]
+	"$schema": "../../types/JSON/network_devices.schema.json",
+	"meta": {
+		"categories": {
+			"IP": {
+				"name": "IP address",
+				"description": "Tools for discovering and analyzing IP addresses associated with devices and networks"
+			},
+			"H": {
+				"name": "Hostname",
+				"description": "Tools for identifying and resolving hostnames to IP addresses and vice versa"
+			},
+			"D": {
+				"name": "Domain",
+				"description": "Tools for analyzing domain names, DNS records, and domain ownership information"
+			},
+			"GEO": {
+				"name": "Geolocation data",
+				"description": "Tools for determining the physical location and geographic information of IP addresses and devices"
+			},
+			"T": {
+				"name": "Technologies used",
+				"description": "Tools for identifying the technology stack, frameworks, and software components running on devices"
+			},
+			"OS": {
+				"name": "Operating system",
+				"description": "Tools for detecting and fingerprinting operating systems running on target devices"
+			},
+			"P": {
+				"name": "Open ports",
+				"description": "Tools for scanning and identifying open network ports on devices and systems"
+			},
+			"SV": {
+				"name": "Services",
+				"description": "Tools for identifying and analyzing network services running on devices"
+			},
+			"V": {
+				"name": "Vulnerabilities",
+				"description": "Tools for discovering and assessing vulnerabilities in devices and their software"
+			},
+			"ISP": {
+				"name": "Internat service provider",
+				"description": "Tools for identifying the Internet Service Provider associated with an IP address or network"
+			},
+			"SSL": {
+				"name": "Certificate",
+				"description": "Tools for analyzing SSL/TLS certificates and their configurations on devices"
+			},
+			"+": {
+				"name": "and more",
+				"description": "Tools that provide additional functionalities related to network devices"
+			},
+			"G": {
+				"name": "Geolocation data",
+				"description": "Tools for extracting geolocation information from target devices"
+			}
+		}
+	},
+	"data": [
+		{
+			"name": "Shodan",
+			"categories": [
+				"IP",
+				"H",
+				"D",
+				"GEO",
+				"T",
+				"OS",
+				"P",
+				"SV",
+				"V",
+				"ISP",
+				"SSL"
+			],
+			"link": "https://www.shodan.io/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"description": "Search engine for Internet-connected devices"
+		},
+		{
+			"name": "Censys",
+			"categories": ["IP", "D", "GEO", "OS", "P", "SV", "V", "SSL"],
+			"link": "https://search.censys.io/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"description": "Real-time internet intelligence and threat insights"
+		},
+		{
+			"name": "ONYPHE",
+			"categories": ["IP", "H", "D", "T", "V", "+"],
+			"link": "https://www.onyphe.io/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"description": "Cyber threat intelligence and attack surface data"
+		},
+		{
+			"name": "ZoomEye",
+			"categories": ["IP", "GEO", "P", "SV", "V", "SSL"],
+			"link": "https://www.zoomeye.ai/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"description": "Internet-connected devices and vulnerabilities"
+		},
+		{
+			"name": "Coalition Control",
+			"categories": ["V", "+"],
+			"link": "https://www.coalitioninc.com/",
+			"open_source": false,
+			"accessibility": null,
+			"API": true,
+			"services": null,
+			"CVE": true,
+			"description": "Cyber insurance with security and threat monitoring"
+		},
+		{
+			"name": "Fofa",
+			"categories": ["IP", "H", "D", "GEO", "T", "OS", "P", "SV", "V"],
+			"link": "https://en.fofa.info/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"description": "Chinese search engine for Internet-connected devices"
+		},
+		{
+			"name": "FullHunt",
+			"categories": ["IP", "D", "GEO", "P", "SV", "V"],
+			"link": "https://fullhunt.io/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"description": "Monitoring external digital assets"
+		},
+		{
+			"name": "Netlas",
+			"categories": ["IP", "D", "GEO", "P", "SV", "V", "SSL"],
+			"link": "https://netlas.io/",
+			"open_source": true,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"description": "Internet assets and attack surface analysis"
+		},
+		{
+			"name": "Odin",
+			"categories": ["IP", "G", "OS", "P", "V", "ISP"],
+			"link": "https://odin.io/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": true,
+			"CVE": true,
+			"CVE_note": "Paid or restricted access",
+			"description": "Internet-scanning search engine"
+		},
+		{
+			"name": "NERD",
+			"categories": ["IP", "H", "GEO", "+"],
+			"link": "https://nerd.cesnet.cz/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": false,
+			"CVE": false,
+			"description": "Open-source threat intelligence for network entities"
+		}
+	]
 }

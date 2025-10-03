@@ -3,18 +3,10 @@ import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
+import type z from 'zod'
+import type { SocialNetworksRecordSchema } from '../../types/schema'
 
-type SocialNetworksRecord = {
-	tool: string
-	categories: string[]
-	link: string | null
-	social_network: string
-	maintained: 'yes' | 'no' | 'partial' | 'unknown'
-	maintained_note: string | null
-	API: 'yes' | 'no' | 'partial' | 'unknown'
-	API_note: string | null
-	description: string | null
-}
+type SocialNetworksRecord = z.infer<typeof SocialNetworksRecordSchema>
 
 export default function SocialNetworksPage() {
 	const { data, loading, error } =
@@ -39,9 +31,9 @@ export default function SocialNetworksPage() {
 	const columns = useMemo<DataColumnSpec<SocialNetworksRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},
@@ -61,10 +53,24 @@ export default function SocialNetworksPage() {
 				),
 			},
 			{
-				id: 'social_network',
-				type: 'text',
-				accessorKey: 'social_network',
-				headerLabel: 'Social Network',
+				id: 'social_networks',
+				type: 'array',
+				accessorKey: 'social_networks',
+				headerLabel: 'Social Networks',
+			},
+			{
+				id: 'open_source',
+				type: 'status',
+				accessorKey: 'open_source',
+				headerLabel: 'Open Source',
+				statusOrder: { yes: 0, no: 1, na: 2 },
+			},
+			{
+				id: 'accessibility',
+				type: 'status',
+				accessorKey: 'accessibility',
+				headerLabel: 'Accessibility',
+				noteDataKey: 'accessibility_note',
 			},
 			{
 				id: 'maintained',

@@ -3,15 +3,10 @@ import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
+import type z from 'zod'
+import type { SearchEngineRecordSchema } from '../../types/schema'
 
-type SearchEngineRecord = {
-	tool: string
-	categories: string[]
-	link?: string
-	API: 'yes' | 'no' | 'partial' | 'unknown'
-	API_note?: string
-	description?: string
-}
+type SearchEngineRecord = z.infer<typeof SearchEngineRecordSchema>
 
 export default function SearchEnginesPage() {
 	const { data, loading, error } =
@@ -36,9 +31,9 @@ export default function SearchEnginesPage() {
 	const columns = useMemo<DataColumnSpec<SearchEngineRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},

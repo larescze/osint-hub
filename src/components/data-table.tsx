@@ -8,14 +8,14 @@ import {
 	type ColumnDef,
 	type SortingState,
 } from '@tanstack/react-table'
-import ExternalNavigationModal from './external-navigation-dialog'
+import ExternalNavigationDialog from './external-navigation-dialog'
 import Tag from './tag'
 import type { CategoryMeta } from '../hooks/useSectionData'
 import Note from './note'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import { twMerge } from 'tailwind-merge'
 
-type ColumnType = 'text' | 'link' | 'tags' | 'status'
+type ColumnType = 'text' | 'link' | 'tags' | 'status' | 'array'
 
 type StatusValue = boolean | null | undefined
 
@@ -176,15 +176,26 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 								>
 									{/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
 									<Note note={(row as any)[spec.noteDataKey as string]}>
-										{value ?? (
-											<span
-												className="text-gray-400"
-												style={{ color: '#666666' }}
-											>
-												N/A
-											</span>
-										)}
+										{value ?? <Tag variant="secondary">N/A</Tag>}
 									</Note>
+								</div>
+							)
+						}
+						case 'array': {
+							const value = info.getValue() as string[] | null
+							return (
+								<div
+									className="text-sm text-gray-600"
+									style={{ color: '#111111' }}
+								>
+									{!value ? (
+										<Tag variant="secondary">N/A</Tag>
+									) : (
+										value?.map((word, i) => {
+											if (i === value.length - 1) return word
+											return [word, ', ']
+										})
+									)}
 								</div>
 							)
 						}
@@ -200,7 +211,7 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 									: undefined
 							if (href) {
 								return (
-									<ExternalNavigationModal
+									<ExternalNavigationDialog
 										trigger={
 											<Note
 												note={
@@ -223,26 +234,34 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 									/>
 								)
 							}
-							return <span className="font-medium">{label ?? 'N/A'}</span>
+							return label ? (
+								<span className="font-medium">{label}</span>
+							) : (
+								<Tag variant="secondary">N/A</Tag>
+							)
 						}
 
 						case 'tags': {
 							const tags = (info.getValue() as Array<string>) ?? []
 							return (
 								<div className="flex flex-wrap gap-1">
-									{tags.map((tag) => {
-										const tagUpper = String(tag).toUpperCase()
-										const catInfo = categoryMeta[tagUpper]
-										return (
-											<Tag
-												key={tagUpper}
-												variant="secondary"
-												categoryInfo={catInfo}
-											>
-												{tagUpper}
-											</Tag>
-										)
-									})}
+									{tags.length === 0 ? (
+										<Tag variant="secondary">N/A</Tag>
+									) : (
+										tags.map((tag) => {
+											const tagUpper = String(tag).toUpperCase()
+											const catInfo = categoryMeta[tagUpper]
+											return (
+												<Tag
+													key={tagUpper}
+													variant="secondary"
+													categoryInfo={catInfo}
+												>
+													{tagUpper}
+												</Tag>
+											)
+										})
+									)}
 								</div>
 							)
 						}

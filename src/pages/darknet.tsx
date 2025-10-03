@@ -3,22 +3,15 @@ import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
+import type z from 'zod'
+import type { DarknetRecordSchema } from '../../types/schema'
 
-type DarkWebRecord = {
-	tool: string
-	categories: string[]
-	link: string | null
-	maintained: 'yes' | 'no' | 'partial' | 'unknown'
-	maintained_note: string | null
-	API: 'yes' | 'no' | 'partial' | 'unknown'
-	API_note: string | null
-	description: string | null
-}
+type DarknetRecord = z.infer<typeof DarknetRecordSchema>
 
-export default function DarkWebPage() {
-	const { data, loading, error } = useSectionData<DarkWebRecord>('darknet')
+export default function DarknetPage() {
+	const { data, loading, error } = useSectionData<DarknetRecord>('darknet')
 
-	const records: DarkWebRecord[] = data?.data || []
+	const records: DarknetRecord[] = data?.data || []
 	const categoryMeta = data?.meta?.categories || {}
 
 	const [selectedCategoriesUpper, setSelectedCategoriesUpper] = useState<
@@ -34,12 +27,12 @@ export default function DarkWebPage() {
 		)
 	}, [records, selectedCategoriesUpper])
 
-	const columns = useMemo<DataColumnSpec<DarkWebRecord>[]>(() => {
+	const columns = useMemo<DataColumnSpec<DarknetRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},
@@ -91,20 +84,20 @@ export default function DarkWebPage() {
 				accessorKey: 'description',
 				headerLabel: 'Description',
 				sortable: false,
-			}
+			},
 		]
 	}, [categoryMeta, selectedCategoriesUpper])
 
 	if (loading) {
 		return (
 			<PageLayout
-				title="Dark Web"
-				subtitle="Resources and tools for dark web research"
+				title="Darknet"
+				subtitle="Resources and tools for darknet research"
 			>
 				<div className="flex justify-center items-center min-h-64">
 					<div className="text-center">
 						<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-2" />
-						<p style={{ color: '#111111' }}>Loading dark web sources...</p>
+						<p style={{ color: '#111111' }}>Loading darknet sources...</p>
 					</div>
 				</div>
 			</PageLayout>
@@ -113,7 +106,7 @@ export default function DarkWebPage() {
 
 	if (error) {
 		return (
-			<PageLayout title="Dark Web">
+			<PageLayout title="Darknet">
 				<div className="flex justify-center items-center min-h-64">
 					<div className="text-center text-red-600">
 						<p className="text-lg font-semibold" style={{ color: '#111111' }}>
@@ -130,10 +123,10 @@ export default function DarkWebPage() {
 
 	return (
 		<PageLayout
-			title="Dark Web"
-			subtitle="Resources and tools for dark web research"
+			title="Darknet"
+			subtitle="Resources and tools for darknet research"
 		>
-			<DataTable<DarkWebRecord>
+			<DataTable<DarknetRecord>
 				data={filteredRecords}
 				columns={columns}
 				categoryMeta={categoryMeta}

@@ -34,22 +34,22 @@
 	"definitions": {
 		"ArchivedWebRecord": {
 			"type": "object",
-			"additionalProperties": false,
+			"additionalProperties": true,
 			"properties": {
-				"tool": { "type": "string" },
+				"name": { "type": "string" },
 				"categories": {
-					"type": "array",
+					"type": ["array", "null"],
 					"items": { "type": "string" }
 				},
-				"link": { "type": "string" },
+				"link": { "type": ["string", "null"] },
 				"API": { "type": ["boolean", "null"] },
 				"API_note": { "type": "string" },
-				"description": { "type": "string" },
-				"open_source": { "type": "boolean" },
+				"description": { "type": ["string", "null"] },
+				"open_source": { "type": ["boolean", "null"] },
 				"accessibility": { "type": ["boolean", "null"] },
 				"accessibility_note": { "type": "string" }
 			},
-			"required": ["tool", "categories", "API", "open_source", "accessibility"]
+			"required": ["name", "categories", "API", "open_source", "accessibility"]
 		}
 	}
 }

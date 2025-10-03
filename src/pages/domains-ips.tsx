@@ -3,20 +3,10 @@ import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
+import type z from 'zod'
+import type { DomainsIpsRecordSchema } from '../../types/schema'
 
-type DomainsIpsRecord = {
-	tool: string
-	categories: string[]
-	link: string | null
-	open_source: boolean
-	accessibility: boolean | null
-	accessibility_note: string | null
-	maintained: boolean | null
-	maintained_note: string | null
-	API: boolean | null
-	API_note: string | null
-	description: string | null
-}
+type DomainsIpsRecord = z.infer<typeof DomainsIpsRecordSchema>
 
 export default function DomainsIpsPage() {
 	const { data, loading, error } =
@@ -41,9 +31,9 @@ export default function DomainsIpsPage() {
 	const columns = useMemo<DataColumnSpec<DomainsIpsRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},

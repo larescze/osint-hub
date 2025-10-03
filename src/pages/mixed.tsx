@@ -3,17 +3,10 @@ import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
+import type z from 'zod'
+import type { MixedRecordSchema } from '../../types/schema'
 
-type MixedRecord = {
-	tool: string
-	categories: string[]
-	link: string | null
-	maintained: 'yes' | 'no' | 'partial' | 'unknown'
-	maintained_note: string | null
-	API: 'yes' | 'no' | 'partial' | 'unknown'
-	API_note: string | null
-	description: string | null
-}
+type MixedRecord = z.infer<typeof MixedRecordSchema>
 
 export default function MixedPage() {
 	const { data, loading, error } = useSectionData<MixedRecord>('mixed')
@@ -37,9 +30,9 @@ export default function MixedPage() {
 	const columns = useMemo<DataColumnSpec<MixedRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},

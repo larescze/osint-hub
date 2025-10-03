@@ -3,18 +3,10 @@ import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
+import type z from 'zod'
+import type { ArchivedWebRecordSchema } from '../../types/schema'
 
-type ArchivedWebRecord = {
-	tool: string
-	categories: string[]
-	link: string | null
-	open_source: boolean
-	accessibility: 'yes' | 'no' | 'partial' | 'unknown'
-	accessibility_note: string | null
-	API: 'yes' | 'no' | 'partial' | 'unknown'
-	API_note: string | null
-	description: string | null
-}
+type ArchivedWebRecord = z.infer<typeof ArchivedWebRecordSchema>
 
 export default function ArchivedWebPage() {
 	const { data, loading, error } =
@@ -39,9 +31,9 @@ export default function ArchivedWebPage() {
 	const columns = useMemo<DataColumnSpec<ArchivedWebRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},

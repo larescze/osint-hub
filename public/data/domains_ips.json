@@ -1,185 +1,152 @@
 {
-  "$schema": "../../types/JSON/domains_ips.schema.json",
-  "meta": {
-    "categories": {
-      "D": {
-        "name": "Domains",
-        "description": "Domain WHOIS, DNS, history and analytics"
-      },
-      "IP": {
-        "name": "IP addresses",
-        "description": "IP WHOIS, geolocation, abuse and hosting"
-      },
-      "CERT": {
-        "name": "Certificates",
-        "description": "TLS/SSL certificate transparency and search"
-      },
-      "O": {
-        "name": "Other",
-        "description": "Everything that wasn’t fit for standalone category"
-      }
-    }
-  },
-  "data": [
-    {
-      "tool": "DomainTools",
-      "categories": [
-        "D",
-        "IP"
-      ],
-      "link": "https://www.domaintools.com/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Domain lookup and monitoring"
-    },
-    {
-      "tool": "WhoisFreaks",
-      "categories": [
-        "D"
-      ],
-      "link": "https://whoisfreaks.com/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Aggregated WHOIS data with APIs"
-    },
-    {
-      "tool": "WHOXY",
-      "categories": [
-        "D"
-      ],
-      "link": "https://www.whoxy.com/",
-      "open_source": false,
-      "accessibility": true,
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Reverse WHOIS and domain research"
-    },
-    {
-      "tool": "Whoisology",
-      "categories": [
-        "D"
-      ],
-      "link": "https://whoisology.com/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": false,
-      "maintained": true,
-      "description": "WHOIS records and connections"
-    },
-    {
-      "tool": "IPHunter",
-      "categories": [
-        "IP"
-      ],
-      "link": "https://www.iphunter.info/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Tracks IP addresses"
-    },
-    {
-      "tool": "crt.sh",
-      "categories": [
-        "C"
-      ],
-      "link": "https://crt.sh/",
-      "open_source": null,
-      "accessibility": true,
-      "API": false,
-      "maintained": true,
-      "description": "Certificate Transparency search engine"
-    },
-    {
-      "tool": "SecurityTrails",
-      "categories": [
-        "D",
-        "IP",
-        "CERT"
-      ],
-      "link": "https://securitytrails.com/stats",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Domain, IP intelligence platform"
-    },
-    {
-      "tool": "URLScan",
-      "categories": [
-        "D",
-        "IP",
-        "O"
-      ],
-      "link": "https://urlscan.io/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "URL analysis and threat intelligence"
-    },
-    {
-      "tool": "MXToolBox",
-      "categories": [
-        "D",
-        "IP",
-        "O"
-      ],
-      "link": "https://mxtoolbox.com/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Email, DNS, and blacklist lookup tool"
-    },
-    {
-      "tool": "ViewDNS.info",
-      "categories": [
-        "D",
-        "IP",
-        "O"
-      ],
-      "link": "https://viewdns.info/",
-      "open_source": false,
-      "accessibility": true,
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Domain and IP intelligence lookup"
-    },
-    {
-      "tool": "DNSlytics",
-      "categories": [
-        "D",
-        "IP",
-        "O"
-      ],
-      "link": "https://dnslytics.com/",
-      "open_source": false,
-      "accessibility": true,
-      "accessibility_note": "Paid or restricted access",
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "maintained": true,
-      "description": "Domain, IP, and DNS intelligence"
-    }
-  ]
+	"$schema": "../../types/JSON/domains_ips.schema.json",
+	"meta": {
+		"categories": {
+			"D": {
+				"name": "Domains",
+				"description": "Domain WHOIS, DNS, history and analytics"
+			},
+			"IP": {
+				"name": "IP addresses",
+				"description": "IP WHOIS, geolocation, abuse and hosting"
+			},
+			"C": {
+				"name": "Certificates",
+				"description": "TLS/SSL certificate transparency and search"
+			},
+			"O": {
+				"name": "Other",
+				"description": "Everything that wasn’t fit for standalone category"
+			}
+		}
+	},
+	"data": [
+		{
+			"name": "DomainTools",
+			"categories": ["D", "IP"],
+			"link": "https://www.domaintools.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Domain lookup and monitoring"
+		},
+		{
+			"name": "WhoisFreaks",
+			"categories": ["D"],
+			"link": "https://whoisfreaks.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Aggregated WHOIS data with APIs"
+		},
+		{
+			"name": "WHOXY",
+			"categories": ["D"],
+			"link": "https://www.whoxy.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Reverse WHOIS and domain research"
+		},
+		{
+			"name": "Whoisology",
+			"categories": ["D"],
+			"link": "https://whoisology.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": false,
+			"maintained": true,
+			"description": "WHOIS records and connections"
+		},
+		{
+			"name": "IPHunter",
+			"categories": ["IP"],
+			"link": "https://www.iphunter.info/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Tracks IP addresses"
+		},
+		{
+			"name": "crt.sh",
+			"categories": ["C"],
+			"link": "https://crt.sh/",
+			"open_source": null,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Certificate Transparency search engine"
+		},
+		{
+			"name": "SecurityTrails",
+			"categories": ["D", "IP", "C"],
+			"link": "https://securitytrails.com/stats",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Domain, IP intelligence platform"
+		},
+		{
+			"name": "URLScan",
+			"categories": ["D", "IP", "O"],
+			"link": "https://urlscan.io/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "URL analysis and threat intelligence"
+		},
+		{
+			"name": "MXToolBox",
+			"categories": ["D", "IP", "O"],
+			"link": "https://mxtoolbox.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Email, DNS, and blacklist lookup tool"
+		},
+		{
+			"name": "ViewDNS.info",
+			"categories": ["D", "IP", "O"],
+			"link": "https://viewdns.info/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Domain and IP intelligence lookup"
+		},
+		{
+			"name": "DNSlytics",
+			"categories": ["D", "IP", "O"],
+			"link": "https://dnslytics.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Domain, IP, and DNS intelligence"
+		}
+	]
 }

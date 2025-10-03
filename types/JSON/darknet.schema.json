@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$id": "types/darknet.schema.json",
-	"title": "Dark Web section file",
+	"title": "Darknet section file",
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
@@ -25,15 +25,11 @@
 								"type": "string"
 							}
 						},
-						"required": [
-							"name"
-						]
+						"required": ["name"]
 					}
 				}
 			},
-			"required": [
-				"categories"
-			]
+			"required": ["categories"]
 		},
 		"data": {
 			"type": "array",
@@ -42,55 +38,39 @@
 			}
 		}
 	},
-	"required": [
-		"meta",
-		"data"
-	],
+	"required": ["meta", "data"],
 	"definitions": {
 		"DarkWebRecord": {
 			"type": "object",
-			"additionalProperties": false,
+			"additionalProperties": true,
 			"properties": {
-				"tool": {
+				"name": {
 					"type": "string"
 				},
 				"categories": {
-					"type": "array",
+					"type": ["array", "null"],
 					"items": {
 						"type": "string"
 					}
 				},
-				"link": {
-					"type": "string"
-				},
+				"link": { "type": ["string", "null"] },
 				"API": {
-					"type": [
-						"boolean",
-						"null"
-					]
+					"type": ["boolean", "null"]
 				},
 				"API_note": {
 					"type": "string"
 				},
 				"description": {
-					"type": "string"
+					"type": ["string", "null"]
 				},
 				"maintained": {
-					"type": [
-						"boolean",
-						"null"
-					]
+					"type": ["boolean", "null"]
 				},
 				"maintained_note": {
 					"type": "string"
 				}
 			},
-			"required": [
-				"tool",
-				"categories",
-				"API",
-				"maintained"
-			]
+			"required": ["name", "categories", "API", "maintained"]
 		}
 	}
 }

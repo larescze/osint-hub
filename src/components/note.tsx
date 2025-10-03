@@ -20,7 +20,12 @@ export default function Note({
 	if (!note) return <Component className={className}>{children}</Component>
 
 	return (
-		<HoverCard.Root open={isOpen} onOpenChange={setIsOpen}>
+		<HoverCard.Root
+			open={isOpen}
+			onOpenChange={setIsOpen}
+			openDelay={200}
+			closeDelay={200}
+		>
 			<HoverCard.Trigger asChild>
 				<Component
 					className={twMerge(

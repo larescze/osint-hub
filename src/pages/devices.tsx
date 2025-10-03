@@ -5,7 +5,7 @@ import CategoryFilterPopover from '../components/category-filter-popover'
 import { useSectionData } from '../hooks/useSectionData'
 
 type DevicesRecord = {
-	tool: string
+	name: string
 	categories: string[]
 	link: string | null
 	services: boolean | null
@@ -42,9 +42,9 @@ export default function DevicesPage() {
 	const columns = useMemo<DataColumnSpec<DevicesRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},

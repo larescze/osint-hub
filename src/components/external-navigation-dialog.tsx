@@ -6,7 +6,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import * as Switch from '@radix-ui/react-switch'
 import { useEffect, useState } from 'react'
 
-export default function ExternalNavigationModal(props: {
+export default function ExternalNavigationDialog(props: {
 	trigger: React.ReactNode
 	href: string
 }) {
@@ -26,7 +26,9 @@ export default function ExternalNavigationModal(props: {
 		maxAgeSeconds: number,
 	): void => {
 		if (typeof document === 'undefined') return
-		document.cookie = `${name}=${encodeURIComponent(value)}; Max-Age=${maxAgeSeconds}; Path=/; SameSite=Lax`
+		document.cookie = `${name}=${encodeURIComponent(
+			value,
+		)}; Max-Age=${maxAgeSeconds}; Path=/; SameSite=Lax`
 	}
 
 	const deleteCookie = (name: string): void => {
@@ -85,8 +87,9 @@ export default function ExternalNavigationModal(props: {
 
 	return (
 		<Dialog.Root open={isOpen} onOpenChange={handleOpenChange}>
-			<div
-				role="button"
+			<button
+				className="text-left"
+				type="button"
 				tabIndex={0}
 				onClick={handleTriggerClick}
 				onKeyDown={(e) => {
@@ -97,7 +100,7 @@ export default function ExternalNavigationModal(props: {
 				}}
 			>
 				{props.trigger}
-			</div>
+			</button>
 			<Dialog.Portal>
 				<Dialog.Overlay className="fixed inset-0 bg-black/40 z-20" />
 				<Dialog.Content className="absolute w-[460px] overflow-hidden max-w-[95vw] bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg shadow-lg z-30">
@@ -108,11 +111,23 @@ export default function ExternalNavigationModal(props: {
 						</Dialog.Title>
 						<div className="text-black opacity-80 space-y-3 leading-[1.3]">
 							<p>
-								Remember that some links listed on OSINT Hub may lead to content
-								that could be harmful, offensive or illegal.
+								You are leaving OSINT Hub to visit an external site.
+								<div className="text-sm text-gray-950 bg-gray-200 p-3 rounded-md mt-4">
+									If this resource has changed or is no longer available, we
+									appreciate your help keeping OSINT Hub up to date.{' '}
+									<a
+										href="https://github.com/larescze/osint-hub"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="underline hover:text-black"
+									>
+										Contribute an update
+									</a>
+									.
+								</div>
 							</p>
 						</div>
-						<div className="mt-6 flex max-sm:flex-col items-center justify-end gap-2">
+						<div className="mt-9 flex max-sm:flex-col items-center justify-end gap-2">
 							<Dialog.Close asChild>
 								<button
 									type="button"

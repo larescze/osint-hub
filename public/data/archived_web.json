@@ -1,100 +1,86 @@
 {
-  "$schema": "../../types/JSON/archived_web.schema.json",
-  "meta": {
-    "categories": {
-      "A": {
-        "name": "Archived content",
-        "description": "Tools for accessing images, articles, pages that might have already been deleted or modified, including JavaScript content and historical web data."
-      },
-      "B": {
-        "name": "Bibliographical content",
-        "description": "Tools for accessing books, papers, articles, magazines, records and metadata from various repositories and archives."
-      },
-      "C": {
-        "name": "Leaked and classified information",
-        "description": "Tools for accessing leaked and often classified information and documents, including government documents, surveillance and intelligence materials."
-      }
-    }
-  },
-  "data": [
-    {
-      "tool": "Internet Archive",
-      "categories": [
-        "A"
-      ],
-      "link": "https://web.archive.org/",
-      "open_source": false,
-      "accessibility": true,
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "description": "View historical snapshots of websites"
-    },
-    {
-      "tool": "Archive.today",
-      "categories": [
-        "A"
-      ],
-      "link": "https://archive.ph",
-      "open_source": false,
-      "accessibility": true,
-      "API": true,
-      "API_note": "Paid or restricted access",
-      "description": "View archived versions of websites"
-    },
-    {
-      "tool": "CachedView.com",
-      "categories": [
-        "A"
-      ],
-      "link": "https://cachedview.com",
-      "open_source": false,
-      "accessibility": true,
-      "API": false,
-      "description": "Cached pages from Google and Archive.org"
-    },
-    {
-      "tool": "Anna's Archive",
-      "categories": [
-        "B"
-      ],
-      "link": "https://annas-archive.org",
-      "open_source": true,
-      "accessibility": true,
-      "API": true,
-      "description": "Repository of books, papers, and magazines"
-    },
-    {
-      "tool": "Waybackpack",
-      "categories": [
-        "A"
-      ],
-      "link": "https://github.com/jsvine/waybackpack",
-      "open_source": true,
-      "accessibility": true,
-      "API": false,
-      "description": "View archived versions of websites"
-    },
-    {
-      "tool": "Cryptome",
-      "categories": [
-        "C"
-      ],
-      "link": "https://cryptome.org",
-      "open_source": false,
-      "accessibility": true,
-      "API": false,
-      "description": "Repository of leaked/secret government docs"
-    },
-    {
-      "tool": "WikiLeaks",
-      "categories": [
-        "C"
-      ],
-      "link": "https://wikileaks.org",
-      "open_source": false,
-      "accessibility": true,
-      "API": false,
-      "description": "Repository of leaked/secret government docs"
-    }
-  ]
+	"$schema": "../../types/JSON/archived_web.schema.json",
+	"meta": {
+		"categories": {
+			"A": {
+				"name": "Archived content",
+				"description": "Tools for accessing images, articles, pages that might have already been deleted or modified, including JavaScript content and historical web data."
+			},
+			"B": {
+				"name": "Bibliographical content",
+				"description": "Tools for accessing books, papers, articles, magazines, records and metadata from various repositories and archives."
+			},
+			"C": {
+				"name": "Leaked and classified information",
+				"description": "Tools for accessing leaked and often classified information and documents, including government documents, surveillance and intelligence materials."
+			}
+		}
+	},
+	"data": [
+		{
+			"name": "Internet Archive",
+			"categories": ["A"],
+			"link": "https://web.archive.org/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"description": "View historical snapshots of websites"
+		},
+		{
+			"name": "Archive.today",
+			"categories": ["A"],
+			"link": "https://archive.ph",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"description": "View archived versions of websites"
+		},
+		{
+			"name": "CachedView.com",
+			"categories": ["A"],
+			"link": "https://cachedview.com",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "Cached pages from Google and Archive.org"
+		},
+		{
+			"name": "Anna's Archive",
+			"categories": ["B"],
+			"link": "https://annas-archive.org",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"description": "Repository of books, papers, and magazines"
+		},
+		{
+			"name": "Waybackpack",
+			"categories": ["A"],
+			"link": "https://github.com/jsvine/waybackpack",
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"description": "View archived versions of websites"
+		},
+		{
+			"name": "Cryptome",
+			"categories": ["C"],
+			"link": "https://cryptome.org",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "Repository of leaked/secret government docs"
+		},
+		{
+			"name": "WikiLeaks",
+			"categories": ["C"],
+			"link": "https://wikileaks.org",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "Repository of leaked/secret government docs"
+		}
+	]
 }

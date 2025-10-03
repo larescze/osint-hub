@@ -1,21 +1,16 @@
 import { useMemo, useState } from 'react'
-import {
-	useSectionData,
-	normalizeIndexedInternetRecord,
-	type NormalizedRecord,
-	type CategoryMeta,
-} from '../hooks/useSectionData'
+import { useSectionData } from '../hooks/useSectionData'
 import CategoryFilterPopover from '../components/category-filter-popover'
 import DataTable, { type DataColumnSpec } from '../components/data-table'
 import PageLayout from '../components/page-layout'
+import type z from 'zod'
+import type { IndexedInternetRecordSchema } from '../../types/schema'
+
+type IndexedInternetRecord = z.infer<typeof IndexedInternetRecordSchema>
 
 export default function IndexedInternet() {
-	const { data, loading, error } = useSectionData('indexed_internet', {
-		map: (records) =>
-			(records as unknown as NormalizedRecord[]).map(
-				normalizeIndexedInternetRecord,
-			),
-	})
+	const { data, loading, error } =
+		useSectionData<IndexedInternetRecord>('indexed_internet')
 
 	const records = data?.data || []
 	const categoryMeta = data?.meta?.categories || {}
@@ -28,18 +23,18 @@ export default function IndexedInternet() {
 	const filteredRecords = useMemo(() => {
 		if (selectedCategoriesUpper.size === 0) return records
 		return records.filter((r) =>
-			r.categories.some((catLower) =>
+			r.categories?.some((catLower) =>
 				selectedCategoriesUpper.has(catLower.toUpperCase()),
 			),
 		)
 	}, [records, selectedCategoriesUpper])
 
-	const columns = useMemo<DataColumnSpec<NormalizedRecord>[]>(() => {
+	const columns = useMemo<DataColumnSpec<IndexedInternetRecord>[]>(() => {
 		return [
 			{
-				id: 'tool',
+				id: 'name',
 				type: 'link',
-				accessorKey: 'tool',
+				accessorKey: 'name',
 				linkHrefKey: 'link',
 				headerLabel: 'Name',
 			},
@@ -120,7 +115,7 @@ export default function IndexedInternet() {
 			title="Indexed Internet Sources"
 			subtitle="Curated collection of OSINT sources for web research"
 		>
-			<DataTable<NormalizedRecord>
+			<DataTable<IndexedInternetRecord>
 				data={filteredRecords}
 				columns={columns}
 				categoryMeta={categoryMeta}
