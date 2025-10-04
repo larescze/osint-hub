@@ -117,7 +117,7 @@
 		},
 		{
 			"name": "Graph.tips",
-			"categories": ["PI", "PMC", "GEO", "AUD", "O"],
+			"categories": ["PMC", "PI", "GEO", "AUD", "O"],
 			"link": "https://graph.tips/beta/",
 			"social_networks": ["Facebook"],
 			"open_source": false,
@@ -323,17 +323,6 @@
 			"description": "Finds geo-location of video"
 		},
 		{
-			"name": "Watch Frame by Frame",
-			"categories": ["FBF"],
-			"link": "",
-			"social_networks": ["YouTube", "Vimeo"],
-			"open_source": false,
-			"accessibility": true,
-			"API": false,
-			"maintained": null,
-			"description": "Frame-by-frame video viewer"
-		},
-		{
 			"name": "Anilyzer",
 			"categories": ["FBF"],
 			"link": "https://anilyzer.com/",
@@ -504,7 +493,7 @@
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"maintained": false,
+			"maintained": true,
 			"description": "Instagram media downloader"
 		},
 		{
@@ -627,7 +616,7 @@
 		{
 			"name": "Reddit Comment Search",
 			"categories": ["PMC"],
-			"link": "",
+			"link": "https://redditcommentsearch.com/",
 			"social_networks": ["Reddit"],
 			"open_source": false,
 			"accessibility": true,
@@ -683,7 +672,7 @@
 			"description": "Telegram bot API wrapper"
 		},
 		{
-			"name": "Pryogram",
+			"name": "Pyrogram",
 			"categories": ["G", "PMC", "AUD", "B", "+"],
 			"link": "https://github.com/pyrogram/pyrogram",
 			"social_networks": ["Telegram"],

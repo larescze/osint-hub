@@ -39,20 +39,16 @@
 				"description": "Tools for discovering and assessing vulnerabilities in devices and their software"
 			},
 			"ISP": {
-				"name": "Internat service provider",
+				"name": "Internet service provider",
 				"description": "Tools for identifying the Internet Service Provider associated with an IP address or network"
 			},
-			"SSL": {
+			"C": {
 				"name": "Certificate",
 				"description": "Tools for analyzing SSL/TLS certificates and their configurations on devices"
 			},
 			"+": {
 				"name": "and more",
 				"description": "Tools that provide additional functionalities related to network devices"
-			},
-			"G": {
-				"name": "Geolocation data",
-				"description": "Tools for extracting geolocation information from target devices"
 			}
 		}
 	},
@@ -70,7 +66,7 @@
 				"SV",
 				"V",
 				"ISP",
-				"SSL"
+				"C"
 			],
 			"link": "https://www.shodan.io/",
 			"open_source": false,
@@ -84,7 +80,7 @@
 		},
 		{
 			"name": "Censys",
-			"categories": ["IP", "D", "GEO", "OS", "P", "SV", "V", "SSL"],
+			"categories": ["IP", "D", "GEO", "OS", "P", "SV", "V", "C"],
 			"link": "https://search.censys.io/",
 			"open_source": false,
 			"accessibility": true,
@@ -110,7 +106,7 @@
 		},
 		{
 			"name": "ZoomEye",
-			"categories": ["IP", "GEO", "P", "SV", "V", "SSL"],
+			"categories": ["IP", "GEO", "P", "SV", "V", "C"],
 			"link": "https://www.zoomeye.ai/",
 			"open_source": false,
 			"accessibility": true,
@@ -123,13 +119,14 @@
 		},
 		{
 			"name": "Coalition Control",
-			"categories": ["V", "+"],
+			"categories": null,
 			"link": "https://www.coalitioninc.com/",
 			"open_source": false,
 			"accessibility": null,
+			"API_note": "Paid or restricted access",
 			"API": true,
 			"services": null,
-			"CVE": true,
+			"CVE": null,
 			"description": "Cyber insurance with security and threat monitoring"
 		},
 		{
@@ -160,7 +157,7 @@
 		},
 		{
 			"name": "Netlas",
-			"categories": ["IP", "D", "GEO", "P", "SV", "V", "SSL"],
+			"categories": ["IP", "D", "GEO", "P", "SV", "V", "C"],
 			"link": "https://netlas.io/",
 			"open_source": true,
 			"accessibility": true,
@@ -173,7 +170,7 @@
 		},
 		{
 			"name": "Odin",
-			"categories": ["IP", "G", "OS", "P", "V", "ISP"],
+			"categories": ["IP", "GEO", "OS", "P", "V", "ISP"],
 			"link": "https://odin.io/",
 			"open_source": false,
 			"accessibility": true,

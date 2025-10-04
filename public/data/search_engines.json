@@ -63,7 +63,7 @@
 				"description": "Filter by last update"
 			},
 			"D": {
-				"name": "Domain",
+				"name": "Sites on a specific domain",
 				"description": "Restrict to domain"
 			},
 			"F": {
@@ -82,7 +82,7 @@
 				"name": "Time period",
 				"description": "Specific time period"
 			},
-			"PG": {
+			"P": {
 				"name": "Pagination",
 				"description": "Pagination controls"
 			},
@@ -102,10 +102,6 @@
 				"name": "IP host",
 				"description": "Sites hosted on IP"
 			},
-			"P": {
-				"name": "Preferences",
-				"description": "Search preferences"
-			},
 			"RF": {
 				"name": "RSS feed",
 				"description": "RSS feed on a site"
@@ -121,6 +117,10 @@
 			"N": {
 				"name": "Results per page",
 				"description": "Number of results per page"
+			},
+			"PREF": {
+				"name": "Preferences",
+				"description": "Emphasis to a search term or another operator"
 			}
 		}
 	},
@@ -128,19 +128,25 @@
 		{
 			"name": "Google",
 			"categories": [
-				"SW",
-				"EW",
-				"AW",
-				"NW",
-				"IU",
-				"IT",
-				"ITX",
-				"L",
-				"R",
-				"D",
-				"F",
-				"T",
-				"IP"
+				"SW", 
+				"EW", 
+				"AW", 
+				"NW", 
+				"L", 
+				"R", 
+				"T", 
+				"D", 
+				"F", 
+				"IU", 
+				"IT", 
+				"ITX", 
+				"P", 
+				"RLT", 
+				"N",  
+				"SS", 
+				"RU", 
+				"U", 
+				"IS"
 			],
 			"link": "https://www.google.com/advanced_search",
 			"API": true,
@@ -150,19 +156,21 @@
 		{
 			"name": "Yandex",
 			"categories": [
-				"SW",
-				"EW",
-				"AW",
-				"NW",
-				"PG",
-				"L",
-				"R",
-				"U",
-				"D",
-				"T",
-				"SR",
-				"GR",
-				"IS",
+				"SW", 
+				"EW", 
+				"AW", 
+				"NW", 
+				"IU", 
+				"IT", 
+				"L", 
+				"R", 
+				"D", 
+				"T", 
+				"P", 
+				"SR", 
+				"GR", 
+				"IS", 
+				"SS", 
 				"P"
 			],
 			"link": "https://yandex.com/",
@@ -173,23 +181,27 @@
 		{
 			"name": "Bing",
 			"categories": [
-				"SW",
-				"EW",
-				"AW",
-				"NW",
-				"IT",
+				"SW", 
+				"EW", 
+				"AW", 
+				"NW", 
+				"F", 
+				"E", 
+				"IA", 
 				"IB",
-				"IA",
-				"L",
-				"R",
-				"D",
-				"F",
-				"E",
-				"PG",
+				"IT", 
+				"L", 
+				"R", 
+				"P", 
+				"D", 
+				"RF", 
+				"PRF", 
+				"SS", 
+				"T", 
+				"PREF", 
 				"IP",
-				"P",
-				"RF",
-				"PRF"
+				"RU",
+				"IS"
 			],
 			"link": "https://www.bing.com/",
 			"API": false,
@@ -198,18 +210,21 @@
 		{
 			"name": "Brave",
 			"categories": [
-				"SW",
-				"EW",
-				"AW",
-				"NW",
-				"IT",
-				"IB",
-				"IPG",
-				"L",
-				"R",
-				"D",
-				"F",
-				"E"
+				"E", 
+				"F", 
+				"IB", 
+				"IT", 
+				"IPG", 
+				"L", 
+				"R", 
+				"D", 
+				"SW", 
+				"EW", 
+				"AW", 
+				"NW", 
+				"SS", 
+				"P", 
+				"T"
 			],
 			"link": "https://search.brave.com/",
 			"API": true,
@@ -218,14 +233,14 @@
 		},
 		{
 			"name": "DuckDuckGo",
-			"categories": ["SW", "EW", "AW", "NW", "IU", "IT", "D", "F"],
+			"categories": ["SW", "EW", "AW", "NW", "F", "D", "IT", "IU", "SS", "T", "IS", "RU"],
 			"link": "https://duckduckgo.com/",
 			"API": true,
 			"description": "Privacy-first search with open API support"
 		},
 		{
 			"name": "Yahoo",
-			"categories": ["SW", "EW", "AW", "NW", "L", "R", "D", "F", "SS", "N"],
+			"categories": ["SW", "EW", "AW", "NW", "D", "F", "SS", "R", "L", "N", "P", "T", "IS", "RU"],
 			"link": "https://search.yahoo.com/",
 			"API": null,
 			"description": "Legacy engine with basic advanced query tools"
@@ -254,19 +269,25 @@
 		{
 			"name": "I Search From",
 			"categories": [
-				"SW",
-				"EW",
-				"AW",
-				"NW",
-				"IU",
-				"IT",
-				"ITX",
-				"L",
-				"R",
-				"D",
-				"F",
-				"T",
-				"IP"
+				"SW", 
+				"EW", 
+				"AW", 
+				"NW", 
+				"L", 
+				"R", 
+				"T", 
+				"D", 
+				"F", 
+				"IU", 
+				"IT", 
+				"ITX", 
+				"P", 
+				"RLT", 
+				"N",  
+				"SS", 
+				"RU", 
+				"U", 
+				"IS"
 			],
 			"link": "https://isearchfrom.com/",
 			"API": false,

@@ -16,7 +16,7 @@
 			},
 			"O": {
 				"name": "Other",
-				"description": "Everything that wasn’t fit for standalone category"
+				"description": "Tools that offer additional functionalities not covered by the other categories."
 			}
 		}
 	},

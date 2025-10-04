@@ -132,8 +132,7 @@
 			"name": "Hunchly",
 			"categories": ["S", "O", "SCDE"],
 			"link": "https://hunch.ly/",
-			"open_source": true,
-			"open_source_note": "Core is open source; some features are paid",
+			"open_source": false,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
@@ -249,7 +248,7 @@
 			"accessibility": null,
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"maintained": null,
+			"maintained": true,
 			"description": "Dark web monitoring for breaches and TTPs"
 		},
 		{
