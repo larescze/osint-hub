@@ -1,6 +1,8 @@
 ## OSINT Hub
 
-Lightweight React + Vite app that lists OSINT resources. Data now lives in per-section files under `public/data/*.json` (e.g., `indexed_internet.json`, `devices.json`, etc.).
+OSINT Hub is an open website and dataset, which presents a comparative analysis of OSINT tools and services for data collection and analysis. The resources are organized into 8 categories, with options to filter individual tools by their functionality. Since this field is constantly evolving, we welcome your contributions to help us keep the OSINT Hub up to date.
+
+Data now lives in per-section files under `public/data/*.json` (e.g., `indexed_internet.json`, `devices.json`, etc.).
 
 ## Run locally
 
