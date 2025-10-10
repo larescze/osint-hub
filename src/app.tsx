@@ -115,7 +115,7 @@ function Home() {
 			<p className="mb-6">
 				Welcome to the open website, which presents a comparative analysis of
 				OSINT tools and services for data collection and analysis. The resources
-				are organized into 9 categories, with options to filter individual tools
+				are organized into 8 categories, with options to filter individual tools
 				by their functionality. Since this field is constantly evolving, we
 				welcome your contributions to help us keep the catalog up to date.
 			</p>
@@ -124,7 +124,15 @@ function Home() {
 				The results of the comparative analysis are part of the research paper
 				entitled “Comparative analysis of OSINT tools, techniques, and legal
 				aspects”, which is currently under review in the journal Computers &
-				Security.
+				Security. The preprint is available at{' '}
+				<a
+					href="https://dx.doi.org/10.2139/ssrn.5579220"
+					className="font-medium underline"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					https://dx.doi.org/10.2139/ssrn.5579220
+				</a>.
 			</p>
 			<h2 className="text-2xl font-bold mb-2">Authors</h2>
 			<p className="mb-3">
