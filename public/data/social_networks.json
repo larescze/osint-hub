@@ -263,6 +263,39 @@
 			"description": "Twitter/X video downloader"
 		},
 		{
+			"name": "XCancel",
+			"categories": ["PMC", "PI", "O"],
+			"link": "https://xcancel.com/",
+			"social_networks": ["X (Twitter)"],
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Anonymous X/Twitter viewer via Nitter"
+		},
+		{
+			"name": "Wayback Tweets",
+			"categories": ["PMC", "DT", "O"],
+			"link": "https://github.com/claromes/waybacktweets",
+			"social_networks": ["X (Twitter)"],
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Displays archived tweets from Wayback"
+		},
+		{
+			"name": "BirdHunt",
+			"categories": ["GEO", "PMC"],
+			"link": "https://birdhunt.huntintel.io/",
+			"social_networks": ["X (Twitter)"],
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Geolocated tweet search tool"
+		},
+		{
 			"name": "YouTube Data API",
 			"categories": ["G", "O"],
 			"link": "https://developers.google.com/youtube/v3",
@@ -392,6 +425,30 @@
 			"API": false,
 			"maintained": true,
 			"description": "LinkedIn scraper"
+		},
+		{
+			"name": "ReverseContact",
+			"categories": ["PI", "E", "O"],
+			"link": "https://reversecontact.com/",
+			"social_networks": ["LinkedIn"],
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Email-to-LinkedIn profile lookup"
+		},
+		{
+			"name": "RecruitEm",
+			"categories": ["PI", "G"],
+			"link": "https://recruitin.net/",
+			"social_networks": ["LinkedIn"],
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Boolean query generator for LinkedIn"
 		},
 		{
 			"name": "TikTok-API",
@@ -553,6 +610,18 @@
 			"description": "Anonymous viewing of Instagram stories"
 		},
 		{
+			"name": "Osintgram",
+			"categories": ["PI", "PMC", "GEO", "O"],
+			"link": "https://github.com/Datalux/Osintgram",
+			"social_networks": ["Instagram"],
+			"open_source": true,
+			"accessibility": true,
+			"accessibility_note": "Limited access (EU auth issues)",
+			"API": false,
+			"maintained": true,
+			"description": "Instagram account analysis tool"
+		},
+		{
 			"name": "Reddit API",
 			"categories": ["PI", "PMC"],
 			"link": "https://www.reddit.com/dev/api/",
@@ -623,6 +692,17 @@
 			"API": false,
 			"maintained": true,
 			"description": "Searches comments by user/keyword"
+		},
+		{
+			"name": "PullPush Reddit Search",
+			"categories": ["PI", "PMC", "DT"],
+			"link": "https://search.pullpush.io/",
+			"social_networks": ["Reddit"],
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Advanced Reddit search with filters"
 		},
 		{
 			"name": "Pinterest API",
@@ -740,6 +820,17 @@
 			"API": false,
 			"maintained": false,
 			"description": "Checks if number is on Telegram"
+		},
+		{
+			"name": "Maigret",
+			"categories": ["PI", "O"],
+			"link": "https://github.com/soxoj/maigret",
+			"social_networks": ["Multiple platforms"],
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Multi-platform username enumeration"
 		}
 	]
 }
