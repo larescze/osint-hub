@@ -227,7 +227,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Dark web marketplace investigation"
 		},
 		{
@@ -291,6 +291,16 @@
 			"API": false,
 			"maintained": true,
 			"description": "Shows when IP was last used as a Tor relay"
+		},
+		{
+			"name": "DarkwebCrawler",
+			"categories": ["SCDE"],
+			"link": "https://github.com/IntelEyes/darkweb_crawler",
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Crawler for .onion sites with marketplace analysis"
 		}
 	]
 }
