@@ -303,136 +303,126 @@
 			"description": "Crawler for .onion sites with marketplace analysis"
 		},
 		[
-  {
-    "name": "Maltego",
-    "categories": ["CTI"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": true,
-    "maintained": true,
-    "description": "Tool for visualizing and correlating data from OSINT sources. Key for connecting entities (pseudonyms, IP addresses)."
-  },
-  {
-    "name": "Shodan",
-    "categories": ["IS"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": true,
-    "maintained": true,
-    "description": "Search engine for connected devices and infrastructure (IoT, servers). Identifies vulnerabilities relevant to Dark Web operations."
-  },
-  {
-    "name": "The Harvester",
-    "categories": ["CTI"],
-    "link": "N/A",
-    "open_source": true,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "Simple, Open-source tool for collecting emails, hosts, and names from public sources."
-  },
-  {
-    "name": "Torch",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "The oldest and most extensive Darknet search engine, offering uncensored pages and a simple interface."
-  },
-  {
-    "name": "Haystak",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "Over 1.5 billion indexed pages. Offers free and premium versions (premium includes historical data and advanced search)."
-  },
-  {
-    "name": "Not Evil",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "Focuses only on .onion content, guarantees no trackers, no ads, and no censorship."
-  },
-  {
-    "name": "Candle",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": true,
-    "accessibility": true,
-    "API": true,
-    "maintained": true,
-    "description": "Keyword search across onion search engines."
-  },
-  {
-    "name": "Kilos",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": false,
-    "maintained": false,
-    "description": "Search engine focused on illegal markets."
-  },
-  {
-    "name": "LibreY",
-    "categories": ["S"],
-    "link": "N/A",
-    "open_source": true,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "Allows access to onion sites via regular browsers."
-  },
-  {
-    "name": "Tordex",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": false,
-    "maintained": false,
-    "description": "Dark Web search engine, generally considered unmaintained and inactive."
-  },
-  {
-    "name": "ExcavaTor",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "Inactive/unmaintained Dark Web search engine."
-  },
-  {
-    "name": "Hidden Wiki",
-    "categories": ["OS"],
-    "link": "N/A",
-    "open_source": false,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "Community-maintained directory of .onion links."
-  },
-  {
-    "name": "Ahmia",
-    "categories": ["O"],
-    "link": "N/A",
-    "open_source": true,
-    "accessibility": true,
-    "API": false,
-    "maintained": true,
-    "description": "Search engine for Tor hidden services (used in testing)."
-  }
-]
+		  {
+		    "name": "Maltego",
+		    "categories": ["CTI"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": true,
+		    "maintained": true,
+		    "description": "Tool for visualizing and correlating data from OSINT sources. Key for connecting entities (pseudonyms, IP addresses)."
+		  },
+		  {
+		    "name": "Shodan",
+		    "categories": ["IS"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": true,
+		    "maintained": true,
+		    "description": "Search engine for connected devices and infrastructure (IoT, servers). Identifies vulnerabilities relevant to Dark Web operations."
+		  },
+		  {
+		    "name": "The Harvester",
+		    "categories": ["CTI"],
+		    "link": "N/A",
+		    "open_source": true,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": true,
+		    "description": "Simple, Open-source tool for collecting emails, hosts, and names from public sources."
+		  },
+		  {
+		    "name": "Torch",
+		    "categories": ["O"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": true,
+		    "description": "The oldest and most extensive Darknet search engine, offering uncensored pages and a simple interface."
+		  },
+		  {
+		    "name": "Haystak",
+		    "categories": ["O"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": true,
+		    "description": "Over 1.5 billion indexed pages. Offers free and premium versions (premium includes historical data and advanced search)."
+		  },
+		  {
+		    "name": "Not Evil",
+		    "categories": ["O"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": true,
+		    "description": "Focuses only on .onion content, guarantees no trackers, no ads, and no censorship."
+		  },
+		  {
+		    "name": "Candle",
+		    "categories": ["O"],
+		    "link": "N/A",
+		    "open_source": true,
+		    "accessibility": true,
+		    "API": true,
+		    "maintained": true,
+		    "description": "Keyword search across onion search engines."
+		  },
+		  {
+		    "name": "Kilos",
+		    "categories": ["O"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": false,
+		    "description": "Search engine focused on illegal markets."
+		  },
+		  {
+		    "name": "LibreY",
+		    "categories": ["S"],
+		    "link": "N/A",
+		    "open_source": true,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": true,
+		    "description": "Allows access to onion sites via regular browsers."
+		  },
+		  {
+		    "name": "Tordex",
+		    "categories": ["O"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": false,
+		    "description": "Dark Web search engine, generally considered unmaintained and inactive."
+		  },
+		  {
+		    "name": "ExcavaTor",
+		    "categories": ["O"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": true,
+		    "description": "Inactive/unmaintained Dark Web search engine."
+		  },
+		  {
+		    "name": "Hidden Wiki",
+		    "categories": ["OS"],
+		    "link": "N/A",
+		    "open_source": false,
+		    "accessibility": true,
+		    "API": false,
+		    "maintained": true,
+		    "description": "Community-maintained directory of .onion links."
+		  }
+		]
 	]
 }
