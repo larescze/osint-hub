@@ -520,6 +520,53 @@
 			"description": "Finds trending TikTok content"
 		},
 		{
+			"name": "TikTok Scraper: Export Users, Posts, Comments & more",
+			"categories": ["PI", "AUD", "M", "O"],
+			"link": "https://nifty.codes/e/tiktok-scraper",
+			"social_networks": ["TikTok"],
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": false,
+			"maintained": true,
+			"description": "Web extension - Universally usable scraper"
+		},
+		{
+			"name": "TikTok & Instagram Sorter",
+			"categories": ["PMC", "AUD"],
+			"link": "https://www.ovszon.com/tiktok-instagram-sorter/",
+			"social_networks": ["TikTok"],
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": false,
+			"maintained": true,
+			"description": "Web extension - Content sorting"
+		},
+		{
+			"name": "TikTok Comment Extraction Pro",
+			"categories": ["PMC"],
+			"link": "https://chromewebstore.google.com/detail/tiktok-comment-export-too/pjjldehmkcnmmkldjielbonlnmbkomlm",
+			"social_networks": ["TikTok"],
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": false,
+			"maintained": true,
+			"description": "Web extension - Comments extraction"
+		},
+		{
+			"name": "TikTok Download & Analytics Toolkit | KOLSprite",
+			"categories": ["PI", "PMC", "AUD"],
+			"link": "https://chromewebstore.google.com/detail/tiktok-download-analytics/penohjgblobinadflplocjekaclnoemh",
+			"social_networks": ["TikTok"],
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Web extension - Complex analysis tool"
+		},
+		{
 			"name": "Instagram Scraper",
 			"categories": ["PI", "PMC", "GEO", "M"],
 			"link": "https://github.com/drawrowfly/instagram-scraper",
