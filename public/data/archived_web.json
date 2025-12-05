@@ -65,6 +65,15 @@
 			"description": "View archived versions of websites"
 		},
 		{
+			"name": "ArchiveBox",
+			"categories": ["A"],
+			"link": "https://archivebox.io/",
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"description": "Open source self-hosted web archiving"
+		},
+		{
 			"name": "Cryptome",
 			"categories": ["C"],
 			"link": "https://cryptome.org",
@@ -81,6 +90,17 @@
 			"accessibility": true,
 			"API": false,
 			"description": "Repository of leaked/secret government docs"
+		},
+		{
+			"name": "Distributed Denial of Secrets",
+			"categories": ["C"],
+			"link": "https://ddosecrets.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"description": "Repository of leaked/secret government docs"
+			
 		}
+		
 	]
 }
