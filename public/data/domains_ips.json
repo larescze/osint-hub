@@ -22,6 +22,16 @@
 	},
 	"data": [
 		{
+			"name": "Web Check",
+			"categories": ["D", "IP", "C", "O"],
+			"link": "https://web-check.xyz/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Complex website scanning tool"
+		},
+		{
 			"name": "DomainTools",
 			"categories": ["D", "IP"],
 			"link": "https://www.domaintools.com/",
@@ -147,6 +157,74 @@
 			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "Domain, IP, and DNS intelligence"
+		},
+		{
+			"name": "Hacker Target",
+			"categories": ["D", "IP", "C", "O"],
+			"link": "https://hackertarget.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "DNS, IP and Domain recon"
+		},
+		{
+			"name": "Merkelmap",
+			"categories": ["D", "IP"],
+			"link": "https://www.merklemap.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "CT-based subdomain discovery"
+		},
+		{
+			"name": "AlienVault Domain Lookup",
+			"categories": ["D", "IP", "O"],
+			"link": "https://otx.alienvault.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Domain, IP reputation lookup using AlienVault OTX threat intelligence"
+		},
+		{
+			"name": "AbuseIPDB",
+			"categories": ["IP"],
+			"link": "https://www.abuseipdb.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Community-driven IP abuse reports and reputation scoring"
+		},
+		{
+			"name": "CertStream",
+			"categories": ["C"],
+			"link": "https://certstream.calidog.io/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Real-time feed of newly issued TLS certificates from CT logs"
+		},
+		{
+			"name": "Cert Spotter",
+			"categories": ["D", "IP", "C", "O"],
+			"link": "https://search.censys.io/",
+			"open_source": true,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "CT monitoring for detecting new or suspicious certificates"
 		}
 	]
 }
