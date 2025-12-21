@@ -94,7 +94,7 @@
 		},
 		{
 			"name": "Maltego",
-			"categories": ["FS"],
+			"categories": ["FS", "AI"],
 			"link": "https://www.maltego.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -220,7 +220,7 @@
 		{
 			"name": "Taranis AI",
 			"categories": ["AI"],
-			"link": "https://www.synapsint.com/",
+			"link": "https://taranis.ai/",
 			"open_source": true,
 			"accessibility": true,
 			"API": null,
@@ -230,7 +230,7 @@
 		{
 			"name": "Babel X (by Babel Street)",
 			"categories": ["FS", "AI"],
-			"link": "https://www.synapsint.com/",
+			"link": "https://www.babelstreet.com/",
 			"open_source": false,
 			"accessibility": false,
 			"API": null,
@@ -240,7 +240,7 @@
 		{
 			"name": "Dataminr",
 			"categories": ["FS", "AI"],
-			"link": "https://www.synapsint.com/",
+			"link": "https://www.dataminr.com/",
 			"open_source": false,
 			"accessibility": false,
 			"API": true,
@@ -251,7 +251,7 @@
 		{
 			"name": "Paliscope",
 			"categories": ["FS", "AI"],
-			"link": "https://www.synapsint.com/",
+			"link": "https://www.paliscope.com/",
 			"open_source": false,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
@@ -263,7 +263,7 @@
 		{
 			"name": "DarkTrace",
 			"categories": ["FS", "AI"],
-			"link": "https://www.synapsint.com/",
+			"link": "https://www.darktrace.com/",
 			"open_source": false,
 			"accessibility": false,
 			"API": null,
