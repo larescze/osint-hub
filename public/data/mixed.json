@@ -22,10 +22,6 @@
 				"name": "Posts, messages, and comments",
 				"description": "Tools for collecting posts, messages, comments, reactions, subreddits, stories, feeds, and likes from social media platforms."
 			},
-			"M": {
-				"name": "Maltego",
-				"description": "Tools and modules for OSINT investigations using Maltego."
-			},
 			"S": {
 				"name": "Statistical and analytical data",
 				"description": "Tools for gathering statistical data and performing analytics on social media accounts and content."
@@ -37,6 +33,14 @@
 			"DD": {
 				"name": "Deep Fake detection",
 				"description": "Tools for detecting deep fake images and videos."
+			},
+			"FS": {
+				"name": "Full stack",
+				"description": "All-in-one solutions."
+			},
+			"AI": {
+				"name": "Aritificial inteligence integration",
+				"description": "Tools and services integrating artificial inteligence."
 			},
 			"+": {
 				"name": "and more",
@@ -90,7 +94,7 @@
 		},
 		{
 			"name": "Maltego",
-			"categories": ["M"],
+			"categories": ["FS"],
 			"link": "https://www.maltego.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -212,6 +216,59 @@
 			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "Comprehensive OSINT platform"
+		},
+		{
+			"name": "Taranis AI",
+			"categories": ["AI"],
+			"link": "https://www.synapsint.com/",
+			"open_source": true,
+			"accessibility": true,
+			"API": null,
+			"maintained": true,
+			"description": "AI-powered aggregation and analysis."
+		},
+		{
+			"name": "Babel X (by Babel Street)",
+			"categories": ["FS", "AI"],
+			"link": "https://www.synapsint.com/",
+			"open_source": false,
+			"accessibility": false,
+			"API": null,
+			"maintained": true,
+			"description": "Risk Intelligence Platform"
+		},
+		{
+			"name": "Dataminr",
+			"categories": ["FS", "AI"],
+			"link": "https://www.synapsint.com/",
+			"open_source": false,
+			"accessibility": false,
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Risk Intelligence Platform"
+		},
+		{
+			"name": "Paliscope",
+			"categories": ["FS", "AI"],
+			"link": "https://www.synapsint.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Digital investigation and data analysis"
+		},
+		{
+			"name": "DarkTrace",
+			"categories": ["FS", "AI"],
+			"link": "https://www.synapsint.com/",
+			"open_source": false,
+			"accessibility": false,
+			"API": null,
+			"maintained": true,
+			"description": "Digital investigation and data analysis"
 		}
 	]
 }
