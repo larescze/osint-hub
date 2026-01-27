@@ -871,18 +871,18 @@
 			"social_networks": ["TikTok"],
 			"open_source": false,
 			"accessibility": true,
-			"API": true,
+			"API": false,
 			"maintained": true,
 			"description": "Allows viewing and downloading posts and stories without logging in to an account"
 		},
 		{
 			"name": "SnapTik",
 			"categories": ["AUD"],
-			"link": "https://github.com/soxoj/maigret",
+			"link": "https://snaptik.app/en2",
 			"social_networks": ["TikTok"],
 			"open_source": false,
 			"accessibility": true,
-			"API": true,
+			"API": false,
 			"maintained": true,
 			"description": "Allows downloading videos from TikTok without a watermark"
 		}
