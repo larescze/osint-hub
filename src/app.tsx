@@ -120,7 +120,7 @@ function Home() {
 				welcome your contributions to help us keep the catalog up to date.
 			</p>
 			<h2 className="text-2xl font-bold mb-2">About</h2>
-			<p className="mb-6">
+			<p className="mb-3">
 				The results of the comparative analysis are part of the research paper
 				entitled “Comparative analysis of OSINT tools, techniques, and legal
 				aspects”, which is currently under review in the journal Computers &
@@ -133,6 +133,14 @@ function Home() {
 				>
 					https://dx.doi.org/10.2139/ssrn.5579220
 				</a>.
+			</p>
+			<p className="mb-6">
+				<strong>Note:</strong> 
+				The comparative analysis was conducted exclusively using information from 
+				official repositories, product websites, and technical documentation, without 
+				performing empirical benchmarking of the identified tools and services. It is 
+				also possible that some links may no longer be active. In this case, we welcome 
+				updates to the dataset according to the instructions provided below.
 			</p>
 			<h2 className="text-2xl font-bold mb-2">Authors</h2>
 			<p className="mb-3">
