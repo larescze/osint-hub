@@ -135,7 +135,7 @@ function Home() {
 				</a>.
 			</p>
 			<p className="mb-6">
-				<strong>Note:</strong> 
+				<strong>Note: </strong>
 				The comparative analysis was conducted exclusively using information from 
 				official repositories, product websites, and technical documentation, without 
 				performing empirical benchmarking of the identified tools and services. It is 
