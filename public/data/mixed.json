@@ -269,6 +269,16 @@
 			"API": null,
 			"maintained": true,
 			"description": "Digital investigation and data analysis"
+		},
+		{
+			"name": "Osiris",
+			"categories": ["FS"],
+			"link": "https://github.com/simplifaisoul/osiris",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Open Source Global Intelligence Platform"
 		}
 	]
 }
