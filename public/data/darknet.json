@@ -44,7 +44,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Google dorking scanner; supports Tor"
 		},
 		{
@@ -105,7 +105,8 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
+			"functional": false,
 			"description": "Access .onion sites via regular browsers"
 		},
 		{
@@ -305,7 +306,7 @@
 		{
 		    "name": "Torch",
 		    "categories": ["O"],
-		    "link": "N/A",
+		    "link": "https://www.onionlinkhub.com/links/torch/",
 		    "open_source": false,
 		    "accessibility": true,
 		    "API": false,
@@ -315,7 +316,7 @@
 		{
 		    "name": "Haystak",
 		    "categories": ["O"],
-		    "link": "N/A",
+		    "link": "https://onion.live/site/haystak",
 		    "open_source": false,
 		    "accessibility": true,
 		    "API": false,
@@ -325,7 +326,7 @@
 		{
 		    "name": "Not Evil",
 		    "categories": ["O"],
-		    "link": "N/A",
+		    "link": "https://notevil.website/",
 		    "open_source": false,
 		    "accessibility": true,
 		    "API": false,
@@ -335,7 +336,7 @@
 		{
 		    "name": "Candle",
 		    "categories": ["O"],
-		    "link": "N/A",
+		    "link": "https://onion.live/site/candle",
 		    "open_source": true,
 		    "accessibility": true,
 		    "API": true,
@@ -345,7 +346,7 @@
 		{
 		    "name": "Kilos",
 		    "categories": ["O"],
-		    "link": "N/A",
+		    "link": "https://onion.live/site/kilos",
 		    "open_source": false,
 		    "accessibility": true,
 		    "API": false,
@@ -355,7 +356,7 @@
 		{
 		    "name": "LibreY",
 		    "categories": ["S"],
-		    "link": "N/A",
+		    "link": "https://librey.garudalinux.org/",
 		    "open_source": true,
 		    "accessibility": true,
 		    "API": false,
@@ -365,7 +366,7 @@
 		{
 		    "name": "Tordex",
 		    "categories": ["O"],
-		    "link": "N/A",
+		    "link": "https://tordex.app/",
 		    "open_source": false,
 		    "accessibility": true,
 		    "API": false,
@@ -375,7 +376,7 @@
 		{
 		    "name": "ExcavaTor",
 		    "categories": ["O"],
-		    "link": "N/A",
+		    "link": "https://www.onionlinkhub.com/links/excavator/",
 		    "open_source": false,
 		    "accessibility": true,
 		    "API": false,
@@ -385,7 +386,7 @@
 		{
 		    "name": "Hidden Wiki",
 		    "categories": ["OS"],
-		    "link": "N/A",
+		    "link": "https://thehiddenwiki.org/",
 		    "open_source": false,
 		    "accessibility": true,
 		    "API": false,
