@@ -59,6 +59,7 @@ export const RecordBaseSchema = z.object({
 	open_source: z.boolean().nullable(),
 	accessibility: z.boolean().nullable(),
 	accessibility_note: z.string().optional(),
+	functional: z.boolean().nullable().optional(),
 })
 
 const MaintainableRecordSchema = RecordBaseSchema.extend({

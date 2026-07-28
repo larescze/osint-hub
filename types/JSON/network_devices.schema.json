@@ -48,7 +48,8 @@
 				"services": { "type": ["boolean", "null"] },
 				"services_note": { "type": "string" },
 				"CVE": { "type": ["boolean", "null"] },
-				"CVE_note": { "type": "string" }
+				"CVE_note": { "type": "string" },
+				"functional": { "type": ["boolean", "null"] }
 			},
 			"required": ["name", "categories", "API", "services", "CVE"]
 		}

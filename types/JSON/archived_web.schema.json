@@ -47,7 +47,8 @@
 				"description": { "type": ["string", "null"] },
 				"open_source": { "type": ["boolean", "null"] },
 				"accessibility": { "type": ["boolean", "null"] },
-				"accessibility_note": { "type": "string" }
+				"accessibility_note": { "type": "string" },
+				"functional": { "type": ["boolean", "null"] }
 			},
 			"required": ["name", "categories", "API", "open_source", "accessibility"]
 		}

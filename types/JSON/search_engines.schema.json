@@ -44,7 +44,8 @@
 				"link": { "type": ["string", "null"] },
 				"API": { "type": ["boolean", "null"] },
 				"API_note": { "type": "string" },
-				"description": { "type": ["string", "null"] }
+				"description": { "type": ["string", "null"] },
+				"functional": { "type": ["boolean", "null"] }
 			},
 			"required": ["name", "categories", "API"]
 		}

@@ -68,7 +68,8 @@
 				},
 				"maintained_note": {
 					"type": "string"
-				}
+				},
+				"functional": { "type": ["boolean", "null"] }
 			},
 			"required": ["name", "categories", "API", "maintained"]
 		}

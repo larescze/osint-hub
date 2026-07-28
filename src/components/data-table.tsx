@@ -12,7 +12,10 @@ import ExternalNavigationDialog from './external-navigation-dialog'
 import Tag from './tag'
 import type { CategoryMeta } from '../hooks/useSectionData'
 import Note from './note'
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
+import {
+	ArrowTopRightOnSquareIcon,
+	ExclamationCircleIcon,
+} from '@heroicons/react/24/outline'
 import { twMerge } from 'tailwind-merge'
 
 type ColumnType = 'text' | 'link' | 'tags' | 'status' | 'array'
@@ -57,6 +60,12 @@ function normalizeStatus(value: StatusValue): 'yes' | 'no' | 'na' {
 	if (value === true) return 'yes'
 	if (value === false) return 'no'
 	return 'na'
+}
+
+// A source is treated as non-functional only when `functional` is explicitly false.
+// null/undefined/true are all considered functional.
+function isNonFunctional(record: unknown): boolean {
+	return (record as { functional?: boolean | null })?.functional === false
 }
 
 export default function DataTable<T extends object>(props: DataTableProps<T>) {
@@ -213,22 +222,26 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 								return (
 									<ExternalNavigationDialog
 										trigger={
-											<Note
-												note={
-													spec.noteDataKey
-														? // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-															(row as any)[spec.noteDataKey as string]
-														: null
-												}
-												as="div"
-												className="whitespace-nowrap"
-											>
-												<span className="font-medium underline cursor-pointer whitespace-normal">
-													{label}
-												</span>
-												{'\u00A0'}
-												<ArrowTopRightOnSquareIcon className="size-4 cursor-pointer inline ml-1" />
-											</Note>
+											<div className="flex items-center gap-1 h-full">
+												{isNonFunctional(row) && (
+													<ExclamationCircleIcon className="size-[24px] p-1 bg-neutral-200 align-top rounded-full inline-block mr-1 shrink-0 text-neutral-800 align-text-bottom" />
+												)}
+												<Note
+													note={
+														isNonFunctional(row)
+															? 'This source is no longer available'
+															: ''
+													}
+													as="div"
+													className="whitespace-nowrap "
+												>
+													<span className="font-medium underline cursor-pointer whitespace-normal align-top">
+														{label}
+													</span>
+													{'\u00A0'}
+													<ArrowTopRightOnSquareIcon className="size-4 cursor-pointer inline ml-1" />
+												</Note>
+											</div>
 										}
 										href={href as string}
 									/>
@@ -322,6 +335,15 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 		},
 		state: { sorting },
 	})
+
+	// Keep non-functional sources at the end of the table regardless of the
+	// active column sort. `filter` is stable, so ordering within each group
+	// (i.e. the user's chosen sort) is preserved.
+	const sortedRows = table.getRowModel().rows
+	const orderedRows = [
+		...sortedRows.filter((r) => !isNonFunctional(r.original)),
+		...sortedRows.filter((r) => isNonFunctional(r.original)),
+	]
 
 	return (
 		<div className="bg-white rounded-lg shadow border border-gray-200">
@@ -423,8 +445,15 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 						))}
 					</thead>
 					<tbody className="bg-white divide-y divide-gray-200">
-						{table.getRowModel().rows.map((row) => (
-							<tr key={row.id} className="hover:bg-gray-50">
+						{orderedRows.map((row) => (
+							<tr
+								key={row.id}
+								className={
+									isNonFunctional(row.original)
+										? 'bg-neutral-100 *:*:!text-gray-600'
+										: 'hover:bg-gray-50'
+								}
+							>
 								{row.getVisibleCells().map((cell) => {
 									const spec = specById[cell.column.id as string]
 									let extraStyle: Record<string, unknown> | undefined =

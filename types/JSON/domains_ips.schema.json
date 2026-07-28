@@ -49,7 +49,8 @@
 				"accessibility": { "type": ["boolean", "null"] },
 				"accessibility_note": { "type": "string" },
 				"maintained": { "type": ["boolean", "null"] },
-				"maintained_note": { "type": "string" }
+				"maintained_note": { "type": "string" },
+				"functional": { "type": ["boolean", "null"] }
 			},
 			"required": [
 				"name",
