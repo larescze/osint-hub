@@ -126,21 +126,23 @@ function Home() {
 				aspects”, which is currently under review in the journal Computers &
 				Security. The preprint is available at{' '}
 				<a
-					href="https://dx.doi.org/10.2139/ssrn.5579220"
+					href="https://doi.org/10.1016/j.cose.2026.104938"
 					className="font-medium underline"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					https://dx.doi.org/10.2139/ssrn.5579220
-				</a>.
+					https://doi.org/10.1016/j.cose.2026.104938
+				</a>
+				.
 			</p>
 			<p className="mb-6">
 				<strong>Note: </strong>
-				The comparative analysis was conducted exclusively using information from 
-				official repositories, product websites, and technical documentation, without 
-				performing empirical benchmarking of the identified tools and services. It is 
-				also possible that some links may no longer be active. In this case, we welcome 
-				updates to the dataset according to the instructions provided below.
+				The comparative analysis was conducted exclusively using information
+				from official repositories, product websites, and technical
+				documentation, without performing empirical benchmarking of the
+				identified tools and services. It is also possible that some links may
+				no longer be active. In this case, we welcome updates to the dataset
+				according to the instructions provided below.
 			</p>
 			<h2 className="text-2xl font-bold mb-2">Authors</h2>
 			<p className="mb-3">
@@ -151,6 +153,46 @@ function Home() {
 				Special thanks go to Pavel Prochorov, Josef Bezunk, and Roman Klampar
 				for their methodological and technical support in this work.
 			</p>
+			<h2 className="text-2xl font-bold mb-2">Acknowledgment</h2>
+			<p className="mb-3">
+				This project was financially supported by the Technology Agency of the
+				Czech Republic, project No. FW11020057.
+			</p>
+			<div className="flex items-center gap-12">
+				<a
+					href="https://tacr.gov.cz/en/"
+					rel={'noopener noreferrer'}
+					target="_blank"
+				>
+					<img
+						alt="TACR Logo"
+						className="h-[64px]"
+						src="/osint-hub/assets/logos/logo _en_red.png"
+					/>
+				</a>
+				<a
+					href="https://www.vut.cz/en/"
+					rel={'noopener noreferrer'}
+					target="_blank"
+				>
+					<img
+						alt="VUT Logo"
+						className="h-[64px]"
+						src="/osint-hub/assets/logos/BUT_color_RGB_EN.png"
+					/>
+				</a>
+				<a
+					href="https://www.penterep.com/en/"
+					rel={'noopener noreferrer'}
+					target="_blank"
+				>
+					<img
+						alt="Penterep Logo"
+						className="h-[54px]"
+						src="/osint-hub/assets/logos/penterep_orange_black.png"
+					/>
+				</a>
+			</div>
 			<h2 className="text-2xl font-bold mb-2 mt-6">Contributing</h2>
 			<div className="mb-6">
 				<p>
