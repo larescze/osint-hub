@@ -92,7 +92,7 @@
 			"categories": ["O"],
 			"link": "https://onionsearchengine.com/",
 			"open_source": false,
-			"accessibility": true,
+			"accessibility": false,
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": false,
@@ -244,9 +244,9 @@
 		{
 			"name": "Lunar",
 			"categories": ["CTI"],
-			"link": "https://webz.io/products/lunar/#lite?1",
+			"link": "https://lunarcyber.com/",
 			"open_source": false,
-			"accessibility": null,
+			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -280,7 +280,7 @@
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"maintained": null,
+			"maintained": true,
 			"description": "Aggregated list of .onion services"
 		},
 		{
@@ -318,9 +318,9 @@
 		    "categories": ["O"],
 		    "link": "https://onion.live/site/haystak",
 		    "open_source": false,
-		    "accessibility": true,
+		    "accessibility": false,
 		    "API": false,
-		    "maintained": true,
+		    "maintained": false,
 		    "description": "Over 1.5 billion indexed pages, offers free and premium versions (premium includes historical data and advanced search)"
 		},
 		{
@@ -338,9 +338,9 @@
 		    "categories": ["O"],
 		    "link": "https://onion.live/site/candle",
 		    "open_source": true,
-		    "accessibility": true,
+		    "accessibility": false,
 		    "API": true,
-		    "maintained": true,
+		    "maintained": false,
 		    "description": "Keyword search across onion search engines"
 		},
 		{
@@ -348,7 +348,7 @@
 		    "categories": ["O"],
 		    "link": "https://onion.live/site/kilos",
 		    "open_source": false,
-		    "accessibility": true,
+		    "accessibility": false,
 		    "API": false,
 		    "maintained": false,
 		    "description": "Search engine focused on illegal markets"
@@ -359,7 +359,7 @@
 		    "link": "https://librey.garudalinux.org/",
 		    "open_source": true,
 		    "accessibility": true,
-		    "API": false,
+		    "API": true,
 		    "maintained": true,
 		    "description": "Allows access to onion sites via regular browsers"
 		},
