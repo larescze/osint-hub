@@ -51,11 +51,11 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": true,
-			"API_note": "Paid or restricted access",
+			"API_note": "Free public access",
 			"description": "Open-source web crawl data archive"
 		},
 		{
-			"name": "SeoReviewTools",
+			"name": "SEO REVIEW TOOLS",
 			"categories": ["S", "BC"],
 			"link": "https://www.seoreviewtools.com/",
 			"open_source": false,
@@ -87,14 +87,14 @@
 			"description": "Searches source code and keyword signatures"
 		},
 		{
-			"name": "Grepp App",
+			"name": "Grepp",
 			"categories": ["SC"],
 			"link": "https://grep.app/",
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
+			"accessibility_note": "Public access",
 			"API": true,
-			"API_note": "Paid or restricted access",
+			"API_note": "Public API/MCP access with service restrictions",
 			"description": "Searches code, files, and paths on GitHub"
 		},
 		{
