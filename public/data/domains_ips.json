@@ -45,7 +45,7 @@
 		},
 		{
 			"name": "WhoisFreaks",
-			"categories": ["D"],
+			"categories": ["D", "IP"],
 			"link": "https://whoisfreaks.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -73,7 +73,7 @@
 			"open_source": false,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
-			"API": false,
+			"API": true,
 			"maintained": true,
 			"description": "WHOIS records and connections"
 		},
@@ -93,7 +93,7 @@
 			"name": "crt.sh",
 			"categories": ["C"],
 			"link": "https://crt.sh/",
-			"open_source": null,
+			"open_source": true,
 			"accessibility": true,
 			"API": false,
 			"maintained": true,

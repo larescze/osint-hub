@@ -88,7 +88,7 @@
 			"link": "https://www.social-searcher.com/",
 			"open_source": false,
 			"accessibility": true,
-			"API": null,
+			"API": true,
 			"maintained": true,
 			"description": "Social media search engine"
 		},
@@ -132,7 +132,7 @@
 			"categories": ["PI", "E", "O", "CN"],
 			"link": "https://osint.rocks/",
 			"open_source": false,
-			"accessibility": true,
+			"accessibility": false,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
@@ -153,11 +153,11 @@
 			"categories": ["DD"],
 			"link": "https://deepware.ai/",
 			"open_source": false,
-			"accessibility": true,
+			"accessibility": false,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"maintained": true,
+			"maintained": false,
 			"description": "Deepfake detection"
 		},
 		{
@@ -179,7 +179,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Finds accounts by username"
 		},
 		{
@@ -211,7 +211,7 @@
 			"categories": ["E", "O", "CN", "GEO"],
 			"link": "https://www.synapsint.com/",
 			"open_source": false,
-			"accessibility": null,
+			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -223,7 +223,7 @@
 			"link": "https://taranis.ai/",
 			"open_source": true,
 			"accessibility": true,
-			"API": null,
+			"API": true,
 			"maintained": true,
 			"description": "AI-powered aggregation and analysis."
 		},
@@ -233,7 +233,7 @@
 			"link": "https://www.babelstreet.com/",
 			"open_source": false,
 			"accessibility": false,
-			"API": null,
+			"API": true,
 			"maintained": true,
 			"description": "Risk Intelligence Platform"
 		},
@@ -242,7 +242,7 @@
 			"categories": ["FS", "AI"],
 			"link": "https://www.dataminr.com/",
 			"open_source": false,
-			"accessibility": false,
+			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -266,7 +266,7 @@
 			"link": "https://www.darktrace.com/",
 			"open_source": false,
 			"accessibility": false,
-			"API": null,
+			"API": false,
 			"maintained": true,
 			"description": "Digital investigation and data analysis"
 		},

@@ -21,10 +21,10 @@
 			"name": "Internet Archive",
 			"categories": ["A"],
 			"link": "https://web.archive.org/",
-			"open_source": false,
+			"open_source": true,
 			"accessibility": true,
 			"API": true,
-			"API_note": "Paid or restricted access",
+			"API_note": "Public APIs available",
 			"description": "View historical snapshots of websites"
 		},
 		{
@@ -33,7 +33,7 @@
 			"link": "https://archive.ph",
 			"open_source": false,
 			"accessibility": true,
-			"API": true,
+			"API": false,
 			"API_note": "Paid or restricted access",
 			"description": "View archived versions of websites"
 		},
@@ -42,14 +42,14 @@
 			"categories": ["A"],
 			"link": "https://cachedview.com",
 			"open_source": false,
-			"accessibility": true,
+			"accessibility": false,
 			"API": false,
 			"description": "Cached pages from Google and Archive.org"
 		},
 		{
 			"name": "Anna's Archive",
 			"categories": ["B"],
-			"link": "https://annas-archive.org",
+			"link": "https://annas-archive.gl",
 			"open_source": true,
 			"accessibility": true,
 			"API": true,
@@ -70,7 +70,7 @@
 			"link": "https://archivebox.io/",
 			"open_source": true,
 			"accessibility": true,
-			"API": false,
+			"API": true,
 			"description": "Open source self-hosted web archiving"
 		},
 		{
@@ -94,7 +94,7 @@
 		{
 			"name": "Distributed Denial of Secrets",
 			"categories": ["C"],
-			"link": "https://ddosecrets.com/",
+			"link": "https://ddosecrets.org/",
 			"open_source": false,
 			"accessibility": true,
 			"API": false,

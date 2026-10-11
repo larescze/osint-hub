@@ -118,9 +118,9 @@
 		{
 			"name": "Graph.tips",
 			"categories": ["PMC", "PI", "GEO", "AUD", "O"],
-			"link": "https://graph.tips/beta/",
+			"link": "https://graph.tips/",
 			"social_networks": ["Facebook"],
-			"open_source": false,
+			"open_source": true,
 			"accessibility": true,
 			"API": false,
 			"maintained": true,
@@ -146,7 +146,7 @@
 			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"maintained": true,
+			"maintained": false,
 			"description": "Extracts ID from a given URL"
 		},
 		{
@@ -211,10 +211,10 @@
 			"categories": ["O"],
 			"link": "https://github.com/igorbrigadir/twitter-advanced-search",
 			"social_networks": ["X (Twitter)"],
-			"open_source": null,
-			"accessibility": null,
-			"API": null,
-			"maintained": null,
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
 			"description": "Advanced Twitter/X search"
 		},
 		{
@@ -230,13 +230,13 @@
 		},
 		{
 			"name": "socialbearing.com",
-			"categories": null,
+			"categories": ["S"],
 			"link": "https://tomelliott.com/social-media/twitter-search-analytics-tool",
 			"social_networks": ["X (Twitter)"],
-			"open_source": null,
-			"accessibility": null,
-			"API": null,
-			"maintained": null,
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": false,
 			"description": "The tools is no longer operation"
 		},
 		{
@@ -258,7 +258,7 @@
 			"social_networks": ["X (Twitter)"],
 			"open_source": false,
 			"accessibility": true,
-			"API": false,
+			"API": true,
 			"maintained": true,
 			"description": "Twitter/X video downloader"
 		},
@@ -270,7 +270,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Anonymous X/Twitter viewer via Nitter"
 		},
 		{
@@ -281,7 +281,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Displays archived tweets from Wayback"
 		},
 		{
@@ -351,7 +351,7 @@
 			"social_networks": ["YouTube"],
 			"open_source": true,
 			"accessibility": true,
-			"API": null,
+			"API": false,
 			"maintained": true,
 			"description": "Finds geo-location of video"
 		},
@@ -407,7 +407,7 @@
 			"categories": ["PI", "G"],
 			"link": "https://github.com/linkedin-developers",
 			"social_networks": ["LinkedIn"],
-			"open_source": false,
+			"open_source": true,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
@@ -493,7 +493,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": null,
+			"maintained": true,
 			"description": "Extracts video upload time"
 		},
 		{
@@ -592,7 +592,7 @@
 		{
 			"name": "Famety",
 			"categories": ["AUD"],
-			"link": "https://www.famety.net/download-instagram-stories",
+			"link": "https://www.famety.net/",
 			"social_networks": ["Instagram"],
 			"open_source": false,
 			"accessibility": true,
@@ -723,10 +723,10 @@
 			"link": "https://www.redective.com/",
 			"social_networks": ["Reddit"],
 			"open_source": false,
-			"accessibility": true,
+			"accessibility": false,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
-			"maintained": null,
+			"maintained": false,
 			"description": "Reddit profile info and statistics"
 		},
 		{
@@ -807,7 +807,7 @@
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Telegram API wrapper"
 		},
 		{
@@ -865,7 +865,7 @@
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
-			"maintained": false,
+			"maintained": true,
 			"description": "Checks if number is on Telegram"
 		},
 		{

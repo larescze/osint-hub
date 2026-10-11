@@ -151,7 +151,7 @@
 			"link": "https://www.google.com/advanced_search",
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"description": null
+			"description": "The world's leading search engine offering powerful advanced search operators and APIs."
 		},
 		{
 			"name": "Yandex",
@@ -204,7 +204,7 @@
 				"IS"
 			],
 			"link": "https://www.bing.com/",
-			"API": false,
+			"API": true,
 			"description": "Rich search features; legacy API deprecation pending"
 		},
 		{
@@ -242,28 +242,28 @@
 			"name": "Yahoo",
 			"categories": ["SW", "EW", "AW", "NW", "D", "F", "SS", "R", "L", "N", "P", "T", "IS", "RU"],
 			"link": "https://search.yahoo.com/",
-			"API": null,
+			"API": true,
 			"description": "Legacy engine with basic advanced query tools"
 		},
 		{
 			"name": "SearXNG",
-			"categories": null,
+			"categories": ["SW", "EW", "AW", "NW", "IU", "IT", "D", "L", "R"],
 			"link": "https://searx.bndkt.io/",
 			"API": true,
 			"description": "Meta-search engine with customizable API"
 		},
 		{
 			"name": "Baidu",
-			"categories": null,
+			"categories": ["SW", "EW", "AW", "NW", "IT", "IU", "D", "T", "F"],
 			"link": "https://www.baidu.com/",
-			"API": null,
+			"API": true,
 			"description": "Chinese-language search engine"
 		},
 		{
 			"name": "SearchEngineCollossus",
-			"categories": null,
+			"categories": ["R", "L"],
 			"link": "https://www.searchenginecolossus.com/",
-			"API": null,
+			"API": false,
 			"description": "Directory of global search engine endpoints"
 		},
 		{
@@ -295,9 +295,9 @@
 		},
 		{
 			"name": "Milion Short",
-			"categories": null,
+			"categories": ["SW", "EW", "AW", "NW", "D", "P"],
 			"link": "https://millionshort.com/",
-			"API": null,
+			"API": false,
 			"description": "Search engine that skips popular sites"
 		},
 		{
