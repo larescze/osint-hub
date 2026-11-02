@@ -42,7 +42,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"description": "SEO audit, rank tracking, and site analysis tool"
+			"description": "Analyze any website's traffic, backlinks, and paid ads"
 		},
 		{
 			"name": "Common Crawler",
@@ -51,18 +51,18 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": true,
-			"API_note": "Paid or restricted access",
+			"API_note": "Free public access",
 			"description": "Open-source web crawl data archive"
 		},
 		{
-			"name": "SeoReviewTools",
+			"name": "SEO REVIEW TOOLS",
 			"categories": ["S", "BC"],
 			"link": "https://www.seoreviewtools.com/",
 			"open_source": false,
 			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"description": "Provides backlinks and domain stats"
+			"description": "Free SEO, content, and AI analysis tools"
 		},
 		{
 			"name": "NerdyData",
@@ -77,7 +77,7 @@
 		},
 		{
 			"name": "PublicWWW",
-			"categories": ["SC"],
+			"categories": ["SC", "T"],
 			"link": "https://publicwww.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -87,14 +87,14 @@
 			"description": "Searches source code and keyword signatures"
 		},
 		{
-			"name": "Grepp App",
+			"name": "Grepp",
 			"categories": ["SC"],
 			"link": "https://grep.app/",
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
+			"accessibility_note": "Public access",
 			"API": true,
-			"API_note": "Paid or restricted access",
+			"API_note": "Public API/MCP access with service restrictions",
 			"description": "Searches code, files, and paths on GitHub"
 		},
 		{
@@ -106,7 +106,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"description": "Search for public code and files"
+			"description": "Code intelligence platform for enterprise codebases"
 		},
 		{
 			"name": "Google Scholar",
