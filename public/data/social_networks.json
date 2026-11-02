@@ -71,7 +71,7 @@
 	"data": [
 		{
 			"name": "Facebook Graph API",
-			"categories": ["PI", "PMC"],
+			"categories": ["PI", "PMC", "G"],
 			"link": "https://developers.facebook.com/docs/graph-api",
 			"social_networks": ["Facebook"],
 			"open_source": false,
@@ -95,9 +95,9 @@
 		},
 		{
 			"name": "Who Posted What",
-			"categories": ["PI", "PMC"],
+			"categories": ["PI", "PMC", "DT"],
 			"link": "https://whopostedwhat.com/",
-			"social_networks": ["Facebook", "Instagram"],
+			"social_networks": ["Facebook"],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
@@ -106,24 +106,24 @@
 		},
 		{
 			"name": "Facebook Graph Searcher",
-			"categories": ["PMC", "AUD", "O"],
+			"categories": ["PMC", "AUD", "O", "G", "GEO", "DT"],
 			"link": "https://intelx.io/tools?tab=facebook",
 			"social_networks": ["Facebook"],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
 			"maintained": true,
-			"description": "Searches posts by time period"
+			"description": "Searches Facebook posts, people, photos, videos, events"
 		},
 		{
 			"name": "Graph.tips",
 			"categories": ["PMC", "PI", "GEO", "AUD", "O"],
-			"link": "https://graph.tips/beta/",
+			"link": "https://graph.tips/",
 			"social_networks": ["Facebook"],
-			"open_source": false,
+			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Facebook search"
 		},
 		{
@@ -146,7 +146,7 @@
 			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"maintained": true,
+			"maintained": false,
 			"description": "Extracts ID from a given URL"
 		},
 		{
@@ -157,7 +157,7 @@
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"maintained": false,
+			"maintained": true,
 			"description": "Checks if number was in 2019 FB breach"
 		},
 		{
@@ -197,7 +197,7 @@
 		},
 		{
 			"name": "Twint",
-			"categories": ["PI", "PMC"],
+			"categories": ["PI", "PMC", "E", "CN", "GEO", "DT"],
 			"link": "https://github.com/twintproject/twint",
 			"social_networks": ["X (Twitter)"],
 			"open_source": true,
@@ -208,18 +208,18 @@
 		},
 		{
 			"name": "Twitter Advanced Search",
-			"categories": ["O"],
+			"categories": ["GEO", "DT"],
 			"link": "https://github.com/igorbrigadir/twitter-advanced-search",
 			"social_networks": ["X (Twitter)"],
-			"open_source": null,
-			"accessibility": null,
-			"API": null,
-			"maintained": null,
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"maintained": false,
 			"description": "Advanced Twitter/X search"
 		},
 		{
 			"name": "Followerwonk.com",
-			"categories": ["PI", "S"],
+			"categories": ["PI", "S", "GEO"],
 			"link": "https://followerwonk.com/",
 			"social_networks": ["X (Twitter)"],
 			"open_source": false,
@@ -230,18 +230,18 @@
 		},
 		{
 			"name": "socialbearing.com",
-			"categories": null,
+			"categories": ["S"],
 			"link": "https://tomelliott.com/social-media/twitter-search-analytics-tool",
 			"social_networks": ["X (Twitter)"],
-			"open_source": null,
-			"accessibility": null,
-			"API": null,
-			"maintained": null,
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": false,
 			"description": "The tools is no longer operation"
 		},
 		{
 			"name": "twitonomy.com",
-			"categories": ["PI", "S"],
+			"categories": ["PI", "S", "GEO"],
 			"link": "https://twitonomy.com/",
 			"social_networks": ["X (Twitter)"],
 			"open_source": false,
@@ -258,7 +258,7 @@
 			"social_networks": ["X (Twitter)"],
 			"open_source": false,
 			"accessibility": true,
-			"API": false,
+			"API": true,
 			"maintained": true,
 			"description": "Twitter/X video downloader"
 		},
@@ -268,9 +268,9 @@
 			"link": "https://xcancel.com/",
 			"social_networks": ["X (Twitter)"],
 			"open_source": true,
-			"accessibility": true,
+			"accessibility": false,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Anonymous X/Twitter viewer via Nitter"
 		},
 		{
@@ -281,7 +281,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Displays archived tweets from Wayback"
 		},
 		{
@@ -297,7 +297,7 @@
 		},
 		{
 			"name": "YouTube Data API",
-			"categories": ["G", "O"],
+			"categories": ["G", "O", "C", "GEO", "DT"],
 			"link": "https://developers.google.com/youtube/v3",
 			"social_networks": ["YouTube"],
 			"open_source": false,
@@ -315,10 +315,9 @@
 			"social_networks": ["YouTube"],
 			"open_source": true,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
-			"description": "Video downloader"
+			"description": "Audio/video downloader"
 		},
 		{
 			"name": "MW Metadata",
@@ -339,7 +338,6 @@
 			"social_networks": ["YouTube"],
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
 			"description": "Returns video metadata"
@@ -351,7 +349,7 @@
 			"social_networks": ["YouTube"],
 			"open_source": true,
 			"accessibility": true,
-			"API": null,
+			"API": false,
 			"maintained": true,
 			"description": "Finds geo-location of video"
 		},
@@ -369,7 +367,7 @@
 		{
 			"name": "Discord API",
 			"categories": ["PI", "PMC", "O"],
-			"link": "https://discord.com/developers/docs/reference",
+			"link": "https://docs.discord.com/developers/reference",
 			"social_networks": ["Discord"],
 			"open_source": false,
 			"accessibility": true,
@@ -381,7 +379,7 @@
 		},
 		{
 			"name": "Discord.py",
-			"categories": ["PI", "PMC", "+"],
+			"categories": ["PI", "PMC", "+", "B"],
 			"link": "https://discordpy.readthedocs.io/en/stable/",
 			"social_networks": ["Discord"],
 			"open_source": true,
@@ -407,7 +405,7 @@
 			"categories": ["PI", "G"],
 			"link": "https://github.com/linkedin-developers",
 			"social_networks": ["LinkedIn"],
-			"open_source": false,
+			"open_source": true,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
@@ -437,13 +435,13 @@
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
-			"description": "Email-to-LinkedIn profile lookup"
+			"description": "B2B people and company data API for LinkedIn enrichment"
 		},
 		{
 			"name": "RecruitEm",
 			"categories": ["PI", "G"],
 			"link": "https://recruitin.net/",
-			"social_networks": ["LinkedIn"],
+			"social_networks": ["LinkedIn", "Multiple platforms"],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
@@ -493,7 +491,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": null,
+			"maintained": true,
 			"description": "Extracts video upload time"
 		},
 		{
@@ -521,7 +519,7 @@
 		},
 		{
 			"name": "TikTok Scraper: Export Users, Posts, Comments & more",
-			"categories": ["PI", "AUD", "M", "O"],
+			"categories": ["PI", "M", "O", "PMC"],
 			"link": "https://nifty.codes/e/tiktok-scraper",
 			"social_networks": ["TikTok"],
 			"open_source": false,
@@ -535,7 +533,7 @@
 			"name": "TikTok & Instagram Sorter",
 			"categories": ["PMC", "AUD"],
 			"link": "https://www.ovszon.com/tiktok-instagram-sorter/",
-			"social_networks": ["TikTok"],
+			"social_networks": ["TikTok", "Instagram"],
 			"open_source": false,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
@@ -568,7 +566,7 @@
 		},
 		{
 			"name": "Instagram Scraper",
-			"categories": ["PI", "PMC", "GEO", "M"],
+			"categories": ["PI", "PMC", "GEO", "M", "AUD"],
 			"link": "https://github.com/drawrowfly/instagram-scraper",
 			"social_networks": ["Instagram"],
 			"open_source": true,
@@ -579,12 +577,11 @@
 		},
 		{
 			"name": "Instaloader",
-			"categories": ["PI", "PMC", "AUD"],
+			"categories": ["PI", "PMC", "AUD", "GEO"],
 			"link": "https://github.com/instaloader/instaloader",
 			"social_networks": ["Instagram"],
 			"open_source": true,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
 			"description": "Instagram scraper"
@@ -592,19 +589,27 @@
 		{
 			"name": "Famety",
 			"categories": ["AUD"],
-			"link": "https://www.famety.net/download-instagram-stories",
-			"social_networks": ["Instagram"],
+			"link": "https://www.famety.net/",
+			"social_networks": [
+				"Instagram",
+				"TikTok",
+				"YouTube",
+				"Facebook",
+				"X (Twitter)",
+				"Telegram",
+				"LinkedIn"
+			],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
 			"maintained": true,
-			"description": "Instagram media downloader"
+			"description": "Paid social media engagement service"
 		},
 		{
 			"name": "dumpor",
 			"categories": ["PI", "PMC", "AUD"],
 			"link": "https://dumpor.io/",
-			"social_networks": ["Instagram"],
+			"social_networks": ["Instagram", "TikTok"],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
@@ -647,7 +652,7 @@
 		},
 		{
 			"name": "InstaStoriesViewer",
-			"categories": ["PMC"],
+			"categories": ["PMC", "AUD"],
 			"link": "https://insta-stories-viewer.com/",
 			"social_networks": ["Instagram"],
 			"open_source": false,
@@ -658,7 +663,7 @@
 		},
 		{
 			"name": "Osintgram",
-			"categories": ["PI", "PMC", "GEO", "O"],
+			"categories": ["PI", "PMC", "GEO", "O", "E", "CN", "DT", "M"],
 			"link": "https://github.com/Datalux/Osintgram",
 			"social_networks": ["Instagram"],
 			"open_source": true,
@@ -706,14 +711,13 @@
 		},
 		{
 			"name": "Pushshift API",
-			"categories": ["PI", "PMC", "O"],
+			"categories": ["PI", "PMC", "O", "S"],
 			"link": "https://github.com/pushshift/api",
 			"social_networks": ["Reddit"],
 			"open_source": true,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
-			"API_note": "Paid or restricted access",
 			"maintained": false,
 			"description": "Reddit comment/post API"
 		},
@@ -723,10 +727,10 @@
 			"link": "https://www.redective.com/",
 			"social_networks": ["Reddit"],
 			"open_source": false,
-			"accessibility": true,
+			"accessibility": false,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
-			"maintained": null,
+			"maintained": false,
 			"description": "Reddit profile info and statistics"
 		},
 		{
@@ -777,7 +781,7 @@
 		},
 		{
 			"name": "OSINTVk",
-			"categories": ["PI", "G", "GEO", "AUD"],
+			"categories": ["PI", "G", "GEO", "AUD", "PMC"],
 			"link": "https://github.com/AdrianGuretto/OSINTvk",
 			"social_networks": ["VKontakte"],
 			"open_source": true,
@@ -807,7 +811,7 @@
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Telegram API wrapper"
 		},
 		{
@@ -823,11 +827,12 @@
 		},
 		{
 			"name": "TGStat",
-			"categories": ["PMC"],
+			"categories": ["PMC", "G", "S"],
 			"link": "https://tgstat.ru/en/search",
 			"social_networks": ["Telegram"],
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -858,14 +863,14 @@
 		},
 		{
 			"name": "Telegram Phone Number Checker",
-			"categories": ["CN"],
+			"categories": ["CN", "PI"],
 			"link": "https://github.com/bellingcat/telegram-phone-number-checker",
 			"social_networks": ["Telegram"],
 			"open_source": true,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
-			"maintained": false,
+			"maintained": true,
 			"description": "Checks if number is on Telegram"
 		},
 		{
