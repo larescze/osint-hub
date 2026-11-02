@@ -40,7 +40,7 @@
 	{
 			"name": "Katana",
 			"categories": ["S", "O"],
-			"link": "https://github.com/0xStrontium/Katana",
+			"link": "https://github.com/c4tcom/Katana",
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
@@ -91,12 +91,12 @@
 			"name": "Onion Search Engine",
 			"categories": ["O"],
 			"link": "https://onionsearchengine.com/",
-			"open_source": false,
+			"open_source": true,
 			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"maintained": false,
-			"description": "Keyword search across onion search engines"
+			"maintained": true,
+			"description": "Privacy-first search engine for the Tor network"
 		},
 		{
 			"name": "Tor2Web",
@@ -244,9 +244,9 @@
 		{
 			"name": "Lunar",
 			"categories": ["CTI"],
-			"link": "https://webz.io/products/lunar/#lite?1",
+			"link": "https://lunarcyber.com/",
 			"open_source": false,
-			"accessibility": null,
+			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -268,7 +268,6 @@
 			"link": "https://github.com/smicallef/spiderfoot",
 			"open_source": true,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": false,
 			"description": "OSINT tool with dark web and Tor support"
@@ -280,7 +279,7 @@
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"maintained": null,
+			"maintained": true,
 			"description": "Aggregated list of .onion services"
 		},
 		{
@@ -295,12 +294,12 @@
 		},
 		{
 			"name": "DarkwebCrawler",
-			"categories": ["SCDE"],
+			"categories": ["SCDE", "CTI"],
 			"link": "https://github.com/IntelEyes/darkweb_crawler",
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
+			"maintained": false,
 			"description": "Crawler for .onion sites with marketplace analysis"
 		},
 		{
@@ -318,29 +317,29 @@
 		    "categories": ["O"],
 		    "link": "https://onion.live/site/haystak",
 		    "open_source": false,
-		    "accessibility": true,
+		    "accessibility": false,
 		    "API": false,
-		    "maintained": true,
+		    "maintained": false,
 		    "description": "Over 1.5 billion indexed pages, offers free and premium versions (premium includes historical data and advanced search)"
 		},
 		{
-		    "name": "Not Evil",
-		    "categories": ["O"],
-		    "link": "https://notevil.website/",
-		    "open_source": false,
-		    "accessibility": true,
-		    "API": false,
-		    "maintained": true,
-		    "description": "Focuses only on .onion content, guarantees no trackers, no ads, and no censorship"
+			"name": "Not Evil",
+			"categories": ["O"],
+			"link": "https://notevil.website/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Privacy-focused search engine for Tor onion sites"
 		},
 		{
 		    "name": "Candle",
 		    "categories": ["O"],
 		    "link": "https://onion.live/site/candle",
 		    "open_source": true,
-		    "accessibility": true,
+		    "accessibility": false,
 		    "API": true,
-		    "maintained": true,
+		    "maintained": false,
 		    "description": "Keyword search across onion search engines"
 		},
 		{
@@ -348,20 +347,20 @@
 		    "categories": ["O"],
 		    "link": "https://onion.live/site/kilos",
 		    "open_source": false,
-		    "accessibility": true,
+		    "accessibility": false,
 		    "API": false,
 		    "maintained": false,
 		    "description": "Search engine focused on illegal markets"
 		},
 		{
-		    "name": "LibreY",
-		    "categories": ["S"],
-		    "link": "https://librey.garudalinux.org/",
-		    "open_source": true,
-		    "accessibility": true,
-		    "API": false,
-		    "maintained": true,
-		    "description": "Allows access to onion sites via regular browsers"
+			"name": "LibreY",
+			"categories": ["S"],
+			"link": "https://librey.garudalinux.org/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Privacy-respecting meta search engine"
 		},
 		{
 		    "name": "Tordex",
@@ -372,16 +371,6 @@
 		    "API": false,
 		    "maintained": false,
 		    "description": "Dark Web search engine, generally considered unmaintained and inactive"
-		},
-		{
-		    "name": "ExcavaTor",
-		    "categories": ["O"],
-		    "link": "https://www.onionlinkhub.com/links/excavator/",
-		    "open_source": false,
-		    "accessibility": true,
-		    "API": false,
-		    "maintained": true,
-		    "description": "Inactive/unmaintained Dark Web search engine"
 		},
 		{
 		    "name": "Hidden Wiki",
