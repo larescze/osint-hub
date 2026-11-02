@@ -282,6 +282,18 @@
 			"API": true,
 			"maintained": true,
 			"description": "Open Source Global Intelligence Platform"
+		},
+		{
+			"name": "Opsis",
+			"categories": ["PI", "E"],
+			"link": "https://useopsis.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Finds accounts linked to an email, username or domain"
 		}
 	]
 }
