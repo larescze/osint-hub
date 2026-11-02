@@ -76,6 +76,7 @@
 			"API_note": "Paid or restricted access",
 			"services": true,
 			"CVE": true,
+			"CVE_note": "Paid or restricted access",
 			"description": "Search engine for Internet-connected devices"
 		},
 		{
@@ -94,7 +95,7 @@
 		{
 			"name": "ONYPHE",
 			"categories": ["IP", "H", "D", "T", "V", "+"],
-			"link": "https://www.onyphe.io/",
+			"link": "https://www.onyphe.com",
 			"open_source": false,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
@@ -123,6 +124,7 @@
 			"link": "https://www.coalitioninc.com/",
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API_note": "Paid or restricted access",
 			"API": true,
 			"services": true,
@@ -144,7 +146,7 @@
 		},
 		{
 			"name": "FullHunt",
-			"categories": ["IP", "D", "GEO", "P", "SV", "V"],
+			"categories": ["IP", "D", "GEO", "P", "SV", "V", "T", "H", "C", "ISP"],
 			"link": "https://fullhunt.io/",
 			"open_source": false,
 			"accessibility": true,
@@ -157,7 +159,7 @@
 		},
 		{
 			"name": "Netlas",
-			"categories": ["IP", "D", "GEO", "P", "SV", "V", "C"],
+			"categories": ["IP", "D", "GEO", "P", "SV", "V", "C", "H", "T", "ISP"],
 			"link": "https://netlas.io/",
 			"open_source": true,
 			"accessibility": true,
@@ -170,7 +172,7 @@
 		},
 		{
 			"name": "Odin",
-			"categories": ["IP", "GEO", "OS", "P", "V", "ISP"],
+			"categories": ["IP", "GEO", "OS", "P", "V", "ISP", "H", "SV", "T"],
 			"link": "https://odin.io/",
 			"open_source": false,
 			"accessibility": false,
@@ -179,12 +181,11 @@
 			"API_note": "Paid or restricted access",
 			"services": true,
 			"CVE": true,
-			"CVE_note": "Paid or restricted access",
 			"description": "Internet-scanning search engine"
 		},
 		{
 			"name": "NERD",
-			"categories": ["IP", "H", "GEO", "+"],
+			"categories": ["IP", "H", "GEO", "+", "ISP"],
 			"link": "https://nerd.cesnet.cz/",
 			"open_source": true,
 			"accessibility": true,

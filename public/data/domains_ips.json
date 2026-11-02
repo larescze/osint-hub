@@ -41,7 +41,7 @@
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
-			"description": "Domain lookup and monitoring"
+			"description": "Comprehensive DNS threat intelligence platform"
 		},
 		{
 			"name": "WhoisFreaks",
@@ -61,6 +61,7 @@
 			"link": "https://www.whoxy.com/",
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -105,7 +106,6 @@
 			"link": "https://securitytrails.com/stats",
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -168,11 +168,11 @@
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
-			"description": "DNS, IP and Domain recon"
+			"description": "Hosted vulnerability scanners and network tools"
 		},
 		{
 			"name": "Merklemap",
-			"categories": ["D", "IP"],
+			"categories": ["D", "IP", "C"],
 			"link": "https://www.merklemap.com/",
 			"open_source": false,
 			"accessibility": true,

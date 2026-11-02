@@ -42,7 +42,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"description": "SEO audit, rank tracking, and site analysis tool"
+			"description": "Analyze any website's traffic, backlinks, and paid ads"
 		},
 		{
 			"name": "Common Crawler",
@@ -62,7 +62,7 @@
 			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"description": "Provides backlinks and domain stats"
+			"description": "Free SEO, content, and AI analysis tools"
 		},
 		{
 			"name": "NerdyData",
@@ -77,7 +77,7 @@
 		},
 		{
 			"name": "PublicWWW",
-			"categories": ["SC"],
+			"categories": ["SC", "T"],
 			"link": "https://publicwww.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -106,7 +106,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
-			"description": "Search for public code and files"
+			"description": "Code intelligence platform for enterprise codebases"
 		},
 		{
 			"name": "Google Scholar",

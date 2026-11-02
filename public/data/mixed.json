@@ -144,15 +144,16 @@
 			"link": "https://inteltechniques.com/",
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
-			"description": "Browser-based OSINT search aggregator"
+			"description": "OSINT training, books, and magazine"
 		},
 		{
 			"name": "Deepware",
 			"categories": ["DD"],
 			"link": "https://deepware.ai/",
-			"open_source": false,
+			"open_source": true,
 			"accessibility": false,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
@@ -232,7 +233,8 @@
 			"categories": ["FS", "AI"],
 			"link": "https://www.babelstreet.com/",
 			"open_source": false,
-			"accessibility": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"maintained": true,
 			"description": "Risk Intelligence Platform"
@@ -243,6 +245,7 @@
 			"link": "https://www.dataminr.com/",
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -272,7 +275,7 @@
 		},
 		{
 			"name": "Osiris",
-			"categories": ["FS"],
+			"categories": ["FS", "AI"],
 			"link": "https://github.com/simplifaisoul/osiris",
 			"open_source": true,
 			"accessibility": true,

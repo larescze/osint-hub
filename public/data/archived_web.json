@@ -19,7 +19,7 @@
 	"data": [
 		{
 			"name": "Internet Archive",
-			"categories": ["A"],
+			"categories": ["A", "B"],
 			"link": "https://web.archive.org/",
 			"open_source": true,
 			"accessibility": true,
@@ -44,7 +44,7 @@
 			"open_source": false,
 			"accessibility": false,
 			"API": false,
-			"description": "Cached pages from Google and Archive.org"
+			"description": "Cached pages from Archive.org"
 		},
 		{
 			"name": "Anna's Archive",
@@ -98,8 +98,7 @@
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"description": "Repository of leaked/secret government docs"
-			
+			"description": "Public library of leaked and hacked datasets"
 		}
 		
 	]
