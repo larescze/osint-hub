@@ -294,6 +294,18 @@
 			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "Finds accounts linked to an email, username or domain"
+		},
+		{
+			"name": "looot",
+			"categories": ["E", "CN"],
+			"link": "https://looot.ai/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Work email and phone lookup, email verification and company enrichment through one API"
 		}
 	]
 }
