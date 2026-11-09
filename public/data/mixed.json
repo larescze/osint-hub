@@ -117,7 +117,7 @@
 		},
 		{
 			"name": "PhantomBuster",
-			"categories": ["PI"],
+			"categories": ["PI", "E", "PMC", "AI"],
 			"link": "https://phantombuster.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -154,7 +154,7 @@
 			"categories": ["DD"],
 			"link": "https://deepware.ai/",
 			"open_source": true,
-			"accessibility": false,
+			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
@@ -209,12 +209,11 @@
 		},
 		{
 			"name": "Synapsint",
-			"categories": ["E", "O", "CN", "GEO"],
+			"categories": ["E", "O", "CN"],
 			"link": "https://www.synapsint.com/",
 			"open_source": false,
 			"accessibility": true,
 			"API": true,
-			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "Comprehensive OSINT platform"
 		},
@@ -275,13 +274,25 @@
 		},
 		{
 			"name": "Osiris",
-			"categories": ["FS", "AI"],
+			"categories": ["FS", "AI", "O", "GEO"],
 			"link": "https://github.com/simplifaisoul/osiris",
 			"open_source": true,
 			"accessibility": true,
 			"API": true,
 			"maintained": true,
 			"description": "Open Source Global Intelligence Platform"
+		},
+		{
+			"name": "Opsis",
+			"categories": ["PI", "E", "GEO"],
+			"link": "https://useopsis.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Finds accounts linked to an email, username or domain"
 		}
 	]
 }
