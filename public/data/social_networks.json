@@ -139,7 +139,7 @@
 		},
 		{
 			"name": "RandomTools",
-			"categories": ["PI"],
+			"categories": ["PI", "G"],
 			"link": "https://randomtools.io/",
 			"social_networks": ["Facebook"],
 			"open_source": false,
@@ -237,7 +237,7 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": false,
-			"description": "The tools is no longer operation"
+			"description": "Twitter search and analytics (discontinued)"
 		},
 		{
 			"name": "twitonomy.com",
@@ -373,7 +373,6 @@
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
-			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "Official Discord API"
 		},
@@ -426,7 +425,7 @@
 		},
 		{
 			"name": "ReverseContact",
-			"categories": ["PI", "E", "O"],
+			"categories": ["PI", "E", "O", "CN"],
 			"link": "https://reversecontact.com/",
 			"social_networks": ["LinkedIn"],
 			"open_source": false,
@@ -441,7 +440,7 @@
 			"name": "RecruitEm",
 			"categories": ["PI", "G"],
 			"link": "https://recruitin.net/",
-			"social_networks": ["LinkedIn", "Multiple platforms"],
+			"social_networks": ["LinkedIn", "Multiple platforms", "X (Twitter)"],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
@@ -496,7 +495,7 @@
 		},
 		{
 			"name": "Exolyt",
-			"categories": ["PI", "S", "AUD", "T"],
+			"categories": ["PI", "S", "AUD", "T", "PMC"],
 			"link": "https://exolyt.com/",
 			"social_networks": ["TikTok"],
 			"open_source": false,
@@ -527,7 +526,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
-			"description": "Web extension - Universally usable scraper"
+			"description": "TikTok data scraping browser extension"
 		},
 		{
 			"name": "TikTok & Instagram Sorter",
@@ -555,7 +554,7 @@
 		},
 		{
 			"name": "TikTok Download & Analytics Toolkit | KOLSprite",
-			"categories": ["PI", "PMC", "AUD"],
+			"categories": ["PI", "PMC", "AUD", "S", "T"],
 			"link": "https://chromewebstore.google.com/detail/tiktok-download-analytics/penohjgblobinadflplocjekaclnoemh",
 			"social_networks": ["TikTok"],
 			"open_source": false,
@@ -588,7 +587,7 @@
 		},
 		{
 			"name": "Famety",
-			"categories": ["AUD"],
+			"categories": ["AUD", "B"],
 			"link": "https://www.famety.net/",
 			"social_networks": [
 				"Instagram",
@@ -716,7 +715,6 @@
 			"social_networks": ["Reddit"],
 			"open_source": true,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"maintained": false,
 			"description": "Reddit comment/post API"
@@ -827,7 +825,7 @@
 		},
 		{
 			"name": "TGStat",
-			"categories": ["PMC", "G", "S"],
+			"categories": ["PMC", "G", "S", "C"],
 			"link": "https://tgstat.ru/en/search",
 			"social_networks": ["Telegram"],
 			"open_source": false,
