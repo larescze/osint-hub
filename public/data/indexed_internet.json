@@ -35,7 +35,7 @@
 	"data": [
 		{
 			"name": "Site Explorer",
-			"categories": ["S", "SC", "TA"],
+			"categories": ["S", "SC", "TA", "BC"],
 			"link": "https://ahrefs.com/site-explorer",
 			"open_source": false,
 			"accessibility": true,
@@ -56,7 +56,7 @@
 		},
 		{
 			"name": "SEO REVIEW TOOLS",
-			"categories": ["S", "BC"],
+			"categories": ["S", "BC", "SC", "TA"],
 			"link": "https://www.seoreviewtools.com/",
 			"open_source": false,
 			"accessibility": true,

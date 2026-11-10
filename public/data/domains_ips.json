@@ -33,7 +33,7 @@
 		},
 		{
 			"name": "DomainTools",
-			"categories": ["D", "IP"],
+			"categories": ["D", "IP", "C"],
 			"link": "https://www.domaintools.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -45,7 +45,7 @@
 		},
 		{
 			"name": "WhoisFreaks",
-			"categories": ["D", "IP"],
+			"categories": ["D", "IP", "O"],
 			"link": "https://whoisfreaks.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -53,7 +53,7 @@
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
-			"description": "Aggregated WHOIS data with APIs"
+			"description": "Domain and IP intelligence platform with APIs"
 		},
 		{
 			"name": "WHOXY",
@@ -129,7 +129,6 @@
 			"link": "https://mxtoolbox.com/",
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -172,7 +171,7 @@
 		},
 		{
 			"name": "Merklemap",
-			"categories": ["D", "IP", "C"],
+			"categories": ["D", "C"],
 			"link": "https://www.merklemap.com/",
 			"open_source": false,
 			"accessibility": true,

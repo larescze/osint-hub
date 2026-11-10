@@ -203,7 +203,7 @@
 		},
 		{
 			"name": "OnionIngestor",
-			"categories": ["CTI", "SCDE"],
+			"categories": ["CTI", "SCDE", "ST", "IS"],
 			"link": "https://github.com/danieleperera/OnionIngestor",
 			"open_source": true,
 			"accessibility": true,
@@ -250,7 +250,7 @@
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
-			"description": "Dark web monitoring for breaches and TTPs"
+			"description": "Domain-based breach and credential exposure monitoring"
 		},
 		{
 			"name": "deepdarkCLI",
@@ -264,7 +264,7 @@
 		},
 		{
 			"name": "spiderfoot",
-			"categories": ["CTI", "SCDE"],
+			"categories": ["CTI", "SCDE", "O"],
 			"link": "https://github.com/smicallef/spiderfoot",
 			"open_source": true,
 			"accessibility": true,
@@ -324,7 +324,7 @@
 		},
 		{
 			"name": "Not Evil",
-			"categories": ["O"],
+			"categories": ["O", "OS"],
 			"link": "https://notevil.website/",
 			"open_source": false,
 			"accessibility": true,
