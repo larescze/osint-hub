@@ -1062,18 +1062,6 @@
 			"description": "Pulls information about a YouTube video using its URL or ID, generating direct links to platforms for viewing, archiving, and analysing the video."
 		},
 		{
-			"name": "Archivarix Tube Search",
-			"categories": ["M", "DT", "S"],
-			"link": "https://tube.archivarix.net/",
-			"social_networks": ["YouTube"],
-			"open_source": true,
-			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
-			"API": false,	
-			"maintained": true,
-			"description": "Finds deleted YouTube videos and recovers their metadata, thumbnails, and subtitles from archive data."
-		},
-		{
 			"name": "YouTube Channel ID Finder",
 			"categories": ["C", "PI"],
 			"link": "https://www.collabpals.com/tools/youtube-channel-id-finder",
