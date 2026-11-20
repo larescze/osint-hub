@@ -351,16 +351,6 @@
 			"description": "A browser-based domain and network intelligence platform that helps researchers examine a domain's public registration, DNS and TLS certificate information."
 		},
 		{
-			"name": "NerdyData",
-			"categories": ["D"],
-			"link": "https://www.nerdydata.com/",
-			"open_source": true,
-			"accessibility": true,
-			"API": true,
-			"API_note": "Paid or restricted access",	
-			"description": "A web-based source-code search engine & technographics research platform that crawls and indexes website code."
-		},
-		{
 			"name": "BuiltWith",
 			"categories": ["D", "O"],
 			"link": "https://builtwith.com/",
