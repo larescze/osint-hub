@@ -317,6 +317,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",	
+			"maintained": true,
 			"description": "A Software-as-a-Service (SaaS)) platform for professional investigations, leveraging AI-powered tools to perform digital forensics tasks."
 		},
 		{
@@ -327,6 +328,7 @@
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
+			"maintained": true,
 			"description": "An open search engine for domain research and OSINT recon."
 		},
 		{
@@ -337,6 +339,7 @@
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
+			"maintained": true,
 			"description": "A browser-based domain and network intelligence platform that helps researchers examine a domain's public registration, DNS and TLS certificate information."
 		},
 		{
@@ -348,6 +351,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",	
+			"maintained": true,
 			"description": "A browser-based domain and network intelligence platform that helps researchers examine a domain's public registration, DNS and TLS certificate information."
 		},
 		{
@@ -359,6 +363,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",	
+			"maintained": true,
 			"description": "A website technology profiling and internet research platform that identifies technologies used by websites."
 		}
 	]	
