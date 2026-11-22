@@ -52,7 +52,7 @@ export default function CategoryFilterPopover(
 					align="start"
 					sideOffset={8}
 					data-side="top"
-					className="PopoverContent rounded-lg border border-gray-200 bg-white p-4 shadow-lg w-[280px] max-w-[95vw] z-50"
+					className="PopoverContent rounded-lg border border-gray-200 bg-white p-4 shadow-lg w-[360px] max-w-[95vw] z-50"
 					onOpenAutoFocus={(e) => e.preventDefault()}
 				>
 					<div
@@ -61,7 +61,7 @@ export default function CategoryFilterPopover(
 					>
 						Select categories
 					</div>
-					<div className="flex flex-wrap gap-2 mt-2">
+					<div className="flex flex-wrap gap-2 mt-2 max-h-[60vh] overflow-y-auto">
 						{allCodes.map((code) => {
 							const active = selected.has(code)
 							const catInfo = categoryMeta[code]
@@ -69,7 +69,7 @@ export default function CategoryFilterPopover(
 								<button
 									key={code}
 									type="button"
-									className="p-0 m-0 bg-transparent border-0 cursor-pointer"
+									className="p-0 m-0 bg-transparent border-0 cursor-pointer text-left"
 									onClick={(e) => {
 										e.stopPropagation()
 										toggle(code)
@@ -78,9 +78,11 @@ export default function CategoryFilterPopover(
 									<Tag
 										variant={active ? 'info' : 'secondary'}
 										size="sm"
+										className="whitespace-normal"
 										categoryInfo={catInfo}
+										code={code}
 									>
-										{code}
+										{catInfo.name} ({code})
 									</Tag>
 								</button>
 							)
