@@ -15,8 +15,11 @@ import Note from './note'
 import {
 	ArrowTopRightOnSquareIcon,
 	ExclamationCircleIcon,
+	MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline'
 import { twMerge } from 'tailwind-merge'
+import FullTextSearch from "./full-text-search"
+import { useFullTextSearch } from "../hooks/useFullTextSearch"
 
 type ColumnType = 'text' | 'link' | 'tags' | 'status' | 'array'
 
@@ -81,6 +84,7 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 	const columnHelper = createColumnHelper<T>()
 
 	const [sorting, setSorting] = useState<SortingState>(initialSorting)
+	const {searchQuery, setSearchQuery, filteredData} = useFullTextSearch(data);
 	const headerRef = useRef<HTMLTableSectionElement | null>(null)
 	const stickyHeaderRef = useRef<HTMLDivElement | null>(null)
 	const tableContainerRef = useRef<HTMLDivElement | null>(null)
@@ -324,7 +328,7 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 	}, [specs])
 
 	const table = useReactTable({
-		data,
+		data: filteredData,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 		getSortedRowModel: getSortedRowModel(),
@@ -347,6 +351,7 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 
 	return (
 		<div className="bg-white rounded-lg shadow border border-gray-200">
+			<FullTextSearch query={searchQuery} onQueryChange={setSearchQuery} />
 			{stickyHeader && (
 				<div
 					className={`
@@ -491,7 +496,7 @@ export default function DataTable<T extends object>(props: DataTableProps<T>) {
 				</table>
 			</div>
 
-			{data.length === 0 && (
+			{orderedRows.length === 0 && (
 				<div className="text-center py-12">
 					<p className="text-gray-500" style={{ color: '#111111' }}>
 						No records found
