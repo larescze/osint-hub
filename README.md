@@ -62,4 +62,22 @@ Contributions are welcome! The dataset is validated with a strict schema so the 
 - `yarn lint`: run Biome linter
 - `yarn format`: run Biome formatter
 
+## How to cite
 
+If you use or build upon the materials, please use the cite block or BibTeX entry below to cite the original paper (not only this web link).
+
+LAZAROV, Willi; MORAVEC, Vojtech; LOUTOCKY, Pavel; VOSTOUPAL, Jakub and MARTINASEK, Zdenek. Comparative analysis of OSINT tools, techniques, and legal aspects. Computers & Security. 2026, vol. 168, article no. 104938. ISSN 0167-4048. Available from: https://doi.org/10.1016/j.cose.2026.104938.
+
+```bibtex
+@article{lazarov2026osint,
+  title     = {Comparative analysis of {OSINT} tools, techniques, and legal aspects},
+  author    = {Lazarov, Willi and Moravec, Vojtech and Loutocky, Pavel and Vostoupal, Jakub and Martinasek, Zdenek},
+  journal   = {Computers \& Security},
+  volume    = {168},
+  pages     = {104938},
+  year      = {2026},
+  issn      = {0167-4048},
+  publisher = {Elsevier},
+  doi       = {10.1016/j.cose.2026.104938}
+}
+```
