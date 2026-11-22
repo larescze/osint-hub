@@ -224,6 +224,146 @@
 			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "CT monitoring for detecting new or suspicious certificates"
+		},
+		{
+			"name": "OSINT Industries",
+			"categories": ["D", "IP", "O"],
+			"link": "https://app.osint.industries/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"maintained": true,
+			"description": "Aggregates and correlates open‑source data in real time to generate profiles and digital footprints from inputs like email addresses, phone numbers, usernames, names, domains, IPs, and crypto wallets. It also has facial recognition capability."
+		},
+		{
+			"name": "Domain Dossier",
+			"categories": ["D", "IP", "O"],
+			"link": "https://centralops.net/co/DomainDossier.aspx",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Generates reports from public records about domain names and IP addresses."
+		},
+		{
+			"name": "WHOIS API",
+			"categories": ["D"],
+			"link": "https://centralops.net/co/DomainDossier.aspx",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "A domain registration tool showing who owns a domain, when it was created, and how it’s configured."
+		},
+		{
+			"name": "urlscan.io",
+			"categories": ["D", "IP"],
+			"link": "https://urlscan.io/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "It loads a website in a safe environment capturing page screenshots, domains contacted, IP addresses, scripts and resources loaded, and technologies used."
+		},
+		{
+			"name": "Have I Been Squatted?",
+			"categories": ["D", "IP"],
+			"link": "https://haveibeensquatted.com/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "Scans domains for typo-squatting risks and impersonation variants and flags suspicious lookalike websites that could be used for phishing or fraud."
+		},
+		{
+			"name": "Host.io",
+			"categories": ["D", "IP"],
+			"link": "https://haveibeensquatted.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "A domain intelligence and infrastructure discovery tool to uncover relationships between websites, IP addresses, hosting providers, DNS records, and online infrastructure."
+		},
+		{
+			"name": "DNS Dumpster",
+			"categories": ["D", "IP"],
+			"link": "https://dnsdumpster.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"maintained": true,
+			"description": "A free domain research tool that can discover hosts related to a domain."
+		},
+		{
+			"name": "Central Ops",
+			"categories": ["D", "IP", "O"],
+			"link": "https://centralops.net/co/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "A free internet reconnaissance and domain investigation platform that brings together multiple lookup tools in one place."
+		},
+		{
+			"name": "Indicia",
+			"categories": ["D", "IP", "C", "O"],
+			"link": "https://indicia.app/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",	
+			"maintained": true,
+			"description": "A Software-as-a-Service (SaaS)) platform for professional investigations, leveraging AI-powered tools to perform digital forensics tasks."
+		},
+		{
+			"name": "cl0q",
+			"categories": ["D", "IP", "O"],
+			"link": "https://cl0q.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"maintained": true,
+			"description": "An open search engine for domain research and OSINT recon."
+		},
+		{
+			"name": "CC.LA",
+			"categories": ["D", "IP"],
+			"link": "https://cc.la/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": false,
+			"maintained": true,
+			"description": "A browser-based domain and network intelligence platform that helps researchers examine a domain's public registration, DNS and TLS certificate information."
+		},
+		{
+			"name": "Karma Domains",
+			"categories": ["D"],
+			"link": "https://karma.domains/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",	
+			"maintained": true,
+			"description": "A browser-based domain and network intelligence platform that helps researchers examine a domain's public registration, DNS and TLS certificate information."
+		},
+		{
+			"name": "BuiltWith",
+			"categories": ["D", "O"],
+			"link": "https://builtwith.com/",
+			"open_source": true,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",	
+			"maintained": true,
+			"description": "A website technology profiling and internet research platform that identifies technologies used by websites."
 		}
-	]
+	]	
 }
