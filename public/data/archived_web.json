@@ -42,7 +42,7 @@
 			"categories": ["A"],
 			"link": "https://cachedview.com",
 			"open_source": false,
-			"accessibility": false,
+			"accessibility": true,
 			"API": false,
 			"description": "Cached pages from Archive.org"
 		},
