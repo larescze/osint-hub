@@ -193,6 +193,52 @@
 			"services": false,
 			"CVE": false,
 			"description": "Open-source threat intelligence for network entities"
+		},
+		{
+			"name": "IPinfo",
+			"categories": ["IP", "GEO", "ISP"],
+			"link": "https://ipinfo.io/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": false,
+			"CVE": false,
+			"description": "A fast, reliable tool for looking up IP addresses and getting key details like location, ISP, and network ownership."
+		},
+		{
+			"name": "IntelligenceX",
+			"categories": ["IP", "D"],
+			"link": "https://intelx.io/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"services": false,
+			"CVE": false,
+			"description": "An OSINT search engine that indexes breached data, leaks, and historical internet records to help uncover hidden links and exposed information."
+		},
+		{
+			"name": "PhishTank",
+			"categories": ["IP", "D"],
+			"link": "https://www.phishtank.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"services": false,
+			"CVE": false,
+			"description": "An OSINT search engine that indexes breached data, leaks, and historical internet records to help uncover hidden links and exposed information."
+		},
+		{
+			"name": "Domain Digger",
+			"categories": ["IP", "D", "H","ISP", "GEO"],
+			"link": "https://digger.tools/",
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"services": false,
+			"CVE": false,
+			"description": " A fast, browser-based OSINT tool for uncovering infrastructure linked to a domain."
 		}
 	]
 }
