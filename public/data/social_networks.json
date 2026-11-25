@@ -1071,6 +1071,32 @@
 			"API": false,	
 			"maintained": true,
 			"description": "Finds the permanent channel ID behind a YouTube URL, @handle, video or Shorts link, or username, one at a time or in bulk."
+		},
+		{
+			"name": "Social Fetch",
+			"categories": ["PI", "PMC", "AUD"],
+			"link": "https://www.socialfetch.dev",
+			"social_networks": ["TikTok", "Instagram", "YouTube", "X (Twitter)", "Reddit", "LinkedIn"],
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "100 free credits on signup, no card, then pay as you go",
+			"API": true,
+			"API_note": "100 free credits on signup, no card, then pay as you go",
+			"maintained": true,
+			"description": "A pay as you go API for public posts, profiles, comments and transcripts from TikTok, Instagram, YouTube, X, Reddit and LinkedIn."
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
 	]
 }
