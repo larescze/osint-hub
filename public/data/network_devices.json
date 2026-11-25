@@ -238,7 +238,97 @@
 			"API": false,
 			"services": false,
 			"CVE": false,
-			"description": " A fast, browser-based OSINT tool for uncovering infrastructure linked to a domain."
+			"description": "A fast, browser-based OSINT tool for uncovering infrastructure linked to a domain."
+		},
+		{
+			"name": "Tiny Scan",
+			"categories": ["IP", "D", "GEO", "T", "ISP", "C" , "+"],
+			"link": "https://www.tiny-scan.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"services": false,
+			"CVE": false,
+			"description": "Scans a website, pulling valuable information including SSL certificates, records, web technologies and HTTP headers in an easy-to-use web interface."
+		},
+		{
+			"name": "Dorky",
+			"categories": ["D", "+"],
+			"link": "https://dork.bugbountyhunting.com/",
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"services": false,
+			"CVE": false,
+			"description": "A focused Google dorking and search query builder designed to help quickly generate advanced search queries for uncovering exposed information on the web."
+		},
+		{
+			"name": "XResolver",
+			"categories": ["D", "IP", "GEO", "P", "V", "ISP" , "+"],
+			"link": "https://xresolver.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": false,
+			"services": false,
+			"CVE": false,
+			"description": "A gamer-tag and IP intelligence lookup tool linking Xbox and PlayStation usernames to IP addresses collected from public and peer-to-peer gaming sessions."
+		},
+		{
+			"name": "ARIN",
+			"categories": ["IP", "ISP" , "+"],
+			"link": "https://www.arin.net/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"services": false,
+			"CVE": false,
+			"description": "A non-profit, regional internet registry that provides public access to IP address, Autonomous System Number (ASN), and network ownership records for North America."
+		},
+		{
+			"name": "SynapsInt",
+			"categories": ["D", "IP", "ISP", "C", "V", "+"],
+			"link": "https://synapsint.com/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"services": false,
+			"CVE": true,
+			"description": "A web-based search platform that aggregates publicly available data about people, organisations, domains, IP addresses, email addresses & other digital identifiers."
+		},
+		{
+			"name": "Blacklist Alert",
+			"categories": ["D", "IP", "+"],
+			"link": "https://blacklistalert.org/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"services": false,
+			"CVE": false,
+			"description": "Webtool that checks whether an IP address or domain appears on public DNS-based blacklists (DNSBLs)."
+		},
+		{
+			"name": "BotScout",
+			"categories": ["IP", "+"],
+			"link": "https://botscout.com/search.html",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"services": false,
+			"CVE": false,
+			"description": "A bot-signature lookup service that checks names, email addresses & IP addresses against a database of previously identified bot activity."
+		},
+		{
+			"name": "Codename Sonar",
+			"categories": ["IP", "H", "D", "GEO", "T", "OS", "P", "SV", "V", "C", "+"],
+			"link": "https://codenamesonar.app/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"services": false,
+			"CVE": false,
+			"description": "A browser-based defensive reconnaissance suite for blue-team operators and authorised penetration testers."
 		}
 	]
 }
