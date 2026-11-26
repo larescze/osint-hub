@@ -329,6 +329,63 @@
 			"services": false,
 			"CVE": false,
 			"description": "A browser-based defensive reconnaissance suite for blue-team operators and authorised penetration testers."
+		},
+		{
+			"name": "SearchWebCode",
+			"categories": ["T", "D", "+"],
+			"link": "https://www.searchwebcode.com/",
+			"open_source": false,
+			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
+			"API": true,
+			"services": false,
+			"CVE": false,
+			"description": "A search engine for website source code that indexes HTML, JavaScript, and CSS across roughly 131 million homepage domains."
+		},
+		{
+			"name": "SpiderFoot.tools",
+			"categories": ["IP", "+"],
+			"link": "https://spiderfoot.tools/",
+			"open_source": true,
+			"accessibility": true,
+			"API": true,
+			"services": false,
+			"CVE": false,
+			"description": "Browser-based interface that can investigate usernames, domains, and IP addresses."
+		},
+		{
+			"name": "ActiveDNS",
+			"categories": ["D", "IP", "H", "ISP", "GEO"],
+			"link": "https://activedns.net/",
+			"open_source": false,
+			"accessibility": true,
+			"API": true,
+			"API_note": "Paid or restricted access",
+			"services": false,
+			"CVE": false,
+			"description": "A free online service for exploring DNS records by CIDR, ASN or domain wildcards."
+		},
+		{
+			"name": "EnvTrace",
+			"categories": ["IP", "GEO", "ISP", "+"],
+			"link": "https://envtrace.net/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"services": false,
+			"CVE": false,
+			"description": "A browser-based toolkit for checking browser fingerprints, IP addresses, and network signals."
+		},
+		{
+			"name": "Blacklight",
+			"categories": ["T", "D", "+"],
+			"link": "https://themarkup.org/blacklight",
+			"open_source": true,
+			"accessibility": true,
+			"API": false,
+			"services": false,
+			"CVE": false,
+			"description": "A free website privacy-inspection tool that scans websites for tracking technologies."
 		}
 	]
 }
