@@ -37,7 +37,7 @@
 		}
 	},
 	"data": [
-	{
+		{
 			"name": "Katana",
 			"categories": ["S", "O"],
 			"link": "https://github.com/c4tcom/Katana",
@@ -303,24 +303,24 @@
 			"description": "Crawler for .onion sites with marketplace analysis"
 		},
 		{
-		    "name": "Torch",
-		    "categories": ["O"],
-		    "link": "https://www.onionlinkhub.com/links/torch/",
-		    "open_source": false,
-		    "accessibility": true,
-		    "API": false,
-		    "maintained": true,
-		    "description": "The oldest and most extensive Darknet search engine, offering uncensored pages and a simple interface"
+			"name": "Torch",
+			"categories": ["O"],
+			"link": "https://www.onionlinkhub.com/links/torch/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "The oldest and most extensive Darknet search engine, offering uncensored pages and a simple interface"
 		},
 		{
-		    "name": "Haystak",
-		    "categories": ["O"],
-		    "link": "https://onion.live/site/haystak",
-		    "open_source": false,
-		    "accessibility": false,
-		    "API": false,
-		    "maintained": false,
-		    "description": "Over 1.5 billion indexed pages, offers free and premium versions (premium includes historical data and advanced search)"
+			"name": "Haystak",
+			"categories": ["O"],
+			"link": "https://onion.live/site/haystak",
+			"open_source": false,
+			"accessibility": false,
+			"API": false,
+			"maintained": false,
+			"description": "Over 1.5 billion indexed pages, offers free and premium versions (premium includes historical data and advanced search)"
 		},
 		{
 			"name": "Not Evil",
@@ -333,24 +333,24 @@
 			"description": "Privacy-focused search engine for Tor onion sites"
 		},
 		{
-		    "name": "Candle",
-		    "categories": ["O"],
-		    "link": "https://onion.live/site/candle",
-		    "open_source": true,
-		    "accessibility": false,
-		    "API": true,
-		    "maintained": false,
-		    "description": "Keyword search across onion search engines"
+			"name": "Candle",
+			"categories": ["O"],
+			"link": "https://onion.live/site/candle",
+			"open_source": true,
+			"accessibility": false,
+			"API": true,
+			"maintained": false,
+			"description": "Keyword search across onion search engines"
 		},
 		{
-		    "name": "Kilos",
-		    "categories": ["O"],
-		    "link": "https://onion.live/site/kilos",
-		    "open_source": false,
-		    "accessibility": false,
-		    "API": false,
-		    "maintained": false,
-		    "description": "Search engine focused on illegal markets"
+			"name": "Kilos",
+			"categories": ["O"],
+			"link": "https://onion.live/site/kilos",
+			"open_source": false,
+			"accessibility": false,
+			"API": false,
+			"maintained": false,
+			"description": "Search engine focused on illegal markets"
 		},
 		{
 			"name": "LibreY",
@@ -363,24 +363,24 @@
 			"description": "Privacy-respecting meta search engine"
 		},
 		{
-		    "name": "Tordex",
-		    "categories": ["O"],
-		    "link": "https://tordex.app/",
-		    "open_source": false,
-		    "accessibility": true,
-		    "API": false,
-		    "maintained": false,
-		    "description": "Dark Web search engine, generally considered unmaintained and inactive"
+			"name": "Tordex",
+			"categories": ["O"],
+			"link": "https://tordex.app/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": false,
+			"description": "Dark Web search engine, generally considered unmaintained and inactive"
 		},
 		{
-		    "name": "Hidden Wiki",
-		    "categories": ["OS"],
-		    "link": "https://thehiddenwiki.org/",
-		    "open_source": false,
-		    "accessibility": true,
-		    "API": false,
-		    "maintained": true,
-		    "description": "Community-maintained directory of .onion links"
+			"name": "Hidden Wiki",
+			"categories": ["OS"],
+			"link": "https://thehiddenwiki.org/",
+			"open_source": false,
+			"accessibility": true,
+			"API": false,
+			"maintained": true,
+			"description": "Community-maintained directory of .onion links"
 		}
 	]
 }
