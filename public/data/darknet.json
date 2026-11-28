@@ -84,7 +84,7 @@
 			"open_source": true,
 			"accessibility": true,
 			"API": false,
-			"maintained": false,
+			"maintained": true,
 			"description": "Keyword search across onion search engines"
 		},
 		{
@@ -257,7 +257,7 @@
 			"description": "Domain-based breach and credential exposure monitoring"
 		},
 		{
-			"name": "deepdarkCLI",
+			"name": "deepdarkCTI",
 			"categories": ["CTI", "OS"],
 			"link": "https://github.com/fastfire/deepdarkCTI",
 			"open_source": true,
@@ -282,7 +282,7 @@
 			"link": "https://en.wikipedia.org/wiki/List_of_Tor_onion_services",
 			"open_source": true,
 			"accessibility": true,
-			"API": true,
+			"API": false,
 			"maintained": true,
 			"description": "Aggregated list of .onion services"
 		},
@@ -389,7 +389,8 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": false,
-			"description": "Community-maintained directory of .onion links"
+			"maintained_note": "No updates since June 2025",
+			"description": "Curated directory of .onion links"
 		}
 	]
 }
