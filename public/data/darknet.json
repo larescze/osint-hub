@@ -91,7 +91,7 @@
 			"name": "Onion Search Engine",
 			"categories": ["O"],
 			"link": "https://onionsearchengine.com/",
-			"open_source": true,
+			"open_source": false,
 			"accessibility": true,
 			"API": true,
 			"API_note": "Paid or restricted access",
@@ -199,6 +199,7 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Searches .onion content by keyword"
 		},
 		{
@@ -209,6 +210,7 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Onion site scanner and monitor"
 		},
 		{
@@ -229,6 +231,7 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Dark web marketplace investigation"
 		},
 		{
@@ -239,6 +242,7 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Crawls .onion for certs, crypto wallets, etc."
 		},
 		{
@@ -253,8 +257,8 @@
 			"description": "Domain-based breach and credential exposure monitoring"
 		},
 		{
-			"name": "deepdarkCLI",
-			"categories": ["CTI"],
+			"name": "deepdarkCTI",
+			"categories": ["CTI", "OS"],
 			"link": "https://github.com/fastfire/deepdarkCTI",
 			"open_source": true,
 			"accessibility": true,
@@ -273,10 +277,10 @@
 			"description": "OSINT tool with dark web and Tor support"
 		},
 		{
-			"name": "List of Tor Onion services (Wikiwand)",
+			"name": "List of Tor Onion services (Wikipedia)",
 			"categories": ["OS"],
-			"link": "https://www.wikiwand.com/en/articles/List_of_Tor_onion_services",
-			"open_source": false,
+			"link": "https://en.wikipedia.org/wiki/List_of_Tor_onion_services",
+			"open_source": true,
 			"accessibility": true,
 			"API": false,
 			"maintained": true,
@@ -305,7 +309,8 @@
 		{
 			"name": "Torch",
 			"categories": ["O"],
-			"link": "https://www.onionlinkhub.com/links/torch/",
+			"link": "https://torchsearch.wordpress.com",
+			"link_onion": "http://torchdeedp3i2jigzjdmfpn5ttjhthh5wbmda2rr3jvqjg5p77c54dqd.onion",
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
@@ -320,12 +325,14 @@
 			"accessibility": false,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Over 1.5 billion indexed pages, offers free and premium versions (premium includes historical data and advanced search)"
 		},
 		{
 			"name": "Not Evil",
 			"categories": ["O", "OS"],
 			"link": "https://notevil.website/",
+			"link_onion": "http://notevilugs2d6juvkm4nkfd635tynfmh2vshxzbpr5y4emczdufcubqd.onion",
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
@@ -340,6 +347,7 @@
 			"accessibility": false,
 			"API": true,
 			"maintained": false,
+			"functional": false,
 			"description": "Keyword search across onion search engines"
 		},
 		{
@@ -350,6 +358,7 @@
 			"accessibility": false,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Search engine focused on illegal markets"
 		},
 		{
@@ -379,8 +388,9 @@
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"maintained": true,
-			"description": "Community-maintained directory of .onion links"
+			"maintained": false,
+			"maintained_note": "No updates since June 2025",
+			"description": "Curated directory of .onion links"
 		}
 	]
 }
