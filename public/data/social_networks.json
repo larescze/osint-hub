@@ -1076,7 +1076,7 @@
 			"name": "Social Fetch",
 			"categories": ["PI", "PMC", "AUD"],
 			"link": "https://www.socialfetch.dev",
-			"social_networks": ["TikTok", "Instagram", "YouTube", "X (Twitter)", "Reddit", "LinkedIn"],
+			"social_networks": ["Multiple platforms"],
 			"open_source": false,
 			"accessibility": true,
 			"accessibility_note": "100 free credits on signup, no card, then pay as you go",
