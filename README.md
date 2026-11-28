@@ -35,24 +35,27 @@ Contributions are welcome! The dataset is validated with a strict schema so the 
 
 ### Where to edit
 - Files: `public/data/[section].json`
-- Schema references: `types/schema.ts` (Zod) and `types/data.schema.json` (JSON Schema)
+- Schema references: `types/schema.ts` (Zod, used by `yarn validate`) and `types/JSON/[section].schema.json` (JSON Schema, editor hints)
 
 ### How to propose changes
 1. Fork and create a feature branch.
 2. Update `public/data/[section].json`:
-   - Add or edit entries under the correct top-level section: `indexed_internet`, `archived_web`, `devices`, `dark_web`, `social_networks`, `search_engines`, or `mixed`.
-   - Ensure each new record includes all required fields for that section (e.g., `tool`, `categories`, `API`, plus section specifics like `maintained`, `services`, or `social_network`).
+   - Add or edit records in the file's `data` array. Sections: `indexed_internet`, `archived_web`, `network_devices`, `darknet`, `social_networks`, `search_engines`, `domains_ips`, and `mixed`.
+   - Ensure each new record includes all required fields for that section (e.g., `name`, `categories`, `API`, plus section specifics like `maintained`, `services`, or `social_networks`).
+   - Records may only contain fields defined in the schema; unknown fields (including typos) fail validation. To add a new field, define it in both `types/schema.ts` and `types/JSON/[section].schema.json`.
    - Categories used in records must exist in that section’s `meta.categories`. Add new categories there if needed with at least a `name`.
-3. Validate locally:
+3. Format and validate locally:
    ```bash
+   yarn format
    yarn validate
    ```
-   - The validator checks schema compliance, reports totals, flags undefined/unused categories, and warns about potential duplicate tool names.
+   - The validator checks schema compliance, reports totals, flags undefined categories, and warns about potential duplicate tool names.
 4. Commit and open a Pull Request describing your changes.
 
 ### Tips
-- Keep `tool` names consistent (case/spacing) to avoid duplicate warnings.
+- Keep `name` values consistent (case/spacing) to avoid duplicate warnings.
 - Prefer adding short, clear `description` and `*_note` fields when applicable.
+- Darknet records can include `link_onion` (a v3 `.onion` address) alongside `link`.
 
 ## Useful scripts
 - `yarn dev`: start Vite dev server
