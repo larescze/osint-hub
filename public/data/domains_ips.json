@@ -45,7 +45,7 @@
 		},
 		{
 			"name": "WhoisFreaks",
-			"categories": ["D", "IP", "O"],
+			"categories": ["D", "IP", "O", "C"],
 			"link": "https://whoisfreaks.com/",
 			"open_source": false,
 			"accessibility": true,
@@ -113,7 +113,7 @@
 		},
 		{
 			"name": "URLScan",
-			"categories": ["D", "IP", "O"],
+			"categories": ["D", "IP", "O", "C"],
 			"link": "https://urlscan.io/",
 			"open_source": false,
 			"accessibility": true,
@@ -175,7 +175,6 @@
 			"link": "https://www.merklemap.com/",
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
@@ -249,27 +248,29 @@
 		},
 		{
 			"name": "WHOIS API",
-			"categories": ["D"],
+			"categories": ["D", "IP", "O"],
 			"link": "https://centralops.net/co/DomainDossier.aspx",
 			"open_source": true,
 			"accessibility": true,
 			"API": true,
 			"maintained": true,
-			"description": "A domain registration tool showing who owns a domain, when it was created, and how it’s configured."
+			"description": "A domain registration tool showing who owns a domain, when it was created, and how it's configured."
 		},
 		{
 			"name": "urlscan.io",
-			"categories": ["D", "IP"],
+			"categories": ["D", "IP", "C", "O"],
 			"link": "https://urlscan.io/",
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": true,
+			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "It loads a website in a safe environment capturing page screenshots, domains contacted, IP addresses, scripts and resources loaded, and technologies used."
 		},
 		{
 			"name": "Have I Been Squatted?",
-			"categories": ["D", "IP"],
+			"categories": ["D", "IP", "C", "O"],
 			"link": "https://haveibeensquatted.com/",
 			"open_source": true,
 			"accessibility": true,
@@ -279,11 +280,11 @@
 		},
 		{
 			"name": "Host.io",
-			"categories": ["D", "IP"],
+			"categories": ["D", "IP", "C", "O"],
 			"link": "https://haveibeensquatted.com/",
 			"open_source": false,
 			"accessibility": true,
-			"API": false,
+			"API": true,
 			"maintained": true,
 			"description": "A domain intelligence and infrastructure discovery tool to uncover relationships between websites, IP addresses, hosting providers, DNS records, and online infrastructure."
 		},
@@ -293,6 +294,7 @@
 			"link": "https://dnsdumpster.com/",
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"maintained": true,
 			"description": "A free domain research tool that can discover hosts related to a domain."
@@ -325,7 +327,6 @@
 			"link": "https://cl0q.com/",
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": true,
 			"maintained": true,
 			"description": "An open search engine for domain research and OSINT recon."
@@ -336,14 +337,13 @@
 			"link": "https://cc.la/",
 			"open_source": false,
 			"accessibility": true,
-			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
 			"description": "A browser-based domain and network intelligence platform that helps researchers examine a domain's public registration, DNS and TLS certificate information."
 		},
 		{
 			"name": "Karma Domains",
-			"categories": ["D"],
+			"categories": ["D", "IP", "O"],
 			"link": "https://karma.domains/",
 			"open_source": false,
 			"accessibility": true,
@@ -351,13 +351,13 @@
 			"API": true,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
-			"description": "A browser-based domain and network intelligence platform that helps researchers examine a domain's public registration, DNS and TLS certificate information."
+			"description": "Expired domain aggregator with SEO metrics and Wayback spam analysis"
 		},
 		{
 			"name": "BuiltWith",
 			"categories": ["D", "O"],
 			"link": "https://builtwith.com/",
-			"open_source": true,
+			"open_source": false,
 			"accessibility": true,
 			"accessibility_note": "Paid or restricted access",
 			"API": true,

@@ -35,7 +35,7 @@
 	"data": [
 		{
 			"name": "Site Explorer",
-			"categories": ["S", "SC", "TA", "BC"],
+			"categories": ["S", "TA", "BC"],
 			"link": "https://ahrefs.com/site-explorer",
 			"open_source": false,
 			"accessibility": true,

@@ -55,7 +55,7 @@
 			"link": "https://github.com/sherlock-project/sherlock",
 			"open_source": true,
 			"accessibility": true,
-			"API": true,
+			"API": false,
 			"API_note": "Paid or restricted access",
 			"maintained": true,
 			"description": "Finds accounts by username"

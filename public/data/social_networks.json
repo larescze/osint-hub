@@ -95,14 +95,26 @@
 		},
 		{
 			"name": "Who Posted What",
-			"categories": ["PI", "PMC", "DT"],
+			"categories": ["PI", "PMC", "DT", "G", "GEO"],
 			"link": "https://whopostedwhat.com/",
-			"social_networks": ["Facebook"],
+			"social_networks": [
+				"Facebook",
+				"Instagram",
+				"LinkedIn",
+				"Pinterest",
+				"Reddit",
+				"Telegram",
+				"TikTok",
+				"VKontakte",
+				"X (Twitter)",
+				"YouTube"
+			],
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
-			"description": "Searches Facebook posts by date"
+			"description": "Cross-platform post search to find first mentions"
 		},
 		{
 			"name": "Facebook Graph Searcher",
@@ -221,7 +233,7 @@
 			"name": "Followerwonk.com",
 			"categories": ["PI", "S", "GEO"],
 			"link": "https://followerwonk.com/",
-			"social_networks": ["X (Twitter)"],
+			"social_networks": ["X (Twitter)", "Multiple platforms"],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
@@ -234,9 +246,10 @@
 			"link": "https://tomelliott.com/social-media/twitter-search-analytics-tool",
 			"social_networks": ["X (Twitter)"],
 			"open_source": false,
-			"accessibility": true,
+			"accessibility": false,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Twitter search and analytics (discontinued)"
 		},
 		{
@@ -271,6 +284,7 @@
 			"accessibility": false,
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Anonymous X/Twitter viewer via Nitter"
 		},
 		{
@@ -414,11 +428,12 @@
 		},
 		{
 			"name": "LinkedIn-scraper",
-			"categories": ["PI", "G"],
+			"categories": ["PI", "G", "PMC"],
 			"link": "https://github.com/joeyism/linkedin_scraper",
 			"social_networks": ["LinkedIn"],
 			"open_source": true,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
 			"description": "LinkedIn scraper"
@@ -445,7 +460,7 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": true,
-			"description": "Boolean query generator for LinkedIn"
+			"description": "Boolean query generator for LinkedIn, GitHub and more"
 		},
 		{
 			"name": "TikTok-API",
@@ -462,7 +477,7 @@
 		},
 		{
 			"name": "TikTok-scraper",
-			"categories": ["PI", "PMC", "AUD", "M"],
+			"categories": ["PI", "PMC", "AUD", "M", "T"],
 			"link": "https://github.com/drawrowfly/tiktok-scraper",
 			"social_networks": ["TikTok"],
 			"open_source": true,
@@ -495,7 +510,7 @@
 		},
 		{
 			"name": "Exolyt",
-			"categories": ["PI", "S", "AUD", "T", "PMC"],
+			"categories": ["PI", "S", "AUD", "T", "PMC", "GEO"],
 			"link": "https://exolyt.com/",
 			"social_networks": ["TikTok"],
 			"open_source": false,
@@ -600,6 +615,7 @@
 			],
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
 			"description": "Paid social media engagement service"
@@ -628,7 +644,7 @@
 		},
 		{
 			"name": "StorySaver",
-			"categories": ["PMC"],
+			"categories": ["PMC", "AUD"],
 			"link": "https://www.storysaver.net/",
 			"social_networks": ["Instagram"],
 			"open_source": false,
@@ -729,6 +745,7 @@
 			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": false,
+			"functional": false,
 			"description": "Reddit profile info and statistics"
 		},
 		{
@@ -884,7 +901,7 @@
 		},
 		{
 			"name": "Sowsearch",
-			"categories": ["PMC", "PI", "G"],
+			"categories": ["PMC", "PI", "G", "GEO", "AUD", "O"],
 			"link": "https://www.sowsearch.info/",
 			"social_networks": ["Facebook"],
 			"open_source": false,
@@ -907,7 +924,7 @@
 		},
 		{
 			"name": "Inflact Instagram Profile Viewer",
-			"categories": ["PMC", "PI", "S", "GEO"],
+			"categories": ["PMC", "PI", "S", "GEO", "AUD"],
 			"link": "https://dumpor.io/",
 			"social_networks": ["Instagram"],
 			"open_source": false,
@@ -923,13 +940,14 @@
 			"social_networks": ["Instagram"],
 			"open_source": false,
 			"accessibility": true,
+			"accessibility_note": "Paid or restricted access",
 			"API": false,
 			"maintained": true,
-			"description": "Downloads and exports publicly available Instagram profile data into organised reports for analysis and evidence collection."
+			"description": "Export Instagram comments to CSV, Excel or JSON"
 		},
 		{
 			"name": "IGDataHub",
-			"categories": ["PMC", "M", "PI", "S"],
+			"categories": ["PMC", "M", "PI", "S", "T"],
 			"link": "https://igdatahub.com/",
 			"social_networks": ["Instagram"],
 			"open_source": false,
@@ -940,13 +958,13 @@
 		},
 		{
 			"name": "TweeterID",
-			"categories": ["PI", "M"],
+			"categories": ["PI"],
 			"link": "https://tweeterid.com/",
 			"social_networks": ["X/Twitter"],
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"maintained": false,
+			"maintained": true,
 			"description": "TweeterID allows you to easily look up any username on X/Twitter and find out what their corresponding ID is."
 		},
 		{
@@ -980,7 +998,7 @@
 			"accessibility": true,
 			"API": false,
 			"maintained": true,
-			"description": "It’s a Google Custom Search Engine that indexes publicly accessible Telegram channels and groups. It allows users to search Telegram content using Google’s search capabilities, making it easier to discover messages, posts, and channels that may not appear through Telegram’s internal search."
+			"description": "It's a Google Custom Search Engine that indexes publicly accessible Telegram channels and groups. It allows users to search Telegram content using Google's search capabilities, making it easier to discover messages, posts, and channels that may not appear through Telegram's internal search."
 		},
 		{
 			"name": "Telegram Spoiler Decoder",
@@ -1001,8 +1019,8 @@
 			"open_source": false,
 			"accessibility": true,
 			"API": false,
-			"maintained": false,
-			"description": "Search engine for Telegram channels, groups, and content."
+			"maintained": true,
+			"description": "Paid Telegram monitoring and search service for teams"
 		},
 		{
 			"name": "Telemetry",
@@ -1030,7 +1048,7 @@
 		},
 		{
 			"name": "VIEW",
-			"categories": ["PMC", "PI", "C", "G"],
+			"categories": ["C", "G"],
 			"link": "https://view.tg/en",
 			"social_networks": ["Telegram"],
 			"open_source": false,
@@ -1041,7 +1059,7 @@
 		},
 		{
 			"name": "TK Metrics",
-			"categories": ["PMC", "PI", "C", "S", "M"],
+			"categories": ["PMC", "PI", "C", "S", "M", "DT"],
 			"link": "https://tkmetrics.com/",
 			"social_networks": ["TikTok"],
 			"open_source": false,
@@ -1052,10 +1070,10 @@
 		},
 		{
 			"name": "YouTube Video Finder",
-			"categories": ["S"],
+			"categories": ["S", "M", "AUD"],
 			"link": "https://findyoutubevideo.thetechrobo.ca/",
 			"social_networks": ["YouTube"],
-			"open_source": false,
+			"open_source": true,
 			"accessibility": true,
 			"API": true,
 			"maintained": true,
