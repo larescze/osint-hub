@@ -37,6 +37,24 @@ Contributions are welcome! The dataset is validated with a strict schema so the 
 - Files: `public/data/[section].json`
 - Schema references: `types/schema.ts` (Zod, used by `yarn validate`) and `types/JSON/[section].schema.json` (JSON Schema, editor hints)
 
+### Field definitions
+Attributes follow the methodology of the [paper](#how-to-cite) (Section 3). Use `null` when a value cannot be reliably verified; the website shows it as N/A.
+
+| Field | Meaning |
+|---|---|
+| `name` | Tool or service name. |
+| `categories` | Functionalities and techniques, as codes defined in the section's `meta.categories`. |
+| `link` | Website or repository of the tool. |
+| `link_onion` | Darknet only: the tool's v3 `.onion` address. |
+| `open_source` | `true` if distributed under an open license. |
+| `accessibility` | `true` for free access, `false` for paid only. For limited free access (e.g., a free tier), use `true` and explain in `accessibility_note`. |
+| `API` | `true` if an API is available. Describe restrictions (paid, rate-limited) in `API_note`. |
+| `maintained` | Commercial tools: officially supported. Open-source tools: latest commit within the last year. Optional `maintained_note` explains the status. |
+| `functional` | Optional. Set to `false` only when the tool no longer works; such records are listed at the end of the table. |
+| `description` | Short description of what the tool does. |
+| `services`, `CVE` | Network devices only: whether the tool lists services running on devices and known vulnerabilities (CVEs). |
+| `social_networks` | Social networks only: supported platforms; use `"Multiple platforms"` for tools covering many networks. |
+
 ### How to propose changes
 1. Fork and create a feature branch.
 2. Update `public/data/[section].json`:
@@ -55,7 +73,6 @@ Contributions are welcome! The dataset is validated with a strict schema so the 
 ### Tips
 - Keep `name` values consistent (case/spacing) to avoid duplicate warnings.
 - Prefer adding short, clear `description` and `*_note` fields when applicable.
-- Darknet records can include `link_onion` (a v3 `.onion` address) alongside `link`.
 
 ## Useful scripts
 - `yarn dev`: start Vite dev server
