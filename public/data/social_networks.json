@@ -1046,7 +1046,7 @@
 			"social_networks": ["TikTok"],
 			"open_source": false,
 			"accessibility": true,
-			"API": false,	
+			"API": false,
 			"maintained": true,
 			"description": "Gives follower counts, engagement rates, and video performance for any TikTok account."
 		},
@@ -1057,7 +1057,7 @@
 			"social_networks": ["YouTube"],
 			"open_source": false,
 			"accessibility": true,
-			"API": true,	
+			"API": true,
 			"maintained": true,
 			"description": "Pulls information about a YouTube video using its URL or ID, generating direct links to platforms for viewing, archiving, and analysing the video."
 		},
@@ -1068,7 +1068,7 @@
 			"social_networks": ["YouTube"],
 			"open_source": false,
 			"accessibility": true,
-			"API": false,	
+			"API": false,
 			"maintained": true,
 			"description": "Finds the permanent channel ID behind a YouTube URL, @handle, video or Shorts link, or username, one at a time or in bulk."
 		}
