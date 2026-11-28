@@ -34,7 +34,7 @@
 	"definitions": {
 		"MixedRecord": {
 			"type": "object",
-			"additionalProperties": true,
+			"additionalProperties": false,
 			"properties": {
 				"name": { "type": "string" },
 				"categories": {
@@ -47,9 +47,19 @@
 				"description": { "type": ["string", "null"] },
 				"maintained": { "type": ["boolean", "null"] },
 				"maintained_note": { "type": "string" },
+				"open_source": { "type": ["boolean", "null"] },
+				"accessibility": { "type": ["boolean", "null"] },
+				"accessibility_note": { "type": "string" },
 				"functional": { "type": ["boolean", "null"] }
 			},
-			"required": ["name", "categories", "API", "maintained"]
+			"required": [
+				"name",
+				"categories",
+				"API",
+				"open_source",
+				"accessibility",
+				"maintained"
+			]
 		}
 	}
 }

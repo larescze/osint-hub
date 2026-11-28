@@ -42,7 +42,7 @@
 	"definitions": {
 		"DarkWebRecord": {
 			"type": "object",
-			"additionalProperties": true,
+			"additionalProperties": false,
 			"properties": {
 				"name": {
 					"type": "string"
@@ -54,6 +54,10 @@
 					}
 				},
 				"link": { "type": ["string", "null"] },
+				"link_onion": {
+					"type": "string",
+					"pattern": "^http://[a-z2-7]{56}\\.onion/?$"
+				},
 				"API": {
 					"type": ["boolean", "null"]
 				},
@@ -69,9 +73,19 @@
 				"maintained_note": {
 					"type": "string"
 				},
+				"open_source": { "type": ["boolean", "null"] },
+				"accessibility": { "type": ["boolean", "null"] },
+				"accessibility_note": { "type": "string" },
 				"functional": { "type": ["boolean", "null"] }
 			},
-			"required": ["name", "categories", "API", "maintained"]
+			"required": [
+				"name",
+				"categories",
+				"API",
+				"open_source",
+				"accessibility",
+				"maintained"
+			]
 		}
 	}
 }

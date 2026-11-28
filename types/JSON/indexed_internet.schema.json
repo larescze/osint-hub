@@ -34,7 +34,7 @@
 	"definitions": {
 		"IndexedInternetRecord": {
 			"type": "object",
-			"additionalProperties": true,
+			"additionalProperties": false,
 			"properties": {
 				"name": { "type": "string" },
 				"categories": {

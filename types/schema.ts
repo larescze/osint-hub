@@ -49,7 +49,7 @@ export function createCategorySchema(categories: string[]) {
 	return z.enum(categories as [string, ...string[]])
 }
 
-export const RecordBaseSchema = z.object({
+export const RecordBaseSchema = z.strictObject({
 	name: z.string(),
 	categories: z.array(z.string()).nullable(),
 	link: z.string().nullable().optional(),
@@ -77,7 +77,12 @@ export const DevicesRecordSchema = RecordBaseSchema.extend({
 	CVE_note: z.string().optional(),
 })
 
-export const DarknetRecordSchema = MaintainableRecordSchema
+export const DarknetRecordSchema = MaintainableRecordSchema.extend({
+	link_onion: z
+		.string()
+		.regex(/^http:\/\/[a-z2-7]{56}\.onion\/?$/)
+		.optional(),
+})
 export const MixedRecordSchema = MaintainableRecordSchema
 export const DomainsIpsRecordSchema = MaintainableRecordSchema
 export const IndexedInternetRecordSchema = RecordBaseSchema

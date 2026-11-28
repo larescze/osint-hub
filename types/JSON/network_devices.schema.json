@@ -34,7 +34,7 @@
 	"definitions": {
 		"NetworkDevicesRecord": {
 			"type": "object",
-			"additionalProperties": true,
+			"additionalProperties": false,
 			"properties": {
 				"name": { "type": "string" },
 				"categories": {
@@ -49,9 +49,20 @@
 				"services_note": { "type": "string" },
 				"CVE": { "type": ["boolean", "null"] },
 				"CVE_note": { "type": "string" },
+				"open_source": { "type": ["boolean", "null"] },
+				"accessibility": { "type": ["boolean", "null"] },
+				"accessibility_note": { "type": "string" },
 				"functional": { "type": ["boolean", "null"] }
 			},
-			"required": ["name", "categories", "API", "services", "CVE"]
+			"required": [
+				"name",
+				"categories",
+				"API",
+				"open_source",
+				"accessibility",
+				"services",
+				"CVE"
+			]
 		}
 	}
 }
