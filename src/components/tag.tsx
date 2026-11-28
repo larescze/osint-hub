@@ -21,6 +21,7 @@ interface TagProps {
 	size?: 'sm' | 'md'
 	className?: string
 	categoryInfo?: CategoryInfo
+	code?: React.ReactNode
 }
 
 const variantStyles: Record<TagVariant, string> = {
@@ -43,6 +44,7 @@ export default function Tag({
 	size = 'sm',
 	className = '',
 	categoryInfo,
+	code = children,
 }: TagProps) {
 	const [isOpen, setIsOpen] = useState(false)
 
@@ -91,7 +93,7 @@ export default function Tag({
                   ${variantStyles[variant]}
                 `}
 							>
-								{children}
+								{code}
 							</span>
 							<h3 className="font-semibold text-gray-900">
 								{categoryInfo.name}

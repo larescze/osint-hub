@@ -158,7 +158,7 @@ function Home() {
 				This project was financially supported by the Technology Agency of the
 				Czech Republic, project No. FW11020057.
 			</p>
-			<div className="flex items-center gap-12">
+			<div className="flex items-center gap-12 flex-wrap">
 				<a
 					href="https://tacr.gov.cz/en/"
 					rel={'noopener noreferrer'}
